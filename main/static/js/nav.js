@@ -1,3 +1,3 @@
-$('.jdnavbar-toggle').click(function(){
+$('.navbar-toggle').click(function(){
     $(this).toggleClass('collapsed');
 })
