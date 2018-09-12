@@ -17,18 +17,22 @@
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="navbar-header">
-		    <a class="navbar-brand" href="#">Better Bind</a>
-		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
-		      <span class="icon-bar"></span>
+		    <a class="navbar-brand" href="#"></a>
+		    <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target=".navbar-collapse">
+		      <span class="icon-bar top-bar"></span>
+		      <span class="icon-bar middle-bar"></span>
+		      <span class="icon-bar bottom-bar"></span>
 		    </button>
 		  </div>
 		  <div class="navbar-collapse collapse">
 		    <ul class="nav navbar-nav">
-		      <li class="active"><a href="#">Home</a></li>
-		      <li><a href="#about">About</a></li>
-		      <li><a href="#contact">Contact</a></li>
+                <li class="text-center nav-elements-layout-cp" style="margin-top: 80px !important;><strong class="logo"><a href="/"><img class="desktop" src="https://www.swyfft.com/images/logo-svg.svg" alt="Swyfft"></a></strong></li>
+		      <li class="nav-elements-layout-cp"><a href="#">Agent Login</a></li>
+		      <li class="nav-elements-layout-cp"><a href="#about">Our Company</a></li>
+                <li class="nav-elements-layout-cp"><a href="#about">Contact Us</a></li>
+		      <li class="nav-elements-layout-cp"><a href="#contact">FAQs</a></li>
+                <li class="nav-elements-layout-cp"><a href="#contact">In the Press</a></li>
+                <li class="nav-elements-layout-cp"><a href="#contact">Claims</a></li>
 		    </ul>
 
 		  </div>
@@ -37,20 +41,23 @@
 		<div class="container">
 			<div class="betterbind-container">
 				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+                        <img class="home-logo-ly " src="https://www.swyfft.com/images/logo-svg.svg" alt="Swyfft">
+                    </div>
 					<div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
-	                    <h1 class="header-first-line-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h1>
+	                    <h1 class="header-first-line-md">Unlike other brands that make you fill out endless forms, Swyfft uses unique data sources and proprietary analytics so you can. </h1>
 	                    <h1 class="header-second-line-md">Get a homeowner insurance quote in seconds.</h1>
 	                    <h1 class="header-third-line-md">Just type your address:</h1>
 	                </div>
 					<form id="js_address_form">
-	                <div class="input col-xs-12 col-sm-12 col-md-9 col-lg-9">
+	                <div class="input col-xs-12 col-md-8 col-md-8 col-lg-8 col-md-push-1">
 
                             <input id="address_input" name="address" type="text" placeholder="Type your address" class="form-control home-input" autocomplete="off" required>
 
 
                     </div>
 
-                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+                    <div class="col-xs-4 col-md-4 col-md-push-1 col-md-2 col-lg-2">
 
 							{% csrf_token %}
                         	<input type="submit"  class="btn btn-default getquote">
