@@ -20,5 +20,7 @@ from . import views
 
 urlpatterns = [
     path('', views.Home.as_view()),
+    path('quote', views.Quote.as_view()),
+    path('privacy', views.Privacy.as_view()),
 
 ]
