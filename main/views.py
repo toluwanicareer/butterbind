@@ -49,3 +49,6 @@ class Quote(TemplateView):
                                        'deductibles_choices':deductibles_choices,
                                         'primaryElementName':primary_element,
                                        'replacement_price':replacement_price})
+
+class Privacy(TemplateView):
+    template_name = 'privacy.html'
