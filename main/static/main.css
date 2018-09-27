@@ -15,7 +15,7 @@ p, .line-1, .line-2, .line-3, .line-4, .line-5 {
 
 
 #quotebutton{
-    background-color: #8FBF21;
+    background-color: #218FBF;
     color: #FAFBFC;
     border: none;
     border-radius: 30px;
@@ -133,7 +133,7 @@ body {
     letter-spacing: 0.4px;
     line-height: 1;
     text-rendering: optimizeLegibility;
-    color: #4E6B0B;
+    color: #0B4E6B;
     margin-bottom: 0;
     line-height: 1;
     text-align: left;
@@ -162,7 +162,7 @@ body {
 }
 
 .home-message-container-bs {
-    background-color: #273803;
+    background-color: #032738;
     position: relative;
     top:0px;
     min-height: 100%;

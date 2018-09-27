@@ -207,7 +207,7 @@
 
 .primary-premium-price {
   font-weight: 700;
-  color: #90bf3e; }
+  color: #3e90bf; }
 
 .quote-header .primary-premium-price {
   margin: 0 0 36px; }
@@ -243,7 +243,7 @@
   text-align: center; }
 
 .secondary-premium-price {
-  color: #90bf3e;
+  color: #3e90bf;
   font-weight: 700; }
 
 .dialog-form .primary-premium {
@@ -542,7 +542,7 @@ li.quote-element.gradeTemplate {
   color: #fff; }
 
 .quote-header .options-check label.jcf-label-active .jcf-checked {
-  background-color: #90bf3e; }
+  background-color: #3e90bf; }
 
 .quote-header .options-check label.roofShape {
   text-align: left; }
@@ -610,7 +610,7 @@ li.quote-element.gradeTemplate {
   box-shadow: inset 0 3px 3px 0 #a9a6a6; }
 
 .slider .ui-slider-range {
-  background: #90bf3e;
+  background: #3e90bf;
   height: 14px;
   border-radius: 8px 0 0 8px;
   width: 20%;
@@ -696,7 +696,7 @@ li.quote-element.gradeTemplate {
 
 .replacementCost, .standardReplacementCost, .saleBasedReplacementCost, .replacementCostBySQFT, .replacementCostRate {
   float: right;
-  color: #90bf3e; }
+  color: #3e90bf; }
 
 .slider .ui-slider-handle .value .number {
   vertical-align: sub; }
@@ -1203,16 +1203,16 @@ div#printQuote {
 /* common transitions slowest (1) to fastest (3) */
 /* cubic bezier functions for rc-tooltip animation timing */
 .quote-summary-container {
-  background-color: #8FBF21; }
+  background-color: #218fbf; }
 
 .quote-summary-container, .quote-header {
-  background-color: #8FBF21 !important; }
+  background-color: #218fbf !important; }
 
 .quote-header {
   height: auto; }
 
 .quote-preview-btn-container-ly {
-  background-color: #8FBF21 !important; }
+  background-color: #218fbf !important; }
 
 .premium-descriptor {
   font-size: 10px !important; }
@@ -1289,7 +1289,7 @@ div#printQuote {
   transition: transform 750ms ease-in-out, background-color 300ms ease-out; }
 
 .modify-li-edit-icon {
-  color: #8FBF21 !important;
+  color: #218fbf !important;
   margin: 0 !important;
   position: absolute;
   float: right !important;
@@ -1309,10 +1309,10 @@ li.quote-element:nth-of-type(odd) {
   cursor: default; }
 
 .quote-preview-radio-header-bs {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #4E6B0B;
+  color: #0b4e6b;
   letter-spacing: 2px;
   position: relative;
   top: -20px; }
@@ -1374,10 +1374,10 @@ main#main {
       font-weight: 400;
       font-size: 16px; } }
   .info-block-md p a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .info-block-md p a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 /* modify element specific styles */
 .replacement-cost-details-ly {
@@ -1460,9 +1460,9 @@ main#main {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.4px;
-  color: #8FBF21;
+  color: #218fbf;
   padding-bottom: 3px;
-  border-bottom: 1px solid #8FBF21;
+  border-bottom: 1px solid #218fbf;
   top: 10px;
   right: 40px;
   line-height: 1; }
@@ -1479,7 +1479,7 @@ main#main {
 .unit-bs {
   font-family: "Lato", sans-serif;
   font-weight: 900;
-  color: #8FBF21;
+  color: #218fbf;
   position: absolute;
   left: 55px;
   line-height: 65px; }
@@ -1537,7 +1537,7 @@ main#main {
 
 .agent-address-header-bs {
   font-size: 11px;
-  color: #4E6B0B;
+  color: #0b4e6b;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   letter-spacing: 0.4px;
@@ -1613,7 +1613,7 @@ main#main {
     .agent-header-link-bs {
       font-size: 12px; } }
   .agent-header-link-bs:hover {
-    border-bottom: 1px solid #4E6B0B; }
+    border-bottom: 1px solid #0b4e6b; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -1754,7 +1754,7 @@ input[type=number] {
   padding-bottom: 10px; }
 
 .step-header-span-bs {
-  color: #4E6B0B; }
+  color: #0b4e6b; }
 
 .confirmation-top-blurb-bs {
   font-weight: 400;
@@ -1779,13 +1779,13 @@ input[type=number] {
       font-weight: 400;
       font-size: 16px; } }
   .confirmation-top-blurb-bs a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .confirmation-top-blurb-bs a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .confirm-close-icon-bs {
-  background: #8FBF21 !important;
+  background: #218fbf !important;
   border-radius: 50px;
   width: 30px;
   height: 30px;
@@ -1797,7 +1797,7 @@ input[type=number] {
   right: 20px;
   top: 20px; }
   .confirm-close-icon-bs:hover {
-    background: #273803 !important;
+    background: #032738 !important;
     color: white; }
 
 .confirm-choice-errors-container-bs {
@@ -1857,7 +1857,7 @@ input[type=number] {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px;
-  color: #4E6B0B;
+  color: #0b4e6b;
   margin-top: 10px; }
   @media all and (min-width: 768px) and (max-width: 992px) {
     .preview-physical-address-bs {
@@ -1872,7 +1872,7 @@ input[type=number] {
 .summary-rc-blurb-bs {
   font-size: 11px;
   font-style: italic;
-  color: #4E6B0B;
+  color: #0b4e6b;
   margin-bottom: 15px;
   letter-spacing: 0.4px; }
   @media all and (min-width: 768px) and (max-width: 992px) {
@@ -1892,7 +1892,7 @@ input[type=number] {
   padding: 0 !important; }
 
 .modal-broker-line-bs {
-  color: #8FBF21;
+  color: #218fbf;
   text-decoration: underline; }
 
 #OccupancyType_Non-owner.choice-li-bs {
@@ -2035,7 +2035,7 @@ This should ideally apply only at the container level, but can also touch specif
   float: right;
   font-size: 18px;
   font-weight: bold;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   padding: 0 11px 0 11px;
@@ -2069,7 +2069,7 @@ This should ideally apply only at the container level, but can also touch specif
   font-size: 16px;
   font-weight: 700;
   font-family: "Lato", sans-serif;
-  color: #4E6B0B;
+  color: #0b4e6b;
   letter-spacing: 0.3px;
   float: unset;
   margin-top: 0;
@@ -2156,7 +2156,7 @@ This should ideally apply only at the container level, but can also touch specif
   top: -17px;
   left: -35px;
   padding: 0 !important;
-  color: #8FBF21;
+  color: #218fbf;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.4px; }
@@ -2288,7 +2288,7 @@ This should ideally apply only at the container level, but can also touch specif
 .agent-quote-preview-header-container-ly {
   top: -200px;
   position: fixed;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   z-index: 0;
   width: 100%;
   opacity: 0;
@@ -2300,7 +2300,7 @@ This should ideally apply only at the container level, but can also touch specif
 
 .reprice-quote-preview-header-container-ly {
   position: fixed;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   width: 100%;
   padding: 10px 0;
   top: 0px;
@@ -2394,7 +2394,7 @@ This should ideally apply only at the container level, but can also touch specif
   height: 50px;
   position: absolute;
   top: -22px;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   left: 0;
   right: 0;
   margin: auto; }
@@ -2753,7 +2753,7 @@ This should ideally apply only at the container level, but can also touch specif
   width: 230px !important;
   height: 100px !important;
   padding: 0px !important;
-  background: #8FBF21 !important;
+  background: #218fbf !important;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px !important;
@@ -2774,7 +2774,7 @@ This should ideally apply only at the container level, but can also touch specif
     position: absolute;
     border-style: solid;
     border-width: 17px 16px 0;
-    border-color: #8FBF21 transparent;
+    border-color: #218fbf transparent;
     display: block;
     width: 0;
     z-index: 1;
@@ -2786,7 +2786,7 @@ This should ideally apply only at the container level, but can also touch specif
       width: 230px !important;
       height: 100px !important;
       padding: 0px !important;
-      background: #8FBF21 !important;
+      background: #218fbf !important;
       -webkit-border-radius: 80px;
       -moz-border-radius: 80px;
       border-radius: 80px !important;
@@ -2807,7 +2807,7 @@ This should ideally apply only at the container level, but can also touch specif
         position: absolute;
         border-style: solid;
         border-width: 17px 16px 0;
-        border-color: #8FBF21 transparent;
+        border-color: #218fbf transparent;
         display: block;
         width: 0;
         z-index: 1;
@@ -2819,7 +2819,7 @@ This should ideally apply only at the container level, but can also touch specif
       width: 285px !important;
       height: 125px !important;
       padding: 0px !important;
-      background: #8FBF21 !important;
+      background: #218fbf !important;
       -webkit-border-radius: 80px;
       -moz-border-radius: 80px;
       border-radius: 80px !important;
@@ -2840,7 +2840,7 @@ This should ideally apply only at the container level, but can also touch specif
         position: absolute;
         border-style: solid;
         border-width: 17px 16px 0;
-        border-color: #8FBF21 transparent;
+        border-color: #218fbf transparent;
         display: block;
         width: 0;
         z-index: 1;
@@ -2852,7 +2852,7 @@ This should ideally apply only at the container level, but can also touch specif
       width: 285px !important;
       height: 125px !important;
       padding: 0px !important;
-      background: #8FBF21 !important;
+      background: #218fbf !important;
       -webkit-border-radius: 80px;
       -moz-border-radius: 80px;
       border-radius: 80px !important;
@@ -2873,7 +2873,7 @@ This should ideally apply only at the container level, but can also touch specif
         position: absolute;
         border-style: solid;
         border-width: 17px 16px 0;
-        border-color: #8FBF21 transparent;
+        border-color: #218fbf transparent;
         display: block;
         width: 0;
         z-index: 1;
@@ -2912,7 +2912,7 @@ This should ideally apply only at the container level, but can also touch specif
   letter-spacing: 0.4px;
   text-transform: none;
   font-size: 20px;
-  color: #4E6B0B;
+  color: #0b4e6b;
   opacity: 0.6;
   margin-top: 5px; }
   @media all and (min-width: 768px) and (max-width: 992px) {
@@ -2958,7 +2958,7 @@ This should ideally apply only at the container level, but can also touch specif
 
 .email-modal-md .modal-content {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0; }
@@ -2991,7 +2991,7 @@ This should ideally apply only at the container level, but can also touch specif
   color: #000000 !important; }
 
 .email-modal-md .submit-email-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -3029,7 +3029,7 @@ This should ideally apply only at the container level, but can also touch specif
 
 .cost-title-md {
   font-size: 11px;
-  color: #4E6B0B;
+  color: #0b4e6b;
   font-weight: 600;
   letter-spacing: 3px;
   text-align: left;
@@ -3043,7 +3043,7 @@ This should ideally apply only at the container level, but can also touch specif
   text-align: left !important; }
 
 .vertical-line {
-  border-left: 1px solid #4E6B0B;
+  border-left: 1px solid #0b4e6b;
   opacity: 0.5;
   margin: 0 40px; }
   @media all and (min-width: 768px) and (max-width: 992px) {
@@ -3193,7 +3193,7 @@ li.quote-element .info-area {
   .boolean-modify-btn-md.jcf-unchecked {
     background-color: #dededd !important; }
   .boolean-modify-btn-md.jcf-checked {
-    background-color: #8FBF21 !important; }
+    background-color: #218fbf !important; }
 
 .modify-btn-label-md {
   border: none !important;
@@ -3294,7 +3294,7 @@ li.quote-element .info-area {
   width: 171px !important;
   height: 45px !important;
   padding: 0px !important;
-  background: #8FBF21 !important;
+  background: #218fbf !important;
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border-radius: 80px !important;
@@ -3310,7 +3310,7 @@ li.quote-element .info-area {
     position: absolute;
     border-style: solid;
     border-width: 9px 10px 0;
-    border-color: #8FBF21 transparent;
+    border-color: #218fbf transparent;
     display: block;
     width: 0;
     z-index: 1;
@@ -3462,7 +3462,7 @@ li.quote-element .info-area {
 .deductible-container-ly .choice-li-md .choice-element-btn-md {
   height: 15px !important;
   width: 15px !important;
-  background: #8fbf21;
+  background: #218fbf;
   box-shadow: inset 1px 1px 2px 1px rgba(0, 0, 0, 0.2); }
   @media all and (min-width: 768px) and (max-width: 992px) {
     .deductible-container-ly .choice-li-md .choice-element-btn-md {
@@ -3517,11 +3517,11 @@ li.quote-element .info-area {
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }
 
 .modify-choice-element-btn-md.jcf-checked {
-  background-color: #8FBF21 !important;
+  background-color: #218fbf !important;
   box-shadow: unset !important; }
 
 .main-choice-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border: 1px solid rgba(255, 255, 255, 0.3);
   height: 40px; }
 
@@ -3529,7 +3529,7 @@ li.quote-element .info-area {
   background-color: #FAFBFC !important; }
 
 .customer-header-email-print-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -3592,7 +3592,7 @@ li.quote-element .info-area {
       height: 34px; } }
 
 .agent-email-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: 1px solid #FAFBFC;
   color: #FAFBFC;
@@ -3654,7 +3654,7 @@ li.quote-element .info-area {
     color: #000000 !important; }
 
 .agent-print-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: 1px solid #FAFBFC;
   color: #FAFBFC;
@@ -3700,7 +3700,7 @@ li.quote-element .info-area {
   text-transform: none;
   font-size: 20px;
   display: block;
-  color: #4E6B0B;
+  color: #0b4e6b;
   opacity: 0.6; }
   @media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
     .agent-monthly-price-md {
@@ -3833,7 +3833,7 @@ li.quote-element .info-area {
 
 .confirmation-modal-md .modal-content {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0; }
@@ -3899,13 +3899,13 @@ li.quote-element .info-area {
       font-weight: 400;
       font-size: 16px; } }
   .confirmation-modal-md .modal-body h5 a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .confirmation-modal-md .modal-body h5 a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .confirmation-modal-md .btn-default {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -3978,7 +3978,7 @@ li.quote-element .info-area {
       font-size: 16px; } }
 
 .premium-fees-blurb-items-instance-md {
-  color: #8FBF21;
+  color: #218fbf;
   font-weight: 800; }
 
 .premium-fees-breakdown-container-md {
@@ -3992,7 +3992,7 @@ li.quote-element .info-area {
   font-size: 20px; }
 
 .fees-green-span-md {
-  color: #8FBF21;
+  color: #218fbf;
   font-weight: 800; }
 
 .premium-fees-line-container-ly {
@@ -4011,7 +4011,7 @@ li.quote-element .info-area {
 
 .quote-preview-container-ly {
   border: 1px dashed #FAFBFC;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   font-family: "Lato", sans-serif;
   font-weight: 900; }
 
@@ -4234,7 +4234,7 @@ div#swyfftWarningAlert {
 
 .hub-modal-container-md .modal-content {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0;
@@ -4306,10 +4306,10 @@ div#swyfftWarningAlert {
         font-weight: 400;
         font-size: 16px; } }
     .hub-modal-container-md .modal-body h5 a {
-      color: #8FBF21;
+      color: #218fbf;
       transition: all 100ms ease-out; }
     .hub-modal-container-md .modal-body h5 a:hover {
-      color: #4E6B0B; }
+      color: #0b4e6b; }
   @media all and (min-width: 768px) and (max-width: 992px) {
     .hub-modal-container-md .modal-body {
       padding: 0 50px; } }
@@ -4321,7 +4321,7 @@ div#swyfftWarningAlert {
       padding: 0 50px; } }
 
 .hub-modal-container-md .btn-default {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -4361,10 +4361,10 @@ div#swyfftWarningAlert {
       font-weight: 400;
       font-size: 16px; } }
   .hub-modal-container-md .hub-content-italic-md a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .hub-modal-container-md .hub-content-italic-md a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .hub-modal-container-md .hub-cancel-btn-md {
   background-color: #000000 !important;
@@ -4431,10 +4431,10 @@ div#swyfftWarningAlert {
       font-weight: 400;
       font-size: 16px; } }
   .hub-modal-container-md .input-field-md a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .hub-modal-container-md .input-field-md a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
   @media all and (min-width: 768px) and (max-width: 992px) {
     .hub-modal-container-md .input-field-md {
       padding: 0 0 0 10px !important; } }
@@ -4466,11 +4466,11 @@ div#swyfftWarningAlert {
   .hub-modal-container-md .input-field-st:hover, .hub-modal-container-md .input-field-st:focus {
     background-color: #FFFFFF !important;
     border: 0;
-    box-shadow: inset 0px 0px 6px #8FBF21;
-    -webkit-box-shadow: inset 0px 0px 6px #8FBF21;
-    -o-box-shadow: inset 0px 0px 6px #8FBF21;
-    -ms-box-shadow: inset 0px 0px 6px #8FBF21;
-    -moz-box-shadow: inset 0px 0px 6px #8FBF21; }
+    box-shadow: inset 0px 0px 6px #218fbf;
+    -webkit-box-shadow: inset 0px 0px 6px #218fbf;
+    -o-box-shadow: inset 0px 0px 6px #218fbf;
+    -ms-box-shadow: inset 0px 0px 6px #218fbf;
+    -moz-box-shadow: inset 0px 0px 6px #218fbf; }
   .has-error .hub-modal-container-md .input-field-st, .has-error .hub-modal-container-md .input-field-st:hover, .has-error .hub-modal-container-md .input-field-st:focus {
     box-shadow: inset 0px 0px 6px #ff6373;
     -webkit-box-shadow: inset 0px 0px 6px #ff6373;
@@ -4553,11 +4553,11 @@ div#swyfftWarningAlert {
 
 @media all and (min-width: 992px) and (max-width: 1200px) {
   .dropdown-icon-bs:hover:enabled {
-    background-color: #8FBF21; } }
+    background-color: #218fbf; } }
 
 @media all and (min-width: 1200px) {
   .dropdown-icon-bs:hover:enabled {
-    background-color: #8FBF21; } }
+    background-color: #218fbf; } }
 
 .rotate-icon-st {
   -ms-transform: rotate(180deg);
@@ -4565,7 +4565,7 @@ div#swyfftWarningAlert {
   -webkit-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
-  background-color: #8FBF21 !important; }
+  background-color: #218fbf !important; }
 
 .loading-ellipsis {
   font-family: "Lato", sans-serif;
@@ -4630,21 +4630,21 @@ div#swyfftWarningAlert {
 
 .agent-buy-btn-md[disabled], .quote-buy-btn[disabled] {
   cursor: not-allowed;
-  background-color: #749D17 !important;
-  color: #8FBF21 !important;
+  background-color: #17749d !important;
+  color: #218fbf !important;
   opacity: 1; }
 
 .agent-email-btn-md[disabled], .agent-print-btn-md[disabled] .agent-email-btn-md:hover[disabled] {
   cursor: not-allowed;
-  background-color: #749D17 !important;
-  color: #8FBF21 !important;
+  background-color: #17749d !important;
+  color: #218fbf !important;
   opacity: 1;
   border: none; }
 
 .agent-print-btn-md:hover[disabled] {
   cursor: not-allowed;
-  background-color: #749D17 !important;
-  color: #8FBF21 !important;
+  background-color: #17749d !important;
+  color: #218fbf !important;
   opacity: 1; }
 
 .main-choice-text-st {
