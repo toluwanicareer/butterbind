@@ -214,9 +214,9 @@
                         {% for choice in deductibles_choices %}
                         <li data-bind="attr:{id:'main_' + element.name() + '_' + value()}" id="main_Deductible_500">
                             <label  class="choice main-choice-bs jcf-label-active disableEdit">
-                                <strong class="quoteChoiceText main-choice-text-bs main-choice-text-st" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">{{choice.Name}}</strong>
-                                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md jcf-checked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;);">
-                                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$500" value="500">
+                                <strong  class="deductible quoteChoiceText main-choice-text-bs main-choice-text-st" }} data-value="{{choice.Value}}">{{choice.Name}}</strong>
+                                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md jcf-checked" >
+                                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="{{choice.Name}}" value="{{choice.Value}}">
                                 </span>
                             </label>
                         </li>
@@ -1216,8 +1216,19 @@
 
 
     <script type="text/javascript" src="/static/js/home.js?cb=EF45A4C2526F7D71CA75524643D62BF3"></script>
+<script type="text/javascript" src="/static/js/nav.js"></script>
 
 
 </body>
 
 </html>
+<script>
+    $('.deductible').click(function(){
+    console.log($(this).text());
+    url='/patch_quote';
+    $.get(url, {'addresskey':'{{addresskey}}',
+        'quoteid':'{{quote_id}}',
+        'ElementName':'deductible',
+    'value':$(this).attr('data-value')}).done()
+})
+</script>
