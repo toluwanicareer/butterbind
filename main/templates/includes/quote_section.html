@@ -1,0 +1,57 @@
+{% load humanize %}
+<section id="square-footage-info-stick" class="quote-rd-header-bs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 quote-preview-container-ly quote-preview-container-md">
+                <img alt="swyfft logo" src="/static/images/shield-logo-45x50-white.svg" class="preview-logo-ly" />
+                <h4 class="preview-annual-premium-header-bs">annual premium</h4>
+                <h5 class="preview-physical-address-bs" data-bind="text:address">{{ address }}</h5>
+                <h2 class="preview-annual-premium-price-bs" data-bind="text:formatCurrencyUS(grossAnnualPayment())" id="annualPremium">${{annual_premium|intcomma}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 step-header-bs step-one-header-bs"><span class="step-header-span-bs">step 1:</span> choose <span data-bind="text:primaryElementDescription">{{primaryElementName}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="deductible-template-container-md" id="deductible-template-container" data-bind="template:{name:'mainChoiceTemplate', data:deductibleElementVm}">
+                    <ul id="preview-deductible-choices" class="options-check" data-bind="foreach:visibleChoices, disableEdit:quoteVm.disabled() || !element.isEditable()">
+                        {% for choice in deductibles_choices %}
+                        <li data-bind="attr:{id:'main_' + element.name() + '_' + value()}" id="main_Deductible_500">
+                            <label  class="choice main-choice-bs jcf-label-active disableEdit">
+                                <strong  class="deductible quoteChoiceText main-choice-text-bs main-choice-text-st" }} data-value="{{choice.Value}}">{{choice.Name}}</strong>
+                                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md jcf-checked" >
+                                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="{{choice.Name}}" value="{{choice.Value}}">
+                                </span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 step-header-bs"><span class="step-header-span-bs">step 2:</span> home value</div>
+            <div class="col-xs-12 col-md-6 col-md-offset-3 summary-rc-blurb-bs">please enter estimated home value below</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="rc-template-container-md" id="rc-template-container" data-bind="template:{name:'mainReplacementCostTemplate', data:rcElementVm}">
+                    <div class="number-element-template main-replacement-cost-container-st" data-bind="validationOptions: {insertMessages: false}">
+                    <input type="number" id="main-replacement-cost-input" class="main-replacement-cost-input-bs main-replacement-cost-input-st" value="{{replacement_price}}" title="">
+                    <span class="main-replacement-cost-input-prefix-bs">$</span>
+                    <span class="main-replacement-cost-input-suffix-bs" data-bind="visible:!element.mainInputFocus()" style="">edit</span>
+                    <label class="errorLabelOn" data-bind="validationMessage: element.value, attr:{id:element.name() + 'MainError'}" id="ReplacementCostMainError" style=""></label>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="quoteError" class="row alert alert-danger" style="display:none" data-bind="visible:errors().length > 0">
+            <div class="col-xs-12">
+                <strong data-bind="text:errors()[0]"></strong>
+            </div>
+        </div>
+    </div>
+</section>
