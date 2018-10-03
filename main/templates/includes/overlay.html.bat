@@ -1,4 +1,4 @@
-<div class="container load-container" style="height: 100vh; width:100%; background-color: #218fbf; padding-top: 140px; display:none">
+<div class="container load-container" style="height: 100vh; width:100%; background-color: #8FBF21; padding-top: 140px; display:none">
 		<div class="col-md-10 col-md-push-2">
 
 

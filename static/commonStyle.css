@@ -3848,7 +3848,7 @@ OR
   transition: all 500ms ease-out 50ms;
   cursor: pointer; }
   .primary-green-button-cp:hover {
-    background-color: #adcc66 !important;
+    background-color: #66adcc !important;
     color: #FAFBFC !important; }
   .primary-green-button-cp:disabled {
     background-color: #F2F4F5 !important;
@@ -5278,9 +5278,9 @@ header#header + nav#quote-menubar + section .visual-sec .caption {
   font-size: 90%; }
 
 .dialog-form input[type="submit"]:hover, .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
-  color: #fff !important;
-  background-color: #81AD34 !important;
-  border: 2px solid #81AD34; }
+  color: #000000 !important;
+  background-color: #fff !important;
+  border: 2px solid #fff; }
 
 .dialog-form .btn.btn-quote, .modal .btn.btn-quote {
   background: none;
