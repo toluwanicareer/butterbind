@@ -21,7 +21,7 @@ class Home(TemplateView):
         try:
             annual_premium=data['GrossAnnualPayment']
         except:
-            pdb.set_trace()
+            #pdb.set_trace()
             return JsonResponse({'status': False, 'error': 'Address not found'})
         quote_id=data['QuoteId']
         if annual_premium:
@@ -43,6 +43,7 @@ class Quote(TemplateView):
         url='https://www.swyfft.com/api/quotes/quoteid/'+quote_id
         response=requests.get(url)
         response=response.json()
+        address=response['QuoteProperty']['FullAddress']
         data=render_to_include(response,address,quote_id)
         elements=response['Elements']
         data['elements']=elements
