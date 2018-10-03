@@ -4617,10 +4617,10 @@ div#swyfftWarningAlert {
 
 .agent-email-btn-md:hover:enabled, .agent-print-btn-md:hover:enabled {
   cursor: pointer;
-  background-color: #A1D22F !important;
+  background-color: #2fa1d2 !important;
   color: #FAFBFC;
   font-weight: 500;
-  border: 1px solid #A1D22F; }
+  border: 1px solid #2fa1d2; }
 
 .agent-buy-btn-md:hover:enabled {
   cursor: pointer;
@@ -4650,21 +4650,21 @@ div#swyfftWarningAlert {
 .main-choice-text-st {
   transition: all 500ms ease-out 50ms; }
   .main-choice-text-st:hover:enabled {
-    background-color: rgba(78, 107, 11, 0.3) !important; }
+    background-color: rgba(11, 78, 107, 0.3) !important; }
 
 .confirm-choice-element-btn-st {
   transition: all 500ms ease-out 50ms; }
   .confirm-choice-element-btn-st:hover:enabled {
-    background-color: rgba(78, 107, 11, 0.3) !important; }
+    background-color: rgba(11, 78, 107, 0.3) !important; }
 
 .main-replacement-cost-input-st {
   cursor: pointer;
   transition: all 500ms ease-out 50ms; }
   .main-replacement-cost-input-st:hover:enabled {
-    background-color: #A1D22F !important;
+    background-color: #2fa1d2 !important;
     color: #FAFBFC !important; }
   .main-replacement-cost-input-st:focus {
-    background-color: #A1D22F !important;
+    background-color: #2fa1d2 !important;
     color: #FAFBFC !important; }
 
 .main-replacement-cost-input-st:focus + .main-replacement-cost-input-prefix-bs {
@@ -4694,26 +4694,26 @@ div#swyfftWarningAlert {
 
 .choice.main-choice-bs:hover .main-choice-btn-md.jcf-unchecked {
   cursor: pointer;
-  background-color: #A1D22F !important;
+  background-color: #2fa1d2 !important;
   color: #FAFBFC;
   transition: all 500ms ease-out 50ms;
-  border: 1px solid #A1D22F; }
+  border: 1px solid #2fa1d2; }
 
 .choice.main-choice-bs.jcf-label-active:hover .main-choice-btn-md.jcf-checked {
   cursor: pointer;
-  background-color: #A1D22F !important;
+  background-color: #2fa1d2 !important;
   color: #FAFBFC;
   transition: all 500ms ease-out 50ms;
-  border: 1px solid #A1D22F; }
+  border: 1px solid #2fa1d2; }
 
 .choice.main-choice-bs.jcf-label-active:hover .main-choice-text-st {
   color: #FAFBFC !important; }
 
 .choice.main-choice-bs:hover .modify-choice-element-btn-md.jcf-unchecked {
   cursor: pointer;
-  background-color: #A1D22F !important;
+  background-color: #2fa1d2 !important;
   color: #FAFBFC;
   transition: all 500ms ease-out 50ms;
-  border: 1px solid #A1D22F; }
+  border: 1px solid #2fa1d2; }
 
 /*# sourceMappingURL=quote.bundle.css.map*/

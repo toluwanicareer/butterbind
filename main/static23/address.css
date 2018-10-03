@@ -162,13 +162,13 @@
       font-weight: 400;
       font-size: 16px; } }
   .add-address-copy-bs a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .add-address-copy-bs a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .address-btn-bs {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FAFBFC;
@@ -188,7 +188,7 @@
 
 .address-modal-md .modal-content-md {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0; }
@@ -253,13 +253,13 @@
       font-weight: 400;
       font-size: 16px; } }
   .address-modal-md .modal-body h5 a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .address-modal-md .modal-body h5 a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .address-modal-md .btn-default {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -333,10 +333,10 @@ input[type="text"].input-field-md {
       font-weight: 400;
       font-size: 16px; } }
   input[type="text"].input-field-md a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   input[type="text"].input-field-md a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
   @media all and (min-width: 768px) and (max-width: 992px) {
     input[type="text"].input-field-md {
       padding: 0 0 0 10px !important; } }

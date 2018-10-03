@@ -62,3 +62,4 @@ function show_error_modal(){
     $('#errorModalBody').text('We ran into a problem pulling up property data information for this address. Please contact customersupport@swyfft.com.');
     $('#errorModal').modal('show');
 }
+

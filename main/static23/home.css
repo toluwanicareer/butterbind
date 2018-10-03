@@ -148,7 +148,7 @@ Large Desktop: >1600px*/
   font-weight: 900; }
 
 .home-message-container-bs {
-  background-color: #273803; }
+  background-color: #032738; }
 
 .ui-autocomplete-input {
   font-family: "Lato", sans-serif;
@@ -187,7 +187,7 @@ input.ui-autocomplete-input:focus {
 
 /*using id targetting for now due to css specificity issues*/
 input#btnSubmit {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   color: #FAFBFC;
   border: none;
   border-radius: 30px;
@@ -525,7 +525,7 @@ Large Desktop: >1600px*/
   letter-spacing: 0.4px;
   line-height: 1;
   text-rendering: optimizeLegibility;
-  color: #4E6B0B;
+  color: #0b4e6b;
   margin-bottom: 0;
   line-height: 1;
   text-align: left; }
@@ -554,7 +554,7 @@ Large Desktop: >1600px*/
   letter-spacing: 0.4px;
   line-height: 1;
   text-rendering: optimizeLegibility;
-  color: #8FBF21;
+  color: #218fbf;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1; }
@@ -620,11 +620,11 @@ Large Desktop: >1600px*/
 
 .loading-container {
   display: none;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 30px;
-  color: #8FBF21;
+  color: #218fbf;
   line-height: 30px;
   letter-spacing: 1px;
   width: 100%;
@@ -659,7 +659,7 @@ p, .line-1, .line-2, .line-3, .line-4, .line-5 {
 
 .loaded-md {
   opacity: 1;
-  color: #4E6B0B; }
+  color: #0b4e6b; }
 
 .loading-md {
   opacity: 1;
@@ -728,7 +728,7 @@ p, .line-1, .line-2, .line-3, .line-4, .line-5 {
 /* styling the modals */
 .required-info-modal-md .modal-content {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0;
@@ -791,13 +791,13 @@ p, .line-1, .line-2, .line-3, .line-4, .line-5 {
         font-weight: 400;
         font-size: 16px; } }
     .required-info-modal-md .modal-body h5 a {
-      color: #8FBF21;
+      color: #218fbf;
       transition: all 100ms ease-out; }
     .required-info-modal-md .modal-body h5 a:hover {
-      color: #4E6B0B; }
+      color: #0b4e6b; }
 
 .required-info-modal-md .required-submit-btn-md {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -844,10 +844,10 @@ p, .line-1, .line-2, .line-3, .line-4, .line-5 {
       font-weight: 400;
       font-size: 16px; } }
   .required-info-modal-md .errorLabelOn a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .required-info-modal-md .errorLabelOn a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 /*This styles our elements depending on their changing state. Usually applies to things like expand/collapse, hover/blur, checked/unchecked, etc. 
  Some agent vs. non-agent styling can go here, but that would usually go along with changes at the JS level 
@@ -908,8 +908,8 @@ input#btnSubmit:hover {
 
 input#btnSubmit[disabled], input#btnSubmit[disabled]:hover {
   cursor: not-allowed;
-  background-color: #749D17 !important;
-  color: #8FBF21 !important;
+  background-color: #17749d !important;
+  color: #218fbf !important;
   opacity: 1; }
 
 /*# sourceMappingURL=home.bundle.css.map*/
