@@ -98,3 +98,12 @@ def render_to_include(response, address,quote_id ):
 
           }
     return data
+
+class getProperties(View):
+
+    def get(self, request, *args, **kwargs):
+        url='https://www.swyfft.com/api/properties?address='+request.GET.get('term')
+        response=requests.get(url)
+        data=response.json()
+        data=[address['FullAddress'] for address in data]
+        return JsonResponse({'data':data})

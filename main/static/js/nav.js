@@ -20,15 +20,27 @@ function load_screen(){
     setTimeout(function(){$('#quote_page').submit()}, 11500);
 
 }
-
+$('#address_input').autocomplete({
+    minLength:3,
+    source: function(request, response){
+        console.log(request.term);
+        $.get('/get_properties?term='+request.term).done(function(data){
+           console.log(data.data);
+            response( data.data );
+        })
+    },
+    select:function (event, ui) {
+        $("#address_input").val(ui.item.name);
+    }
+});
 
 $('#quotebutton').click(function (e) {
 				e.preventDefault();
 				address=$('#address_input').val();
-				console.log(address)
+				console.log(address);
 				if ( ! address){
 				    $('.hero-error-label').css('display', 'block');
-				    $('.hero-error-label').text('please enter address')
+				    $('.hero-error-label').text('please enter address');
 
 				    return false;
                 }
@@ -45,11 +57,7 @@ $('#quotebutton').click(function (e) {
 
 					}
 					else{
-
-					    //alert(data.error);
                         show_error_modal();
-
-
 					}
                 })
             });

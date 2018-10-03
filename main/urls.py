@@ -24,4 +24,5 @@ urlpatterns = [
     path('privacy', views.Privacy.as_view()),
     path('index.html', views.Home.as_view()),
     path('patch_quote', views.PatchQuote.as_view()),
+    path('get_properties', views.getProperties.as_view()),
 ]
