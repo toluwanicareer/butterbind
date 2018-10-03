@@ -19,7 +19,7 @@
                         {% for choice in deductibles_choices %}
                         <li data-bind="attr:{id:'main_' + element.name() + '_' + value()}" id="main_Deductible_500">
                             <label  class="choice main-choice-bs jcf-label-active disableEdit">
-                                <strong  class="deductible quoteChoiceText main-choice-text-bs main-choice-text-st" }} data-value="{{choice.Value}}">{{choice.Name}}</strong>
+                                <strong  class="deductible quoteChoiceText main-choice-text-bs main-choice-text-st"  data-value="{{choice.Value}}">{{choice.Name}}</strong>
                                 <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md {% if deductibles_value == choice.Value %}jcf-checked{% endif %}" >
                                     <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="{{choice.Name}}" value="{{choice.Value}}">
                                 </span>

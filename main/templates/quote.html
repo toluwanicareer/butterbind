@@ -1164,7 +1164,7 @@
    // $('#quote_replace .deductible').click(function(){
    $('#quote_replace').on('click', '.deductible', function(){
     value=$(this).attr('data-value');
-    get_quote('Deductible', value);
+    get_quote('{{primaryElementName}}', value);
 });
    function get_quote(element, value){
       $.get( '/patch_quote', {'addresskey':'{{addresskey}}',
