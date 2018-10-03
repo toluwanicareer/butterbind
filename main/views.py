@@ -36,6 +36,7 @@ class Quote(TemplateView):
     template_name = 'quote.html'
 
     def post(self, request, *args, **kwargs):
+        #pdb.set_trace()
         address_key=request.POST.get('addresskey')
         address=request.POST.get('addressname')
         quote_id=request.POST.get('quote_id')
@@ -43,6 +44,9 @@ class Quote(TemplateView):
         response=requests.get(url)
         response=response.json()
         data=render_to_include(response,address,quote_id)
+        elements=response['Elements']
+        data['elements']=elements
+        #pdb.set_trace()
         return render(request, 'quote.html', data)
 
 class Privacy(TemplateView):

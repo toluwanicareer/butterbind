@@ -7,16 +7,16 @@ function load_screen(){
      $('footer').css('display', 'none');
      $('.loading-container').css('display', 'block');
    $('.line-1').css('display','block');
-    setTimeout(function (){$('.line-1').css('color','#4E6B0B')}, 2500);
+    setTimeout(function (){$('.line-1').css('color','#0B4E6B')}, 2500);
     setTimeout(function(){$('.line-2').removeClass('hidden-md')}, 3000);
     setTimeout(function(){$('.line-2').css('display', 'block')}, 3000);
-    setTimeout(function(){$('.line-2').css('color','#4E6B0B')}, 5500);
+    setTimeout(function(){$('.line-2').css('color','#0B4E6B')}, 5500);
     setTimeout(function(){$('.line-3').removeClass('hidden-md')}, 6000);
     setTimeout(function(){$('.line-3').css('display', 'block')}, 6000);
-    setTimeout(function(){$('.line-3').css('color','#4E6B0B')}, 8500);
+    setTimeout(function(){$('.line-3').css('color','#0B4E6B')}, 8500);
     setTimeout(function(){$('.line-5').removeClass('hidden-md')}, 9000);
     setTimeout(function(){$('.line-5').css('display','block')}, 9000);
-    setTimeout(function(){$('.line-5').css('color','#4E6B0B')}, 11500);
+    setTimeout(function(){$('.line-5').css('color','#0B4E6B')}, 11500);
     setTimeout(function(){$('#quote_page').submit()}, 11500);
 
 }

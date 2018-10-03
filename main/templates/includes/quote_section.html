@@ -6,7 +6,7 @@
                 <img alt="swyfft logo" src="/static/images/shield-logo-45x50-white.svg" class="preview-logo-ly" />
                 <h4 class="preview-annual-premium-header-bs">annual premium</h4>
                 <h5 class="preview-physical-address-bs" data-bind="text:address">{{ address }}</h5>
-                <h2 class="preview-annual-premium-price-bs" data-bind="text:formatCurrencyUS(grossAnnualPayment())" id="annualPremium">${{annual_premium|intcomma}}</h2>
+                <h2 class="preview-annual-premium-price-bs" data-bind="text:formatCurrencyUS(grossAnnualPayment())" id="annualPremium">${{annual_premium|floatformat:2|intcomma}}</h2>
             </div>
         </div>
         <div class="row">
@@ -20,7 +20,7 @@
                         <li data-bind="attr:{id:'main_' + element.name() + '_' + value()}" id="main_Deductible_500">
                             <label  class="choice main-choice-bs jcf-label-active disableEdit">
                                 <strong  class="deductible quoteChoiceText main-choice-text-bs main-choice-text-st" }} data-value="{{choice.Value}}">{{choice.Name}}</strong>
-                                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md jcf-checked" >
+                                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md main-choice-btn-md {% if deductibles_value == choice.Value %}jcf-checked{% endif %}" >
                                     <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="{{choice.Name}}" value="{{choice.Value}}">
                                 </span>
                             </label>
