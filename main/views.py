@@ -16,19 +16,25 @@ class Home(TemplateView):
 
     def post(self, request):
         address=request.POST.get('address')
-        #annual_premium=get_annual_premium(address)
-        data=scrape(address)
+        addresskey=request.POST.get('addresskey')
+        #pdb.set_trace()
+        if addresskey:
+
+            data=scrape(address, addresskey)
+        else:
+            #pdb.set_trace()
+            data=scrape(address)
         try:
             annual_premium=data['GrossAnnualPayment']
         except:
             #pdb.set_trace()
-            return JsonResponse({'status': False, 'error': 'Address not found'})
+            return JsonResponse({'status': False, 'error': 'Address not found', 'address':address})
         quote_id=data['QuoteId']
         if annual_premium:
             return JsonResponse({'status':True, 'annual_premium':annual_premium, 'quote_id':quote_id,
                                  'addresskey':data['AddressKey'], 'addressname':address})
         else:
-            return JsonResponse({'status':False, 'error':'Address not found'})
+            return JsonResponse({'status':False, 'error':'Address not found', 'address':address})
     
 
 
