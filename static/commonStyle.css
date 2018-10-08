@@ -4650,10 +4650,16 @@ html[data-useragent*='MSIE 8.0'] #header {
 
 .logo img {
   display: block;
-  width: 100%; }
+  width: 100%;
+  }
+
+
+.navbar-collapse .logo img{
+  margin-top:50px;
+}
 
 #swyfft-logo img {
-  width: 54px !important;
+  width: 80px !important;
   padding: 15px 0; }
 
 #home.visual-sec .bg-stretch {

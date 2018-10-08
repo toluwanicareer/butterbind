@@ -71,8 +71,8 @@ function start_load_screen(data){
 
 function show_error_modal(){
     //console.log('im here ok');
-    $('#errorModalTitle').text('SORRY');
-    $('#errorModalBody').text('BetterBind cannot provide instant quote for this property yet. Please contact betterbind@gmail.com for a quote.');
+    $('#errorModalTitle').text('ERROR');
+    $('#errorModalBody').text('We ran into a problem pulling up property data information for this address. Please contact customersupport@butterbind.com.');
     $('#errorModal').modal('show');
 }
 
