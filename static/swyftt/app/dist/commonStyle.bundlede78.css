@@ -1,46 +1,3 @@
-/*  
-    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
-    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
-    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
-*/
-/* Greens */
-/* Neutrals */
-/* ui element colors */
-/* 
-    note: 
-    - numbers go from brightest (1) to darkest (3) 
-    - grays all have same hue + saturation but lightness varies on HSL scale 
-*/
-/*
-    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
-*/
-/*
-    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
-*/
-/*  
-    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
-    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
-    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
-*/
-/* Greens */
-/* Neutrals */
-/* ui element colors */
-/* 
-    note: 
-    - numbers go from brightest (1) to darkest (3) 
-    - grays all have same hue + saturation but lightness varies on HSL scale 
-*/
-/*
-    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
-*/
-/*container for modals to be used with React-Bootstrap modals*/
-/* display text - bubble preview font size */
-/* large headers, page level */
-/* mid headers, page level */
-/* small-mid headers, page level */
-/* small headers, section level */
-/* body copy */
-/* subtext, footnotes */
 body {
   font-family: 'Lato', Arial, sans-serif;
   font-size: 18px;
@@ -1106,7 +1063,7 @@ select.input-lg, .input-group-lg > select.form-control, .input-group-lg > select
   background-color: #ebeaed; }
 
 .nav-li.active {
-  background-color: #90bf3e; }
+  background-color: #3e90bf; }
 
 .navbar-btn {
   margin-top: -21px;
@@ -1437,7 +1394,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   z-index: 1; }
 
 .modal-header {
-  background-color: #90bf3e;
+  background-color: #3e90bf;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
   min-height: 16.8888888889px; }
@@ -1631,7 +1588,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   animation-iteration-count: infinite;
     }
 
-OR 
+OR
 
 .some-element {
     animation: resize 4s infinite
@@ -2958,52 +2915,7 @@ OR
   100% {
     opacity: 0; } }
 
-/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
-/*  
-    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
-    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
-    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
-*/
-/* Greens */
-/* Neutrals */
-/* ui element colors */
-/* 
-    note: 
-    - numbers go from brightest (1) to darkest (3) 
-    - grays all have same hue + saturation but lightness varies on HSL scale 
-*/
-/*
-    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
-*/
-/*container for modals to be used with React-Bootstrap modals*/
-/*  
-    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
-    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
-    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
-*/
-/* Greens */
-/* Neutrals */
-/* ui element colors */
-/* 
-    note: 
-    - numbers go from brightest (1) to darkest (3) 
-    - grays all have same hue + saturation but lightness varies on HSL scale 
-*/
-/*
-    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
-*/
-/*
-    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
-*/
-/* display text - bubble preview font size */
-/* large headers, page level */
-/* mid headers, page level */
-/* small-mid headers, page level */
-/* small headers, section level */
-/* body copy */
-/* subtext, footnotes */
-/* common transitions slowest (1) to fastest (3) */
-/* cubic bezier functions for rc-tooltip animation timing */
+
 .bank-name-bs .bank-name-autocomplete-bs, .bank-name-bs .selector, .autocomplete .bank-name-autocomplete-bs, .autocomplete .selector {
   position: relative;
   width: 100%; }
@@ -3086,17 +2998,17 @@ OR
       font-weight: 400;
       font-size: 16px; } }
   .alternating-rows-table a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .alternating-rows-table a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
   .alternating-rows-table td, .alternating-rows-table th {
     padding: 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
     .alternating-rows-table td a, .alternating-rows-table th a {
-      color: #8FBF21; }
+      color: #218fbf; }
   .alternating-rows-table tr, .alternating-rows-table div.table-row {
     border: solid 1px #E8EAEB; }
     .alternating-rows-table tr:nth-child(even), .alternating-rows-table div.table-row:nth-child(even) {
@@ -3114,7 +3026,7 @@ OR
 
 .address-info-modal-md .modal-content, .single-family-residence-modal-md .modal-content, .update-property-location-modal-md .modal-content {
   border: unset;
-  border-top: 2px solid #8FBF21;
+  border-top: 2px solid #218fbf;
   border-radius: unset !important;
   box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
   padding: 25px 0;
@@ -3184,10 +3096,10 @@ OR
         font-weight: 400;
         font-size: 16px; } }
     .address-info-modal-md .modal-body h5 a, .single-family-residence-modal-md .modal-body h5 a, .update-property-location-modal-md .modal-body h5 a {
-      color: #8FBF21;
+      color: #218fbf;
       transition: all 100ms ease-out; }
     .address-info-modal-md .modal-body h5 a:hover, .single-family-residence-modal-md .modal-body h5 a:hover, .update-property-location-modal-md .modal-body h5 a:hover {
-      color: #4E6B0B; }
+      color: #0b4e6b; }
 
 .address-info-modal-md label, .single-family-residence-modal-md label, .update-property-location-modal-md label {
   font-weight: 400;
@@ -3213,7 +3125,7 @@ OR
   margin-bottom: 10px; }
 
 .address-info-modal-md .address-highlight-btn, .address-info-modal-md .ok-button, .single-family-residence-modal-md .address-highlight-btn, .single-family-residence-modal-md .ok-button, .update-property-location-modal-md .address-highlight-btn, .update-property-location-modal-md .ok-button {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -3261,10 +3173,10 @@ OR
       font-weight: 400;
       font-size: 16px; } }
   .address-info-modal-md .errorLabelOn a, .single-family-residence-modal-md .errorLabelOn a, .update-property-location-modal-md .errorLabelOn a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .address-info-modal-md .errorLabelOn a:hover, .single-family-residence-modal-md .errorLabelOn a:hover, .update-property-location-modal-md .errorLabelOn a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .address-info-modal-md .modal-error, .single-family-residence-modal-md .modal-error, .update-property-location-modal-md .modal-error {
   font-weight: 400;
@@ -3287,17 +3199,17 @@ OR
       font-weight: 400;
       font-size: 16px; } }
   .address-info-modal-md .modal-error a, .single-family-residence-modal-md .modal-error a, .update-property-location-modal-md .modal-error a {
-    color: #8FBF21;
+    color: #218fbf;
     transition: all 100ms ease-out; }
   .address-info-modal-md .modal-error a:hover, .single-family-residence-modal-md .modal-error a:hover, .update-property-location-modal-md .modal-error a:hover {
-    color: #4E6B0B; }
+    color: #0b4e6b; }
 
 .single-family-residence-modal-md, .update-property-location-modal-md {
   position: relative; }
   .single-family-residence-modal-md .no-padding, .update-property-location-modal-md .no-padding {
     padding-top: 0 !important; }
   .single-family-residence-modal-md .x, .update-property-location-modal-md .x {
-    background: #8FBF21 !important;
+    background: #218fbf !important;
     border-radius: 50px;
     width: 30px;
     height: 30px;
@@ -3316,7 +3228,7 @@ OR
     color: white;
     text-align: center; }
     .single-family-residence-modal-md .x:hover, .update-property-location-modal-md .x:hover {
-      background: #273803 !important;
+      background: #032738 !important;
       color: white; }
   .single-family-residence-modal-md .modal-body.header, .update-property-location-modal-md .modal-body.header {
     padding-top: 0; }
@@ -3528,9 +3440,9 @@ OR
 
 .swyfft-modal-md {
   position: relative;
-  border-top: solid 5px #8FBF21; }
+  border-top: solid 5px #218fbf; }
   .swyfft-modal-md button {
-    background-color: #8FBF21;
+    background-color: #218fbf;
     border-radius: 30px;
     border: none !important;
     color: #FAFBFC;
@@ -3574,7 +3486,7 @@ OR
     .swyfft-modal-md .optin-input-field-md:-ms-input-placeholder {
       color: #979899; }
     .swyfft-modal-md .optin-input-field-md:focus {
-      border-color: #8FBF21;
+      border-color: #218fbf;
       color: #000000 !important; }
   .swyfft-modal-md .optin-input-field-label-md {
     font-size: 12px;
@@ -3617,7 +3529,7 @@ OR
   font-size: 12px;
   margin: 20px 0; }
   .optin-modal-md .optin-footer a {
-    color: #8FBF21;
+    color: #218fbf;
     text-decoration: underline;
     cursor: pointer; }
     .optin-modal-md .optin-footer a:hover, .optin-modal-md .optin-footer a:active, .optin-modal-md .optin-footer a:focus {
@@ -3631,7 +3543,7 @@ OR
   height: 142px; }
 
 .eo-ok-btn-bs {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FAFBFC;
@@ -3890,9 +3802,9 @@ OR
     font-size: 14px; }
     .alert-cp .alert-footer-cp a {
       text-decoration: underline;
-      color: #8FBF21; }
+      color: #218fbf; }
   .alert-cp button {
-    background-color: #8FBF21;
+    background-color: #218fbf;
     border-radius: 30px;
     border: none !important;
     color: #FFFFFF !important;
@@ -3925,7 +3837,7 @@ OR
     margin: 20px; } }
 
 .primary-green-button-cp {
-  background-color: #8FBF21;
+  background-color: #218fbf;
   border-radius: 30px;
   border: none !important;
   color: #FFFFFF !important;
@@ -3936,7 +3848,7 @@ OR
   transition: all 500ms ease-out 50ms;
   cursor: pointer; }
   .primary-green-button-cp:hover {
-    background-color: #adcc66 !important;
+    background-color: #66adcc !important;
     color: #FAFBFC !important; }
   .primary-green-button-cp:disabled {
     background-color: #F2F4F5 !important;
@@ -3976,7 +3888,7 @@ OR
   transition: all 500ms ease-out 50ms; }
   .secondary-button-cp i {
     float: left;
-    color: #8FBF21;
+    color: #218fbf;
     font-size: 1.4em;
     margin-right: 8px;
     margin-top: 3px; }
@@ -3999,9 +3911,9 @@ OR
     text-transform: none;
     transition: all 500ms ease-out 50ms; }
   .secondary-button-cp:hover {
-    border-color: #8FBF21; }
+    border-color: #218fbf; }
     .secondary-button-cp:hover .secondary-button-label-cp {
-      color: #8FBF21; }
+      color: #218fbf; }
   .secondary-button-cp:disabled {
     cursor: default !important;
     border-color: #E4E4E4 !important; }
@@ -4397,8 +4309,8 @@ div.jqi {
   margin-right: -4px; }
 
 .btn-default {
-  border: 2px solid #90bf3e;
-  background: #90bf3e;
+  border: 2px solid #3e90bf;
+  background: #3e90bf;
   color: #fff; }
 
 .ds-btn-md {
@@ -4406,7 +4318,7 @@ div.jqi {
 
 .btn-default.disabled, .btn-default[disabled]:hover,
 .btn-default[disabled], btn-default[disabled]:focus {
-  background: #90bf3e;
+  background: #3e90bf;
   border-color: transparent; }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -4521,7 +4433,7 @@ div.alert-danger {
 .visual-sec input[type="submit"], .visual-sec input[type="button"] {
   width: 183px;
   height: 56px;
-  background: #90bf3e;
+  background: #3e90bf;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -4943,7 +4855,7 @@ header#header + nav#quote-menubar + section .visual-sec .caption {
   font-weight: 400; }
 
 #claims .main-section .article a, #about .main-section .article a, #faqsSection a {
-  color: #90bf3e;
+  color: #3e90bf;
   font-weight: 700; }
 
 #claims .main-section .article {
@@ -5366,9 +5278,9 @@ header#header + nav#quote-menubar + section .visual-sec .caption {
   font-size: 90%; }
 
 .dialog-form input[type="submit"]:hover, .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
-  color: #fff !important;
-  background-color: #81AD34 !important;
-  border: 2px solid #81AD34; }
+  color: #000000 !important;
+  background-color: #fff !important;
+  border: 2px solid #fff; }
 
 .dialog-form .btn.btn-quote, .modal .btn.btn-quote {
   background: none;
@@ -5460,7 +5372,7 @@ header#header + nav#quote-menubar + section .visual-sec .caption {
   margin: 19px 0 12px 0; }
 
 .payment-area .head .price strong {
-  color: #90bf3e;
+  color: #3e90bf;
   font-size: 40px;
   font-weight: 700; }
 
@@ -5595,13 +5507,13 @@ div.payment-holder label {
   width: 25px;
   height: 25px;
   background: none;
-  border: 2px solid #90bf3e; }
+  border: 2px solid #3e90bf; }
 
 .payment-area .jcf-radio.jcf-checked span {
   left: 5px;
   top: 5px;
   border-radius: 100%;
-  background: #90bf3e;
+  background: #3e90bf;
   width: 11px;
   height: 11px; }
 
@@ -5643,7 +5555,7 @@ div.payment-holder label {
   padding-left: 40px; }
 
 /*.defaultValue {
-    color: #90bf3e !important;
+    color: #3e90bf !important;
 }*/
 .payment-area .payment-options {
   overflow: hidden;
@@ -5716,7 +5628,7 @@ div.payment-holder label {
   position: absolute;
   left: -9px;
   top: -16px;
-  color: #90bf3e; }
+  color: #3e90bf; }
 
 .payment-area .save-money {
   border: 2px solid #ee6623;
@@ -6034,10 +5946,10 @@ nav#quote-menubar ul.nav-tabs {
 #quote-menubar .nav > li > a:hover,
 #quote-menubar .nav > li > a:focus {
   background-color: transparent !important;
-  color: #90bf3e !important; }
+  color: #3e90bf !important; }
 
 .highlight {
-  color: #90bf3e !important; }
+  color: #3e90bf !important; }
 
 /*Quote-CRM -Page*/
 #crm-section .payment-holder .form-group h5 {
@@ -6083,7 +5995,7 @@ select::-ms-expand {
   text-transform: capitalize !important; }
 
 #crm-section select option.active {
-  color: #90bf3e; }
+  color: #3e90bf; }
 
 /*.historyDialog .input-holder label strong {
     text-transform: uppercase;
@@ -6194,7 +6106,7 @@ ul.ui-autocomplete li a.active:before {
   content: "\2713   "; }
 
 ul.ui-autocomplete li a.active {
-  color: #90bf3e !important;
+  color: #3e90bf !important;
   padding: 15px 7px !important; }
 
 /*Edit CRM Popup*/
@@ -6253,7 +6165,7 @@ label#characterLeft {
   right: 0 !important; }
 
 .ui-datepicker .ui-datepicker-title {
-  color: #90bf3e;
+  color: #3e90bf;
   display: inline-block;
   width: 40em; }
 
@@ -6663,8 +6575,8 @@ div.mapOverlay.standard {
   fill: currentColor; }
 
 /* Overrides for tablet-size form factors (e.g., 768 < width < MAX) */
-/* ks 2/3/16 - We really need to figure out how to simplify all this. 
-    We simply can't be very agile when there are this many weird, one-off customizations. 
+/* ks 2/3/16 - We really need to figure out how to simplify all this.
+    We simply can't be very agile when there are this many weird, one-off customizations.
     It makes it virtually impossible to test everything that needs to be tested, and because it's
     all CSS, none of the testing can be automated. Worth spending some time on it.
 */
@@ -6744,8 +6656,8 @@ div.mapOverlay.standard {
     margin-left: 10%; } }
 
 /* Overrides for cell-phone-sized form factors (e.g., < 768px) */
-/* ks 2/3/16 - We really need to figure out how to simplify all this. 
-    We simply can't be very agile when there are this many weird, one-off customizations. 
+/* ks 2/3/16 - We really need to figure out how to simplify all this.
+    We simply can't be very agile when there are this many weird, one-off customizations.
     It makes it virtually impossible to test everything that needs to be tested, and because it's
     all CSS, none of the testing can be automated. Worth spending some time on it.
 */
@@ -7325,7 +7237,7 @@ div.mapOverlay.standard {
     transform: translateY(0); }
   .dialog-form::-webkit-scrollbar {
     width: 8px;
-    background-color: #90bf3e; }
+    background-color: #3e90bf; }
   .dialog-form::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
@@ -7333,7 +7245,7 @@ div.mapOverlay.standard {
   .dialog-form::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #90bf3e; } }
+    background-color: #3e90bf; } }
 
 @media screen and (max-width: 620px) {
   /* Edit CRM Popup */
@@ -7409,4 +7321,3 @@ div.mapOverlay.standard {
     flex-direction: column-reverse;
     padding-top: 2%; } }
 
-/*# sourceMappingURL=commonStyle.bundle.css.map*/
