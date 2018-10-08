@@ -42,18 +42,19 @@ class Quote(TemplateView):
     template_name = 'quote.html'
 
     def post(self, request, *args, **kwargs):
-        #pdb.set_trace()
         address_key=request.POST.get('addresskey')
         address=request.POST.get('addressname')
         quote_id=request.POST.get('quote_id')
         url='https://www.swyfft.com/api/quotes/quoteid/'+quote_id
         response=requests.get(url)
         response=response.json()
-        address=response['QuoteProperty']['FullAddress']
+        try:
+            address=response['QuoteProperty']['FullAddress']
+        except:
+            pass
         data=render_to_include(response,address,quote_id)
         elements=response['Elements']
         data['elements']=elements
-        #pdb.set_trace()
         return render(request, 'quote.html', data)
 
 class Privacy(TemplateView):
@@ -84,7 +85,7 @@ def render_to_include(response, address,quote_id ):
     deductibles = response['Elements']
     #pdb.set_trace()
     primary_element = response['PrimaryElementName']
-    replacement_price = response['ReplacementCost']
+    #replacement_price = response['ReplacementCost']
     for group in deductibles:
         if group['ElementName'] == primary_element:
             deductibles_value = group['Value']
