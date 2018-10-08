@@ -115,3 +115,13 @@ class getProperties(View):
         data=response.json()
         data=[address['FullAddress'] for address in data]
         return JsonResponse({'data':data})
+
+
+class About(TemplateView):
+    template_name='About.html'
+
+class Faq(TemplateView):
+    template_name = 'Faq.html'
+
+class Contact(TemplateView):
+    template_name = 'ContactUs.html'
