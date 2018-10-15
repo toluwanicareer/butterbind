@@ -85,7 +85,7 @@
       margin: 70px auto 110px auto; } }
 
 .hero-text-callout-bs {
-  color: #8FBF21; }
+  color: #218fbf; }
 
 .clause-bs {
   padding: 30px 15px;
@@ -291,7 +291,7 @@ This should ideally apply only at the container level, but can also touch specif
 
 .address-search-container-ly {
   width: 100vw;
-  background-color: #8FBF21;
+  background-color: #218fbf;
   padding: 50px 0; }
 
 .search-input-header-ly {
