@@ -300,44 +300,10 @@
     </section>
 </section>
                 <div class="quote-step" id="sliders" style="display:block">
-                    <div id="demo">
-
-                        <div id="sliderSection" class="quote-element-container-bs">
-
-                            <!--ko let: { $quoteVm: $data }-->
-                            <div data-bind="template:{name:'elementGroupTemplate', foreach:sortedElementGroups}">
-                               <!--  include 'includes/group_element.html'  -->
-                            </div>
-                            <!--/ko-->
+                    <div class="js-groups">
+            {% include 'includes/group_element.html' %}
                         </div>
-                        <section-- class="premium-fees-container-ly premium-fees-container-bs container" data-bind="visible: annualQuoteFees().length">
-    <div class="container premium-fees-wrapper-ly">
-        <div class="row premium-fee-margin-ly">
-            <!--div class="col-sm-12">
-                <h5 class="premium-fees-header-md premium-fees-header-ly">* additional state fees disclosure</h5>
-            </div-->
-        </div>
-        <div class="row premium-fee-margin-ly">
-            <div class="col-sm-12">
-                <!--p class="premium-fees-blurb-md premium-fees-blurb-ly">
-                    The premium price quoted above includes all required additional fees subject to your state's regulations including the <span class="premium-fees-blurb-items-md" data-bind="foreach: annualQuoteFees"><span class="premium-fees-blurb-items-instance-md" data-bind="text:displayName()"></span></span>
-                </p-->
-            </div>
-        </div>
-        <!--section class="premium-fees-breakdown-container-md premium-fees-breakdown-container-ly premium-fee-margin-ly">
-            <!--div class="row">
-                <div class="col-sm-12">
-                    <h5 class="premium-fees-breakdown-header-md">Total Annual Fees: <span id="annualFeesTotal_Value" class="fees-green-span-md" data-bind="text: formatCurrencyUS(annualFeesTotal()) "></span></h5>
-                </div>
-            </div-->
-            <!--div class="premium-fees-line-container-ly" data-bind="foreach: annualQuoteFees">
-                <div class="row premium-fee-instance-ly">
-                    <div class="col-sm-12"><span id="quoteFeeName" data-bind="text: displayName()"></span><span class="fees-green-span-md fees-instance-symbol-ly">$</span><span id="quoteFee_Value" class="fees-green-span-md" data-bind="text: value()"></span></div>
-                </div>
-            </div>
-        </section-->
-    </div>
-</section>
+            </section>
 
                     </div>
                 </div>
@@ -1177,11 +1143,26 @@
         'address':"{{address}}",
     'value':value}).done(function(data){
         //alert(data.data);
-        $('#quote_replace').html(data.data)
+        $('#quote_replace').html(data.data);
+          $('.js-groups').html(data.elements);
+          reload_slider();
     })
    }
 
-    $('#quote_replace').on('change', '#main-replacement-cost-input', function(){
+    $('#quote_replace').on('change', '#main-replacement-cost-input', handle_replacement_change);
+   $('.js-groups').on('change', '.replacement-cost-input-bs', handle_replacement_change);
+   $('.js-groups').on('click','.replacement-cost-input-bs', function(e){
+       $(this).focus();
+       console.log('im here');
+       e.stopPropagation();
+   });
+
+   $('.js-groups').on('click','.element-choice-md',function(){
+       input= $(this).find('input').first();
+       get_quote(input.attr('name'), input.val());
+   });
+
+    function handle_replacement_change(){
         value=$(this).val()
         console.log(value)
         if (value < {{min_value}}){
@@ -1194,7 +1175,5 @@
             return false
         }
         get_quote('ReplacementCost', value);
-
-
-    })
+    }
 </script>

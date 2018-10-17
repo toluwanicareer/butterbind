@@ -55,6 +55,7 @@ class Quote(TemplateView):
         data=render_to_include(response,address,quote_id)
         elements=response['Elements']
         data['elements']=elements
+        data['stuffs']=['n', 'p', 'c']
         return render(request, 'quote.html', data)
 
 class Privacy(TemplateView):
@@ -70,19 +71,25 @@ class PatchQuote(View):
         value=request.GET.get('value')
         addresskey=request.GET.get('addresskey')
         url='https://www.swyfft.com/api/quotes'
-        Elements=[{"ElementName":elementname, "Value":float(value)}]
+        try:
+            Elements=[{"ElementName":elementname, "Value":float(value)}]
+        except ValueError:
+            Elements = [{"ElementName": elementname, "Value": value}]
         payload={'ConfiguredOn':None, 'Elements':Elements, 'ManualPremiumAdjustment':0, 'QuoteId':quote_id,
                  'gaEventAction':''}
-
         response=requests.patch(url, json=payload)
         response=response.json()
         data=render_to_include(response,address, quote_id)
         string=render_to_string('includes/quote_section.html', context=data)
-        return JsonResponse({'status':200, 'data':string})
+        element_string=render_to_string('includes/group_element.html' , context=data)
+        return JsonResponse({'status':200, 'data':string, 'elements':element_string})
+
+
 
 
 def render_to_include(response, address,quote_id ):
     deductibles = response['Elements']
+    elements = response['Elements']
     #pdb.set_trace()
     primary_element = response['PrimaryElementName']
     #replacement_price = response['ReplacementCost']
@@ -102,7 +109,8 @@ def render_to_include(response, address,quote_id ):
                                           'primaryElementName': primary_element,
                                           'replacement_price': replacement_price,
                                             'min_value': min_value,
-                                            'max_value': max_value
+                                            'max_value': max_value,
+                                            'elements' : elements,
 
           }
     return data

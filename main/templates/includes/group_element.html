@@ -1,402 +1,51 @@
-<div class="container" style="display:hidden" >
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 modify-table-ly">
-                <h2 data-bind="text:name" class="modify-title-bs">Property Coverages</h2>
-                <ul class="quote-detail" data-bind="template:{name:'elementTemplate', foreach:elements, as:'element'}">
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element replacementCostTemplate" id="ReplacementCostContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="ReplacementCostBlock">
 
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Home Value</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly rotate-icon-st" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="ReplacementCost_Value">$308,980</span>
-                <button id="ReplacementCostExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#ReplacementCostInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
+<div id="demo">
 
+    <div id="sliderSection" class="quote-element-container-bs">
 
-                </button>
-                <button id="ReplacementCostExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
+        <!--ko let: { $quoteVm: $data }-->
+        <div data-bind="template:{name:'elementGroupTemplate', foreach:sortedElementGroups}">
+           <!--  include 'includes/group_element.html'  -->
+           <div class="container" data-bind="visible:elements().length > 0">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 modify-table-ly">
+                        <h2 data-bind="text:name" class="modify-title-bs"></h2>
+                        <ul class="quote-detail" data-bind="template:{name:'elementTemplate', foreach:elements, as:'element'}">
+                            {% for element in elements %}
+                                {% include 'includes/element.html' %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="ReplacementCostInfo" style="display: block;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <div class="number-element-template" data-bind="validationOptions: {insertMessages: false}">
-        <div class="input-info-container-md">
-            <div class="replacement-cost-input-container-md" data-bind="css:{'ny-input-field-rc-md': $quoteVm.quote().StateCode === 'NY'}">
-                <span class="large-text unit-bs">$</span>
-                <input type="number" id="ReplacementCostInput" class="replacement-cost-input-bs" data-bind="value:element.value, attr:{id:element.name() + 'Input'}, event:{change:element.handleValueChange}" title="">
-            </div>
-            <div class="details replacement-cost-details-ly">
-                <span data-bind="visible:$quoteVm.quote().StateCode === 'NY'" style="display: none;">
-                    To calculate a fair premium, we need an accurate estimate of the insurance value on your home. The premium in this quote of <span data-bind="currency:$quoteVm.annualPremium()">$2118</span> is based on the home value shown here of <span id="rcElementBlurbValue" data-bind="currency:$quoteVm.replacementCost()">$308,980</span>. We think that’s an appropriate value, but if you feel the value shown is inaccurate or improper, you can change that value accordingly. The policy will be issued offering Replacement Cost on Coverage A, per form HO-3 terms and conditions, including coinsurance wording. However, if you want to have a Guaranteed Replacement Cost, you can choose that option below and Swyfft will cover the full cost of replacing your home in the event of a full loss.
-                </span>
-                <span data-bind="visible:$quoteVm.quote().StateCode !== 'NY'">
-                    Swyfft will cover the full cost of replacing your home in the event of a full loss.  To calculate a fair premium, we need an accurate estimate of the value of the home.  The premium of <span data-bind="currency:$quoteVm.annualPremium()">$2118</span> was based on a home value of <span id="rcElementBlurbValue" data-bind="currency:$quoteVm.replacementCost()">$308,980</span>, but if you believe the cost to replace your home is different, you should change the home value here accordingly.
-                </span>
-            </div>
         </div>
-        <label class="errorLabelOn" data-bind="validationMessage: element.value, attr:{id:element.name() + 'Error'}" id="ReplacementCostError" style="display: none;"></label>
+        <!--/ko-->
     </div>
+    <section-- class="premium-fees-container-ly premium-fees-container-bs container" data-bind="visible: annualQuoteFees().length">
+<div class="container premium-fees-wrapper-ly">
+<div class="row premium-fee-margin-ly">
+<!--div class="col-sm-12">
+<h5 class="premium-fees-header-md premium-fees-header-ly">* additional state fees disclosure</h5>
+</div-->
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="ReplacementCostInfoAgent">This is how much it would cost to rebuild your house from scratch. This is not the same thing as how much your home would sell for: the two can be very different. The good news is Swyfft offers a guaranteed home value: so that even if it were to end up costing more than this to rebuild your home, we guarantee we'll cover it.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="ReplacementCostInfo">This is how much it would cost to rebuild your house from scratch. This is not the same thing as how much your home would sell for: the two can be very different. The good news is Swyfft offers a guaranteed home value: so that even if it were to end up costing more than this to rebuild your home, we guarantee we'll cover it.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element rangeElementTemplate" id="CoverageBLimitContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="CoverageBLimitBlock">
-
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Other Structures</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly rotate-icon-st" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="CoverageBLimit_Value">$35,000</span>
-                <button id="CoverageBLimitExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#CoverageBLimitInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
-
-
-                </button>
-                <button id="CoverageBLimitExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
-            </div>
-
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="CoverageBLimitInfo" style="display: block;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <div data-bind="disableEdit:quoteVm.disabled() || !element.isEditable(), attr:{id:element.name}" class="slider-box" id="CoverageBLimit">
-        <div class="slider-bar-ly slider ui-slider quote-horizontal-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all col-lg-12 col-md-12 col-sm-12" data-bind="attr:{id: 'slider-element'}, slider:element.value, element: element, sliderOptions:{min:element.minValue, max:element.maxValue, step:element.step, stop:element.handleValueChange, disabled: function() { return $quoteVm.isPurchased() &amp;&amp; !$quoteVm.isReprice(); }}" id="slider-element">
-            <span class="ui-slider-handle ui-corner-all ui-state-default" data-bind="attr:{id:element.id}" tabindex="0" id="48" style="left: 58.3333%;">
-                <span class="value value-text-bubble-md">
-                    <span class="number" data-bind="attr:{id: element.name() + '_Handle_Value'}, formatElementValue:element.parsedValue" id="CoverageBLimit_Handle_Value">$35,000</span>
-                </span>
-            </span>
-        </div>
-        <ul class="range-pointer range-pointer-ly">
-            <li class="left" data-bind="text:element.minValue, css:{defaultValue:element.isDefaultMin()}">0</li>
-            <li class="right" data-bind="text:element.maxValue, css:{defaultValue:element.isDefaultMax()}">60000</li>
-        </ul>
-    </div>
+<div class="row premium-fee-margin-ly">
+<div class="col-sm-12">
+<!--p class="premium-fees-blurb-md premium-fees-blurb-ly">
+The premium price quoted above includes all required additional fees subject to your state's regulations including the <span class="premium-fees-blurb-items-md" data-bind="foreach: annualQuoteFees"><span class="premium-fees-blurb-items-instance-md" data-bind="text:displayName()"></span></span>
+</p-->
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="CoverageBLimitInfoAgent">This covers other structures on your property that are not attached to the main dwelling, for example: a storage shed, barn, fence, detached garage or guest house. Also known as "Coverage B".</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="CoverageBLimitInfo">This covers other structures on your property that are not attached to the main dwelling, for example: a storage shed, barn, fence, detached garage or guest house. Also known as "Coverage B".</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element rangeElementTemplate" id="CoverageCLimitContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="CoverageCLimitBlock">
-
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Personal Property</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly rotate-icon-st" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="CoverageCLimit_Value">$200,000</span>
-                <button id="CoverageCLimitExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#CoverageCLimitInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
-
-
-                </button>
-                <button id="CoverageCLimitExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
-            </div>
-
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="CoverageCLimitInfo" style="display: block;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <div data-bind="disableEdit:quoteVm.disabled() || !element.isEditable(), attr:{id:element.name}" class="slider-box" id="CoverageCLimit">
-        <div class="slider-bar-ly slider ui-slider quote-horizontal-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all col-lg-12 col-md-12 col-sm-12" data-bind="attr:{id: 'slider-element'}, slider:element.value, element: element, sliderOptions:{min:element.minValue, max:element.maxValue, step:element.step, stop:element.handleValueChange, disabled: function() { return $quoteVm.isPurchased() &amp;&amp; !$quoteVm.isReprice(); }}" id="slider-element">
-            <span class="ui-slider-handle ui-corner-all ui-state-default" data-bind="attr:{id:element.id}" tabindex="0" id="49" style="left: 70%;">
-                <span class="value value-text-bubble-md">
-                    <span class="number" data-bind="attr:{id: element.name() + '_Handle_Value'}, formatElementValue:element.parsedValue" id="CoverageCLimit_Handle_Value">$200,000</span>
-                </span>
-            </span>
-        </div>
-        <ul class="range-pointer range-pointer-ly">
-            <li class="left" data-bind="text:element.minValue, css:{defaultValue:element.isDefaultMin()}">130000</li>
-            <li class="right" data-bind="text:element.maxValue, css:{defaultValue:element.isDefaultMax()}">230000</li>
-        </ul>
-    </div>
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="CoverageCLimitInfoAgent">This covers damage to or loss of personal property. Personal property includes household contents and other personal belongings owned by you and your family - furniture, appliances, clothing, paintings, that sort of thing. It also includes personal property that may be located outdoors, such as patio furniture or a lawn mower. (In brief, with the exception of motor vehicles, it generally counts as personal property if it's not actually attached to the house.) This covers the replacement cost of these items, not just their actual cash value. Also known as "Coverage C".</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="CoverageCLimitInfo">This covers damage to or loss of personal property. Personal property includes household contents and other personal belongings owned by you and your family - furniture, appliances, clothing, paintings, that sort of thing. It also includes personal property that may be located outdoors, such as patio furniture or a lawn mower. (In brief, with the exception of motor vehicles, it generally counts as personal property if it's not actually attached to the house.) This covers the replacement cost of these items, not just their actual cash value. Also known as "Coverage C".</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element rangeElementTemplate" id="CoverageDLimitContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="CoverageDLimitBlock">
-
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Living Expenses</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="CoverageDLimit_Value">$100,000</span>
-                <button id="CoverageDLimitExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#CoverageDLimitInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
-
-
-                </button>
-                <button id="CoverageDLimitExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
-            </div>
-
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="CoverageDLimitInfo" style="display: none;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <div data-bind="disableEdit:quoteVm.disabled() || !element.isEditable(), attr:{id:element.name}" class="slider-box" id="CoverageDLimit">
-        <div class="slider-bar-ly slider ui-slider quote-horizontal-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all col-lg-12 col-md-12 col-sm-12" data-bind="attr:{id: 'slider-element'}, slider:element.value, element: element, sliderOptions:{min:element.minValue, max:element.maxValue, step:element.step, stop:element.handleValueChange, disabled: function() { return $quoteVm.isPurchased() &amp;&amp; !$quoteVm.isReprice(); }}" id="slider-element">
-            <span class="ui-slider-handle ui-corner-all ui-state-default" data-bind="attr:{id:element.id}" tabindex="0" id="50" style="left: 0%;">
-                <span class="value value-text-bubble-md">
-                    <span class="number" data-bind="attr:{id: element.name() + '_Handle_Value'}, formatElementValue:element.parsedValue" id="CoverageDLimit_Handle_Value">$100,000</span>
-                </span>
-            </span>
-        </div>
-        <ul class="range-pointer range-pointer-ly">
-            <li class="left" data-bind="text:element.minValue, css:{defaultValue:element.isDefaultMin()}">100000</li>
-            <li class="right" data-bind="text:element.maxValue, css:{defaultValue:element.isDefaultMax()}">230000</li>
-        </ul>
-    </div>
+<!--section class="premium-fees-breakdown-container-md premium-fees-breakdown-container-ly premium-fee-margin-ly">
+<!--div class="row">
+<div class="col-sm-12">
+<h5 class="premium-fees-breakdown-header-md">Total Annual Fees: <span id="annualFeesTotal_Value" class="fees-green-span-md" data-bind="text: formatCurrencyUS(annualFeesTotal()) "></span></h5>
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="CoverageDLimitInfoAgent">This covers the expense of staying in a hotel or other location if your home is damaged and you are not able to live there while the repairs are being made. Also known as "Loss of Use", or "Coverage D"</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="CoverageDLimitInfo">This covers the expense of staying in a hotel or other location if your home is damaged and you are not able to live there while the repairs are being made. Also known as "Loss of Use", or "Coverage D"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element choiceElementTemplate" id="CoverageELimitContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="CoverageELimitBlock">
-
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Personal Liability</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="CoverageELimit_Value">$500,000</span>
-                <button id="CoverageELimitExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#CoverageELimitInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
-
-
-                </button>
-                <button id="CoverageELimitExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
-            </div>
-
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="CoverageELimitInfo" style="display: none;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <ul class="options-check choice-ul-md" data-bind="attr:{id:element.name() + '-choices-container'}, foreach:element.choices, disableEdit:quoteVm.disabled() || !element.isEditable()" id="CoverageELimit-choices-container">
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageELimit_100000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$100K</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$100K" value="100000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageELimit_200000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$200K</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$200K" value="200000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageELimit_300000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$300K</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$300K" value="300000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageELimit_400000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$400K</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$400K" value="400000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageELimit_500000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md jcf-label-active">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$500K</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-checked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$500K" value="500000">
-                </span>
-            </label>
-        </li>
-    </ul>
+</div-->
+<!--div class="premium-fees-line-container-ly" data-bind="foreach: annualQuoteFees">
+<div class="row premium-fee-instance-ly">
+<div class="col-sm-12"><span id="quoteFeeName" data-bind="text: displayName()"></span><span class="fees-green-span-md fees-instance-symbol-ly">$</span><span id="quoteFee_Value" class="fees-green-span-md" data-bind="text: value()"></span></div>
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="CoverageELimitInfoAgent">This covers you if a claim is made or a suit is filed against you for damages due to bodily injury or property damage. The insurer will provide your defense at the insurer’s expense, even if the suit is without merit or is fraudulent. Also known as "Coverage E".</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="CoverageELimitInfo">This covers you if a claim is made or a suit is filed against you for damages due to bodily injury or property damage. The insurer will provide your defense at the insurer’s expense, even if the suit is without merit or is fraudulent. Also known as "Coverage E".</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-
-    <li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element choiceElementTemplate" id="CoverageFLimitContainer">
-        <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}" id="CoverageFLimitBlock">
-
-            <div class="modify-info-ly">
-                <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">Medical Expenses</span><span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()" style="display: none;"></span><span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()" style="display: none;"><img class="element-warning-logo-ly" src="../../images/warning_element.svg" alt="warning logo"></span></div>
-                <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}" id="CoverageFLimit_Value">$5,000</span>
-                <button id="CoverageFLimitExpandBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent" data-target="#CoverageFLimitInfo">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs">
-
-
-                </button>
-                <button id="CoverageFLimitExpandInfoAgentBtn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo" style="display: none;">
-                    <img src="../../images/dropdown-icon-2.svg" class="dropdown-icon-bs rotate-icon-st" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
-                </button>
-            </div>
-
-
-
-            <div i="" class="info-area expand-element modify-li-expanded-ly" data-bind="attr:{id:name() + 'Info'}" id="CoverageFLimitInfo" style="display: none;">
-                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
-                    <div data-bind="template:template">
-    <ul class="options-check choice-ul-md" data-bind="attr:{id:element.name() + '-choices-container'}, foreach:element.choices, disableEdit:quoteVm.disabled() || !element.isEditable()" id="CoverageFLimit-choices-container">
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageFLimit_1000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$1,000</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$1,000" value="1000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageFLimit_2000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$2,000</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$2,000" value="2000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageFLimit_3000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$3,000</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$3,000" value="3000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageFLimit_4000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$4,000</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-unchecked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$4,000" value="4000">
-                </span>
-            </label>
-        </li>
-
-        <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="CoverageFLimit_5000">
-            <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())" class="choice element-choice-md jcf-label-active">
-                <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}">$5,000</strong>
-                <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md jcf-checked" data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || '/Images/Transparent.gif') + ')'}" style="background-image: url(&quot;/Images/Transparent.gif&quot;); opacity: 1;">
-                    <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" style="position: absolute; opacity: 0" name="$5,000" value="5000">
-                </span>
-            </label>
-        </li>
-    </ul>
 </div>
-                    <div class="info-area" data-bind="visible: isAgent &amp;&amp; showInfoAgents()" style="display: none;">
-                        <div class="info-area">
-                            <div class="info-block-md">
-                                <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}" id="CoverageFLimitInfoAgent">This covers medical payments to others when you are not legally liable for their injury or damages. Also known as "Coverage F".</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="info-area" data-bind="visible:!isAgent">
-                        <div class="info-block info-block-md">
-                            <p data-bind="html:info, attr:{id:element.name() + 'Info'}" id="CoverageFLimitInfo">This covers medical payments to others when you are not legally liable for their injury or damages. Also known as "Coverage F".</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-            </div>
-        </div>
-    </div>
+</section-->
+</div>
