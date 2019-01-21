@@ -78,17 +78,6 @@
 
     </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62029210-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-62029210-6');
-</script>
-
-
 </head>
 
 <body>
@@ -213,13 +202,11 @@
 <div class="btn-area quote-preview-btn-container-ly quote-preview-btn-container-bs">
     <div class="container">
         <div class="row">
-   <!--         <div class="col-xs-6 col-md-3 col-md-offset-3 button-container-left-ly">
+            <div class="col-xs-6 col-md-3 col-md-offset-3 button-container-left-ly">
                 <button id="btnModifyQuote" class="btn btn-quote quote-modify-btn button-ly" data-bind="click:showModifyElements, enable:adminCustomizeEnabled">customize</button>
-            </div> -->
-            <div class="col-xs-6 col-md-3 button-container-right-ly col-centered">
-                <button id="btnBuy" class="btn quote-buy-btn button-ly" onclick="window.open('https://www.jypinsuranceagency.com/betterbind-payment','_blank')" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button>
-
-<!--                <button id="btnBuy" class="btn quote-buy-btn button-ly" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button> -->
+            </div>
+            <div class="col-xs-6 col-md-3 button-container-right-ly">
+                <button id="btnBuy" class="btn quote-buy-btn button-ly" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button>
             </div>
             <div class="col-xs-12">
             </div>
@@ -313,44 +300,10 @@
     </section>
 </section>
                 <div class="quote-step" id="sliders" style="display:block">
-                    <div id="demo">
-
-                        <div id="sliderSection" class="quote-element-container-bs">
-
-                            <!--ko let: { $quoteVm: $data }-->
-                            <div data-bind="template:{name:'elementGroupTemplate', foreach:sortedElementGroups}">
-                               <!--  include 'includes/group_element.html'  -->
-                            </div>
-                            <!--/ko-->
+                    <div class="js-groups">
+            {% include 'includes/group_element.html' %}
                         </div>
-                        <section-- class="premium-fees-container-ly premium-fees-container-bs container" data-bind="visible: annualQuoteFees().length">
-    <div class="container premium-fees-wrapper-ly">
-        <div class="row premium-fee-margin-ly">
-            <!--div class="col-sm-12">
-                <h5 class="premium-fees-header-md premium-fees-header-ly">* additional state fees disclosure</h5>
-            </div-->
-        </div>
-        <div class="row premium-fee-margin-ly">
-            <div class="col-sm-12">
-                <!--p class="premium-fees-blurb-md premium-fees-blurb-ly">
-                    The premium price quoted above includes all required additional fees subject to your state's regulations including the <span class="premium-fees-blurb-items-md" data-bind="foreach: annualQuoteFees"><span class="premium-fees-blurb-items-instance-md" data-bind="text:displayName()"></span></span>
-                </p-->
-            </div>
-        </div>
-        <!--section class="premium-fees-breakdown-container-md premium-fees-breakdown-container-ly premium-fee-margin-ly">
-            <!--div class="row">
-                <div class="col-sm-12">
-                    <h5 class="premium-fees-breakdown-header-md">Total Annual Fees: <span id="annualFeesTotal_Value" class="fees-green-span-md" data-bind="text: formatCurrencyUS(annualFeesTotal()) "></span></h5>
-                </div>
-            </div-->
-            <!--div class="premium-fees-line-container-ly" data-bind="foreach: annualQuoteFees">
-                <div class="row premium-fee-instance-ly">
-                    <div class="col-sm-12"><span id="quoteFeeName" data-bind="text: displayName()"></span><span class="fees-green-span-md fees-instance-symbol-ly">$</span><span id="quoteFee_Value" class="fees-green-span-md" data-bind="text: value()"></span></div>
-                </div>
-            </div>
-        </section-->
-    </div>
-</section>
+            </section>
 
                     </div>
                 </div>
@@ -1095,21 +1048,46 @@
         <footer id="footer">
 
 <div class="aside container">
-    <div class="row row-centered">
-        <div class="col-xs-12 col-centered">
-                        <h2>BetterBind</h2>
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+            <h2>BetterBind</h2>
             <ul>
-                <li><a  style="color:#218fbf;" href="/">Home</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="about">About</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="faq">Faq</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="contact">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Press.html"><span id="news-overlay">In The Press</span></a></li>
+                <li><a href="privacy.html"><span id="terms-overlay">Terms</span></a></li>
+                <li><a href="privacy.html"><span id="privacy-overlay">Privacy Policy</span></a></li>
+                <li class="agent-login">
+                    <a href="Login.html">Agent Login</a>
+                </li>
+                <li class="agent-logout">
+                    <a href="#">Agent Logout</a>
+                </li>
             </ul>
         </div>
+        <div class="col-xs-3">
+            <h2>Contact</h2>
+            <ul>
+                <li>
+                    <a href="tel:1.201.887.0962">1.201.887.0962</a>
+                </li>
+                <li>
+                    <a href="ContactUs.html" id="contactUsLink">Contact Us</a>
+                </li>
+                <li>
+                    <a href="mailto:betterbind@gmail.com">betterbind@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-xs-3"></div>
     </div>
 </div>
 <div class="container">
     <div class="row row-centered">
         <div class="col-xs-12 col-centered">
-          <h6>Copyright &copy; BetterBind, LLC. &nbsp; All rights reserved.</h6>
-          <h6>Policy Issued by <a style="color:#218fbf;" href="https://www.jypinsuranceagency.com/">JYP Insurance Agency</a></h6>
-          <h6>Powered by <a style="color:#218fbf;" href="https://www.8pubs.com/">8PUBS</a></h6>
+            <p> &copy; 2018 BetterBind&reg; , LLC. All rights reserved.</p>
         </div>
     </div>
 </div>
@@ -1165,11 +1143,26 @@
         'address':"{{address}}",
     'value':value}).done(function(data){
         //alert(data.data);
-        $('#quote_replace').html(data.data)
+        $('#quote_replace').html(data.data);
+          $('.js-groups').html(data.elements);
+          reload_slider();
     })
    }
 
-    $('#quote_replace').on('change', '#main-replacement-cost-input', function(){
+    $('#quote_replace').on('change', '#main-replacement-cost-input', handle_replacement_change);
+   $('.js-groups').on('change', '.replacement-cost-input-bs', handle_replacement_change);
+   $('.js-groups').on('click','.replacement-cost-input-bs', function(e){
+       $(this).focus();
+       console.log('im here');
+       e.stopPropagation();
+   });
+
+   $('.js-groups').on('click','.element-choice-md',function(){
+       input= $(this).find('input').first();
+       get_quote(input.attr('name'), input.val());
+   });
+
+    function handle_replacement_change(){
         value=$(this).val()
         console.log(value)
         if (value < {{min_value}}){
@@ -1182,7 +1175,5 @@
             return false
         }
         get_quote('ReplacementCost', value);
-
-
-    })
+    }
 </script>

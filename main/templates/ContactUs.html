@@ -20,16 +20,32 @@
     <main id="main" role="main">
         <section id="contactForm" class="payment-area">
             <div class="container">
-                <div class="row">
+                <div class="row row-centered">
                     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
                         <form class="form contact-form-ly" data-bind="disableEdit:isBusy">
     <aside>
         <p class="intro-text-bs">
             Just fill out these fields or call and be directed to one
-            of our customer service representatives at <b>1.201.887.0962</b>
+            of our customer service representatives at <a style="color:#000000;"href="tel:1.877.201.2019">1.877.201.2019</a>
         </p>
     </aside>
+ 
+               
+           <input type="submit" class="btn btn-default get-quote-btn-bs get-quote-btn-ly" onclick="window.open('https://www.jypinsuranceagency.com/contact-betterbind','_blank')" value="Contact BetterBind" id="quotebutton" >
+ 
+<!--
+<div style="display:block; overflow:hidden; width: relative; height:700px;">
+<iframe src="https://www.jypinsuranceagency.com/contact-betterbind" style="margin-top: -80%; position: relative; width: 100%; height: 1600px;" frameborder="0" scrolling="yes"> </iframe>
 
+
+ 
+<div class="wrapper">
+<div class="iframe-container">
+    <iframe src="https://www.jypinsuranceagency.com/contact-betterbind" frameborder="0"></iframe>
+  </div>
+-->
+
+<!--
     <div class="field-container-ly row">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <label class="input-label-bs" for="contactType">
@@ -39,11 +55,11 @@
                     <option value="signupAgent">New Agent Signup</option>
                     <option value="changeMortgagee"> Change Mortgage or Loan Information</option>
                     <!-- TODO add Billing Information controls and display when this option is selected.-->
-                    <option value="changeBilling"> Change Billing Information</option>
+ <!--                   <option value="changeBilling"> Change Billing Information</option>
                     <!-- TODO add EffectiveDate dateinput and display when this option is selected.-->
-                    <option value="changeEffectiveDate"> Change Effective Date</option>
+ <!--                   <option value="changeEffectiveDate"> Change Effective Date</option>
                     <!-- TODO add Address input fields and display when this option is selected.-->
-                    <option value="changeInsuredAddress">Change Insured Address</option>
+ <!--                   <option value="changeInsuredAddress">Change Insured Address</option>
                     <option value="changeCancelPolicy">Cancel Policy</option>
                     <option value="validatePolicy">Policy Validation</option>
                     <option value="other">Other</option>
@@ -131,48 +147,53 @@
             <input type="button" value="Submit" class="contact-form-btn-bs contact-form-btn-st" id="contact-submit-button" data-bind="click:sendEmail">
         </div>
     </div>
-</form>
+</form> -->
 
                     </div>
                 </div>
             </div>
             <div class="location-container-ly location-container-bs container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="location-main-header-bs">OUR OFFICE</h2>
+                <div class="row row-centered">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered">
+                        <h2 class="location-main-header-bs">New Jersey</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
+                <div class="row row-centered">
+                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 col-centered" style="vertical-align: top;">
                         <img src="/static/images/jersey-office.jpg" class="map-image-md"/>
                     </div>
 
-                    <div class="col-xs-7 col-sm-8 col-md-3 col-lg-3 location-instance-container-bs">
-                        <h3 class="location-instance-header-bs">New Jersey</h3>
-                        <p>375 Sylvan Ave</p>
-                        <p>Suite 39</p>
-                        <p>Englewood Cliffs, NJ 07632</p>
-                        <p class="location-instance-phone-bs">201.887.0962</p>
-                    </div>
-<!--                     <div class="clearfix visible-xs visible-sm element-spacer-ly"></div>
-                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
-                        <img src="/static/images/redmond-office.jpg" class="map-image-md"/>
+                    <div class="col-xs-7 col-sm-8 col-md-3 col-lg-3 location-instance-container-bs col-centered">
+                        <h3 align="left" class="location-instance-header-bs">BetterBind LLC</h3>
+                        <p align="left">375 Sylvan Ave</p>
+                        <p align="left">Suite 39</p>
+                        <p align="left">Englewood Cliffs, NJ 07632</p>
+                        <p align="left">Hello@Betterbind.com</p>
+                        <p align="left" class="location-instance-phone-bs"> <a style="color:#000000;"href="tel:1.877.201.2019">1.877.201.2019</a></p>
                     </div>
 
-                  <div class="col-xs-7 col-sm-8 col-md-3 col-lg-3 location-instance-container-bs">
-                        <h3 class="location-instance-header-bs">Seattle</h3>
-                        <p>8201 164TH AVE NE</p>
-                        <p>SUITE 320</p>
-                        <p>REDMOND, WA 98052</p>
-                        <p class="location-instance-phone-bs">855.479.9338</p>
-                    </div>
--->
                 </div>
             </div>
+
+
+            
+            
         </section>
     </main>
 </div>
 
+
+        <div class="address-search-container-ly" style="background-color:#218fbf;" >
+            <div class="container" >
+                <div class="row">            
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    
+   
+                    
+            <div class="row form-quote landing-form form-quote-md row-centered" style="margin-top: 50px; margin-bottom: 50px; LINE-HEIGHT:30px;">        
+           <input type="button" class="btn btn-default get-quote-btn-bs get-quote-btn-ly" style="background-color:#000000;"onclick="location.href='https://www.betterbind.com/';" value="GET A QUOTE NOW!" id="btnSubmit" data-bind="click:submit, disable:isBusy()">
+        </div>
+       
 
         </section>
        {% include 'includes/footer.html' %}

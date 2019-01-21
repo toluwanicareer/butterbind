@@ -48,7 +48,7 @@
  some css normalization can go here also, but we already have a normalize sheet higher in the chain*/
 .hero-container-bs {
   background-color: #000000 !important;
-  width: 100%;
+  width: auto;
   height: auto;
   font-family: "Lato", sans-serif;
   font-weight: 900; }
@@ -162,7 +162,7 @@
       font-size: 16px; } }
   .about-list-bs li:before {
     content: "\2022";
-    color: #8FBF21;
+    color: #218fbf;
     display: inline-block;
     width: 40px;
     margin-left: -45px; }

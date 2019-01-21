@@ -1,25 +1,49 @@
  <footer id="footer">
 
 <div class="aside container">
-    <div class="row row-centered">
-        <div class="col-xs-12 col-centered">
-                        <h2>BetterBind</h2>
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+            <h2>Betterbind</h2>
             <ul>
-                <li><a  style="color:#218fbf;" href="/">Home</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="about">About</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="faq">Faq</a> &nbsp; | &nbsp; <a  style="color:#218fbf;" href="contact">Contact</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Press.html"><span id="news-overlay">In The Press</span></a></li>
+                <li><a href="privacy.html"><span id="terms-overlay">Terms</span></a></li>
+                <li><a href="privacy.html"><span id="privacy-overlay">Privacy Policy</span></a></li>
+                <li class="agent-login">
+                    <a href="Login.html">Agent Login</a>
+                </li>
+                <li class="agent-logout">
+                    <a href="#">Agent Logout</a>
+                </li>
             </ul>
         </div>
+        <div class="col-xs-3">
+            <h2>Contact</h2>
+            <ul>
+                <li>
+                    <a href="tel:1.201.887.0962">1.201.887.0962</a>
+                </li>
+                <li>
+                    <a href="ContactUs.html" id="contactUsLink">Contact Us</a>
+                </li>
+                <li>
+                    <a href="mailto:Betterbind@gmail.com">Betterbind@gmail.com</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="col-xs-3"></div>
     </div>
 </div>
 <div class="container">
     <div class="row row-centered">
         <div class="col-xs-12 col-centered">
-          <h6>Copyright &copy; BetterBind, LLC. &nbsp; All rights reserved.</h6>
-          <h6>Policy Issued by <a style="color:#218fbf;" href="https://www.jypinsuranceagency.com/">JYP Insurance Agency</a></h6>
-          <h6>Powered by <a style="color:#218fbf;" href="https://www.8pubs.com/">8PUBS</a></h6>
+            <p>2018 BetterBind, LLC. All rights reserved.</p>
         </div>
     </div>
 </div>
-
 
         </footer>
     </div>
