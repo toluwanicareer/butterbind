@@ -142,6 +142,3 @@ function reload_slider(){
 }
 
 reload_slider();
-$('#btnBuy').click(function(){
-    $('#confirmationModal').modal('show');
-});

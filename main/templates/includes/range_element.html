@@ -2,7 +2,7 @@
     <div class="slider-bar-ly slider ui-slider quote-horizontal-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all col-lg-12 col-md-12 col-sm-12 slider-element" min="{{element.MinValue}}" element-name="{{element.ElementName}}" max="{{element.MaxValue}}" step="{{element.Increment}}" value="{{element.Value}}"  slider="{{element.Value}}" sliderOptions="{min:{{element.MinValue}}, max:{{element.MaxValue}}, step:{{element.Increment}}, value:{{element.Value}}" data-bind="attr:{id: 'slider-element'}, slider:{{element.Value}}, element: element, sliderOptions:{min:{{element.MinValue}}, max:{{element.MaxValue}}, step:element.step, stop:element.handleValueChange, disabled: function() { return $quoteVm.isPurchased() && !$quoteVm.isReprice(); }}">
         <span class="ui-slider-handle ui-corner-all" data-bind="attr:{id:element.id}">
             <span class="value value-text-bubble-md">
-                <span class="number" id="{{element.ElementName}}"  data-bind="attr:{id: element.name() + '_Handle_Value'}, formatElementValue:element.parsedValue">${{element.Value}}</span>
+                <span class="number" id="{{element.ElementName}}" data-bind="attr:{id: element.name() + '_Handle_Value'}, formatElementValue:element.parsedValue">${{element.Value}}</span>
             </span>
         </span>
     </div>

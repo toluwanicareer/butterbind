@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="copyright" content="Copyright Betterbind 2018" />
+    <meta name="description" content="Betterbind instant homeowners insurance." />
+    <meta name="keywords" content="Betterbind, insurance, homeowners insurance" />
+
+    <title>BetterBind</title>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900black" rel="stylesheet"/>
+
+<link href="static/common.css" rel="stylesheet"/>
+
+<link href="/static/commonStyle.css" type="text/css" rel="stylesheet" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="/static/main.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.production.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.production.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.1/react-bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/MutationObserver.js/0.3.2/mutationobserver.min.js"></script>
+
+    <link href="/static/home.css?cb=1C8405C15799C8831C77E8204BF5AB93" type="text/css" rel="stylesheet" />
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/singleSShieldBetterBind-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/singleSShieldBetterBind-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/singleSShieldBetterBind-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/singleSShieldBetterBind-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/singleSShieldBetterBind-144x144.png" />
+
+    <link rel="icon" type="image/png" href="/static//static//static/images/favicon.png" />
+    <!--[if IE]>
+        <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <![endif]-->
+
+
+
+<!-- Template for displaying error messages -->
+<script id="errorTemplate" type="text/html">
+    <label class="errorLabelOn" data-bind="validationMessage: field"></label>
+</script>
+
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/singleSShieldBetterBind-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/singleSShieldBetterBind-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/singleSShieldBetterBind-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/singleSShieldBetterBind-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/singleSShieldBetterBind-144x144.png" />
+
+    <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+    <!--[if IE]>
+        <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <![endif]-->
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).on("orientationchange", function () {
+                var userAgent = navigator.userAgent.toLowerCase(); // detect the user agent
+                var iosDevices = userAgent.match(/(iphone|ipod|ipad)/) ? true : false; //check if the devices are ios devices
+                var widthOfBrowser = $(window).width();
+                var heightOfBrowser = $(window).height();
+                if (iosDevices) {
+                    var isLandscapeMode = window.orientation;
+                    if (isLandscapeMode === 90) {
+                        $('.swyfftLayout').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('height', heightOfBrowser);
+                    }
+                    else {
+                        $('#termsConditionsOverlay').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('height', heightOfBrowser);
+                        $('.jspContainer').css('height', heightOfBrowser);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-P2FXL2"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        '../www.googletagmanager.com/gtm5445.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P2FXL2');
+        </script>
+        <!-- End Google Tag Manager -->
+
+    <div id="loadingModal">
+    <div class="modal fade" role="dialog" data-bind="modal:showModal, backdrop:'static', keyboard:false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="/static/images/ajax-loader.gif"/>
+                    <span data-bind="text:message" class="loading-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="swyfftLayoutWrapper" class="swyfftLayout">
+       {% include 'includes/full_nav.html' %}

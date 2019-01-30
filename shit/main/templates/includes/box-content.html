@@ -1,0 +1,13 @@
+<ul class="options-check choice-ul-md" data-bind="attr:{id:element.name() + '-choices-container'}, foreach:element.choices, disableEdit:quoteVm.disabled() || !element.isEditable()">
+    {% for choice in element.Choices %}
+    <li data-bind="attr:{id:element.name() + '_' + value()}" class="choice-li-md choice-li-bs" id="{{element.ElementName}}_{{choice.Value}}">
+        <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())"  class="choice element-choice-md">
+            <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}" style="{% if choice.Value == element.Value %}color:#fff; {% endif %}">{{choice.Name}}</strong>
+            <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md {% if choice.Value == element.Value %}jcf-checked {% endif %}"
+                  data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || 'Images/Transparent.gif') + ')'}">
+                <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" name="{{element.ElementName}}" value="{{choice.Value}}" style="position: absolute; opacity: 0" />
+            </span>
+        </label>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+<ul class="options-check boolean-options-ly" id={{element.ElementName}} data-bind="attr:{id:element.name}, disableEdit:quoteVm.disabled() || !element.isEditable()">
+        <li>
+            <label class="modify-btn-label-md element-choice-md" data-bind="css:{'jcf-label-active':element.parsedValue()==='true'}, click:element.setValue('true'), attr:{id:element.name() + 'Yes'}" id="{{element.ElementName}}Yes">
+                <strong class="quoteChoiceText quote-choice-text-bs boolean-element-text-true-bs">YES</strong>
+                <span class="jcf-radio boolean-modify-btn-md" data-bind="css:{'jcf-checked':element.parsedValue() === 'true', 'jcf-unchecked':element.parsedValue() !== 'true'}, attr:{id:element.name() + 'Span' + 'Yes'}">
+                    <input name="{{element.ElementName}}" id="{{element.ElementName}}_true" data-bind="attr:{name:element.name, id:element.name() + '_true'}, checked:value" type="radio" value="true" style="position: absolute; opacity: 0" />
+                    <span></span>
+                </span>
+            </label>
+        </li>
+        <li>
+            <label class="modify-btn-label-md element-choice-md" data-bind="css:{'jcf-label-active':element.parsedValue() !=='true'}, click:element.setValue('false'), attr:{id:element.name() + 'No'}" id="{{element.ElementName}}No">
+
+                <strong class="quoteChoiceText quote-choice-text-bs boolean-element-text-false-bs">NO</strong>
+                <span class="jcf-radio boolean-modify-btn-md" data-bind="css:{'jcf-checked':element.parsedValue() !== 'true', 'jcf-unchecked':element.parsedValue() === 'true'}, attr:{id:element.name() + 'Span' + 'No'}" id="{{element.ElementName}}SpanNo">
+                    <input  name="{{element.ElementName}}" id="{{element.ElementName}}_true" data-bind="attr:{name:element.name, id:element.name() + '_true'}, checked:value" type="radio" value="false" style="position: absolute; opacity: 0" />
+                    <span></span>
+                </span>
+            </label>
+        </li>
+    </ul>
