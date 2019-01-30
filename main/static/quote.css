@@ -4717,3 +4717,21 @@ div#swyfftWarningAlert {
   border: 1px solid #2fa1d2; }
 
 /*# sourceMappingURL=quote.bundle.css.map*/
+
+.modify-li-expanded-content-ly .choice-li-md {
+    -webkit-box-flex: 0 0 calc(20% - 10px);
+    -moz-box-flex: 0 0 calc(20% - 10px);
+    -webkit-flex: 0 0 calc(20% - 10px);
+    -ms-flex: 0 0 calc(20% - 10px);
+    flex: 0 0 calc(20% - 10px);
+}
+
+.modify-li-expanded-content-ly .choice-li-md {
+    -webkit-box-flex: 0 0 calc(33% - 10px);
+    -moz-box-flex: 0 0 calc(33% - 10px);
+    -webkit-flex: 0 0 calc(33% - 10px);
+    -ms-flex: 0 0 calc(33% - 10px);
+    flex: 0 0 calc(33% - 10px);
+    margin-left: 10px;
+    margin-top: 10px !important;
+}

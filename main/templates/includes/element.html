@@ -3,7 +3,7 @@
 
         <div class="modify-info-ly">
             <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">{{element.ElementDisplay}}</span><!--span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()"></span><!--span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()"><img class="element-warning-logo-ly" src="/static/images/warning_element.svg" alt="warning logo" /></span--></div>
-            <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}">{% if not element.ElementType == 'b' %}{% if element.ElementType in stuffs  %}{% endif %}     {{element.Value}} {% else %} {% if element.Value == 'true' %} Yes {% else %} No {% endif %}{% endif  %}</span>
+            <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}">{% if not element.Value %}Nothing Selected {% else %}{% if not element.ElementType == 'b' %}{% if element.ElementType in stuffs  %}{% endif %}     {{element.Value}} {% else %} {% if element.Value == 'true' %} Yes {% else %} No {% endif %}{% endif  %}{% endif %}</span>
             <button id="expand-element-btn" class="btn-info modify-li-edit-icon" data-target="#{{element.ElementName}}Info" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent">
                 <img src="/static/images/dropdown-icon-2.svg" class="dropdown-icon-bs">
 

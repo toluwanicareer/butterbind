@@ -1,0 +1,1539 @@
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+/*Base styles go here, such as global font family, font size, margins, padding, etc. 
+ some css normalization can go here also, but we already have a normalize sheet higher in the chain*/
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.purchase-overlay-btn-bs {
+  background-color: #8FBF21;
+  border-radius: 30px;
+  border: none !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 13px;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 15px 0;
+  margin-bottom: 15px;
+  width: 100%; }
+
+.overlay-header-bs {
+  color: #000000 !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  margin-top: 30px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .overlay-header-bs {
+      font-size: 24px;
+      margin-top: 70px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .overlay-header-bs {
+      font-size: 24px;
+      margin-top: 70px; } }
+  @media all and (min-width: 1200px) {
+    .overlay-header-bs {
+      font-size: 24px;
+      margin-top: 70px; } }
+
+.payment-choice-container-ly .overlay-header-bs {
+  margin-top: 0; }
+
+.header-cart-tag-bs {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  line-height: 1.3;
+  margin-bottom: 10px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .header-cart-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .header-cart-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .header-cart-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .header-cart-tag-bs {
+      line-height: 55px;
+      margin-bottom: 0px; } }
+
+.header-tag-bs {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  line-height: 1.5;
+  font-weight: 400;
+  display: inline-block; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .header-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .header-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .header-tag-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  .header-tag-bs span {
+    font-weight: 800; }
+
+.header-cost-title-bs {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  margin: 0; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .header-cost-title-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .header-cost-title-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .header-cost-title-bs {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+
+.header-cost-price-bs {
+  margin: 0;
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  color: #000000 !important;
+  font-weight: 900;
+  margin-top: 10px; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.header-address-bs {
+  display: inline;
+  float: left;
+  padding: 18px 0 0 15px;
+  color: #FFFFFF !important;
+  font-size: 12px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .header-address-bs {
+      font-size: 16px;
+      padding: 15px 0 0 18px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .header-address-bs {
+      font-size: 16px;
+      padding: 15px 0 0 18px; } }
+  @media all and (min-width: 1200px) {
+    .header-address-bs {
+      font-size: 16px;
+      padding: 15px 0 0 18px; } }
+
+.hub-close-icon-bs {
+  z-index: 100;
+  text-align: center;
+  line-height: 27px;
+  padding: 0 !important; }
+
+.confirm-close-icon-bs {
+  background: #8FBF21 !important;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  padding-bottom: 3px !important;
+  transition: all 500ms ease-out 50ms;
+  font-size: 22px !important;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .confirm-close-icon-bs:hover {
+    background: #273803 !important;
+    color: white; }
+
+.hub-modal-check-bs {
+  color: #8FBF21;
+  padding-top: 10px; }
+
+.modal-success-purchase-span-bs {
+  font-weight: 800; }
+
+.modal-broker-line-bs {
+  color: #8FBF21;
+  text-decoration: underline; }
+
+.modal-success-purchase-blurb-bs {
+  text-align: left;
+  line-height: 1.3; }
+
+.fade.in.modal {
+  overflow: scroll !important; }
+
+/*This sheet is for layout-specific styling (ie. the way our elements stack and how that changes depending on screen resolution/width). 
+This means that many of our layout-changing media queries will go here. 
+This should ideally apply only at the container level, but can also touch specific modules if relevant*/
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with -ly (stands for "layout"), 
+ in order to easily track its associated stylesheet. eg. header-container-ly, header-ly */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.headspace-ly {
+  margin: 0;
+  height: 65px; }
+
+.full-overlay-ly {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -100;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF !important;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease, z-index 1s step-end;
+  -moz-transition: opacity 1s ease, z-index 1s step-end;
+  -ms-transition: opacity 1s ease, z-index 1s step-end;
+  -o-transition: opacity 1s ease, z-index 1s step-end;
+  transition: opacity 1s ease, z-index 1s step-end; }
+
+.header-logo-container-ly {
+  padding: 0; }
+  .header-logo-container-ly img {
+    width: 100%;
+    height: auto; }
+
+.price-instance-container-ly {
+  text-align: right; }
+
+.header-row-ly {
+  padding: 15px 0 20px 0;
+  border-bottom: 1px solid #F2F4F5; }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .hub-header-margin-ly {
+    margin-top: 35px; } }
+
+.reset-button-ly {
+  margin: 0 0 10px 0; }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .reset-button-ly {
+      margin: 35px 0 0 0; } }
+  @media all and (min-width: 1200px) {
+    .reset-button-ly {
+      margin: 35px 0 0 0; } }
+
+.checkbox-container-ly {
+  padding-right: 0;
+  padding-left: 0; }
+
+.modal-close-button-ly {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  width: 30px;
+  background-image: url("../../images/close-white-sm.png");
+  height: 30px;
+  background-repeat: no-repeat;
+  background-color: #8FBF21;
+  border-radius: 50%;
+  background-position: 50%;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer; }
+  .modal-close-button-ly:hover {
+    background-color: #4E6B0B; }
+
+.ribbon-container-ly {
+  text-align: center; }
+
+.ribbon-blurb-ly {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px; }
+  @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+    .ribbon-blurb-ly {
+      margin-top: 15px; } }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .ribbon-blurb-ly {
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .ribbon-blurb-ly {
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .ribbon-blurb-ly {
+      font-size: 16px; } }
+
+.add-info-top-container-ly {
+  margin-top: 65px;
+  padding: 0 10px; }
+
+.add-info-top-container-agent-ly {
+  margin-top: 125px; }
+
+.add-info-agent-hide-ly {
+  display: none; }
+
+.echeck-checklabel-container-ly > div > div {
+  /*width: 40%;*/ }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .echeck-checklabel-container-ly > div > div {
+      width: 40%; } }
+
+.payment-choice-container-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /*defined in _layout.scss*/
+  -webkit-box-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%; }
+
+.agent-header-ly {
+  margin-top: 20px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .agent-header-ly {
+      margin-top: 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .agent-header-ly {
+      margin-top: 0; } }
+  @media all and (min-width: 1200px) {
+    .agent-header-ly {
+      margin-top: 0; } }
+
+.top-payment-header-ly {
+  display: inline;
+  margin-right: 10px;
+  color: #000000 !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-weight: 800; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .top-payment-header-ly {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .top-payment-header-ly {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+  @media all and (min-width: 1200px) {
+    .top-payment-header-ly {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+
+.checkbox-label-ly {
+  margin-bottom: 5px; }
+
+#newpurchase.checkbox-label-ly, #newmortgage.checkbox-label-ly {
+  padding-left: 15px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    #newpurchase.checkbox-label-ly, #newmortgage.checkbox-label-ly {
+      padding-left: 30px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    #newpurchase.checkbox-label-ly, #newmortgage.checkbox-label-ly {
+      padding-left: 30px; } }
+  @media all and (min-width: 1200px) {
+    #newpurchase.checkbox-label-ly, #newmortgage.checkbox-label-ly {
+      padding-left: 30px; } }
+
+.secondary-label-ly {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.hub-contact-btn-container-ly {
+  display: block;
+  position: fixed;
+  z-index: 102;
+  top: 50px;
+  right: 0;
+  background-color: #000000 !important;
+  width: 100%;
+  padding: 0px 0 15px 0; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-contact-btn-container-ly {
+      top: 10px;
+      right: 16vw;
+      background-color: unset !important;
+      width: auto;
+      padding: 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-contact-btn-container-ly {
+      top: 10px;
+      right: 13.5vw;
+      background-color: unset !important;
+      width: auto;
+      padding: 0; } }
+  @media all and (min-width: 1200px) {
+    .hub-contact-btn-container-ly {
+      top: 10px;
+      right: 10vw;
+      background-color: unset !important;
+      width: auto;
+      padding: 0; } }
+  @media all and (min-width: 1400px) {
+    .hub-contact-btn-container-ly {
+      top: 10px;
+      right: 16vw;
+      background-color: unset !important;
+      width: auto;
+      padding: 0; } }
+  @media all and (min-width: 1600px) {
+    .hub-contact-btn-container-ly {
+      top: 10px;
+      right: 22.5vw;
+      background-color: unset !important;
+      width: auto;
+      padding: 0; } }
+
+.modal-success-text-container-ly {
+  padding-top: 50px;
+  margin: 0 auto; }
+
+/*This styles specific modules within the layout components of our pages. 
+ This should contain most of our styling, excluding state-specific styles*/
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with _md (stands for "module"), 
+ in order to easily track its associated stylesheet. eg. nav-li1-md */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.annual-price-md {
+  font-size: 20px;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  margin: 0 0 2px 0;
+  color: #000000 !important;
+  letter-spacing: 0.4px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .annual-price-md {
+      font-size: 32px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .annual-price-md {
+      font-size: 32px; } }
+  @media all and (min-width: 1200px) {
+    .annual-price-md {
+      font-size: 32px; } }
+
+.monthly-price-md {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  margin: 0 0 5px 0;
+  color: #000000 !important;
+  letter-spacing: 0.4px;
+  margin: 0; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .monthly-price-md {
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .monthly-price-md {
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .monthly-price-md {
+      font-size: 16px; } }
+
+.annual-cost-border-md {
+  border-right: 1px solid #E8EAEB; }
+
+.annual-cost-border-md.annual-cost-escrow-md {
+  border: none;
+  text-align: right; }
+
+.additional-ins-btn-md {
+  background-color: #FAFBFC;
+  border-radius: 30px;
+  border: none !important;
+  color: #000000 !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 13px;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer;
+  border: 1px solid #979899 !important;
+  width: 100%;
+  padding: 15px 0; }
+
+.buy-policy-btn-md {
+  background-color: #8FBF21;
+  border-radius: 30px;
+  border: none !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 13px;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 5px; }
+
+.payment-form-container-md {
+  background-color: #FAFBFC;
+  padding: 40px 0;
+  max-width: 100%; }
+
+.input-field-md {
+  background-color: #E8EAEB;
+  border: 0;
+  height: 55px;
+  padding: 0 4px 0 8px !important;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 11px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+  color: #000000 !important;
+  font-family: "Lato", sans-serif; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  .input-field-md a {
+    color: #8FBF21;
+    transition: all 100ms ease-out; }
+  .input-field-md a:hover {
+    color: #4E6B0B; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .input-field-md {
+      padding: 0 0 0 10px !important; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .input-field-md {
+      padding: 0 0 0 15px !important; } }
+  @media all and (min-width: 1200px) {
+    .input-field-md {
+      padding: 0 0 0 15px !important; } }
+  .input-field-md::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .input-field-md::-moz-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .input-field-md:-ms-input-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .input-field-md:-moz-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+
+.reset-button-md {
+  border-radius: 50px;
+  border: 0;
+  width: 30px;
+  padding-bottom: 3px;
+  transition: all .1s ease-out; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .reset-button-md {
+      width: 36px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .reset-button-md {
+      width: 36px; } }
+  @media all and (min-width: 1200px) {
+    .reset-button-md {
+      width: 36px; } }
+
+.input-field-label-md {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  font-weight: 400; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+
+.checkbox-label-md {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  font-weight: 400; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .checkbox-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .checkbox-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .checkbox-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+
+#chk-acct.checkbox-label-md, #sav-acct.checkbox-label-md {
+  margin-left: 45px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    #chk-acct.checkbox-label-md, #sav-acct.checkbox-label-md {
+      margin-left: 40px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    #chk-acct.checkbox-label-md, #sav-acct.checkbox-label-md {
+      margin-left: 20px; } }
+  @media all and (min-width: 1200px) {
+    #chk-acct.checkbox-label-md, #sav-acct.checkbox-label-md {
+      margin-left: 20px; } }
+
+.section-header-md {
+  color: #000000 !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-weight: 800; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+  @media all and (min-width: 1200px) {
+    .section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px;
+      line-height: 1; } }
+
+.agent-options-container-md {
+  margin-bottom: 40px; }
+  .agent-options-container-md a {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 11px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    letter-spacing: 0.4px;
+    color: #8FBF21; }
+    @media all and (min-width: 768px) and (max-width: 992px) {
+      .agent-options-container-md a {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 992px) and (max-width: 1200px) {
+      .agent-options-container-md a {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 1200px) {
+      .agent-options-container-md a {
+        font-weight: 400;
+        font-size: 16px; } }
+    .agent-options-container-md a a {
+      color: #8FBF21;
+      transition: all 100ms ease-out; }
+    .agent-options-container-md a a:hover {
+      color: #4E6B0B; }
+    .agent-options-container-md a:hover {
+      color: #4E6B0B; }
+
+.success-modal-container-md {
+  background-color: white;
+  width: 100% !important;
+  border-top: 5px solid #8FBF21;
+  height: 100vh;
+  box-shadow: 0px 0px 5px 2px #e2e2e2;
+  padding-top: 30%; }
+  @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+    .success-modal-container-md {
+      padding-top: 12%; } }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .success-modal-container-md {
+      padding-top: 20%; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .success-modal-container-md {
+      padding-top: 10%; } }
+  @media all and (min-width: 1200px) {
+    .success-modal-container-md {
+      padding-top: 10%; } }
+
+.post-purchase-header-md {
+  color: #000000 !important;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 35px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .post-purchase-header-md {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .post-purchase-header-md {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .post-purchase-header-md {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+
+.post-purchase-section-header-md {
+  color: #8FBF21;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .post-purchase-section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .post-purchase-section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .post-purchase-section-header-md {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+
+.post-purchase-section-p-md {
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 11px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+  color: #979899;
+  margin-bottom: 25px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .post-purchase-section-p-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .post-purchase-section-p-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .post-purchase-section-p-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  .post-purchase-section-p-md a {
+    color: #8FBF21;
+    transition: all 100ms ease-out; }
+  .post-purchase-section-p-md a:hover {
+    color: #4E6B0B; }
+
+#e-sig-ai.input-field-md {
+  background-color: #FFFFFF !important;
+  border: 1px solid #8FBF21;
+  letter-spacing: 3px;
+  font-style: normal; }
+  #e-sig-ai.input-field-md::-webkit-input-placeholder {
+    color: #8FBF21;
+    font-style: normal; }
+  #e-sig-ai.input-field-md::-moz-placeholder {
+    color: #8FBF21;
+    font-style: normal; }
+  #e-sig-ai.input-field-md:-ms-input-placeholder {
+    color: #8FBF21;
+    font-style: normal; }
+  #e-sig-ai.input-field-md:-moz-placeholder {
+    color: #8FBF21;
+    font-style: normal; }
+
+/*checkbox styling*/
+/*duration calculations don't work without the variable below*/
+input[type=checkbox] {
+  display: none; }
+
+.checkbox-field-md {
+  height: 55px;
+  width: 55px;
+  min-width: 55px;
+  background-color: #E8EAEB;
+  border: 0;
+  border-radius: 0px;
+  position: relative;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: border-color ease 0.1s;
+  -o-transition: border-color ease 0.1s;
+  -webkit-transition: border-color ease 0.1s;
+  transition: border-color ease 0.1s;
+  cursor: pointer;
+  /*controls position of bottom portion of checkmark*/
+  /*controls position of top portion of checkmark*/ }
+  .checkbox-field-md::before, .checkbox-field-md::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: 11px;
+    background-color: #8FBF21;
+    display: inline-block;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 0px;
+    content: ' ';
+    -webkit-transition: opacity ease .5;
+    -moz-transition: opacity ease .5;
+    transition: opacity ease .5; }
+  .checkbox-field-md::before {
+    top: 49.99995px;
+    /*50px*/
+    left: 22.55px;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+  .checkbox-field-md::after {
+    top: 31.35px;
+    /*31px*/
+    left: 2.75px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+input[type=checkbox]:checked + .checkbox-field-md,
+.checkbox-field-md.checked {
+  border-color: #8FBF21; }
+  input[type=checkbox]:checked + .checkbox-field-md::after,
+  .checkbox-field-md.checked::after {
+    height: 11px;
+    -moz-animation: checkmark-bottom 0.1s ease 0s forwards;
+    -o-animation: checkmark-bottom 0.1s ease 0s forwards;
+    -webkit-animation: checkmark-bottom 0.1s ease 0s forwards;
+    animation: checkmark-bottom 0.1s ease 0s forwards; }
+  input[type=checkbox]:checked + .checkbox-field-md::before,
+  .checkbox-field-md.checked::before {
+    height: 66px;
+    -moz-animation: checkmark-top 0.2s ease 0s forwards;
+    -o-animation: checkmark-top 0.2s ease 0s forwards;
+    -webkit-animation: checkmark-top 0.2s ease 0s forwards;
+    animation: checkmark-top 0.2s ease 0s forwards; }
+
+.secondary-label-md {
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  color: #979899; }
+  .secondary-label-md span {
+    font-weight: 800; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .secondary-label-md {
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .secondary-label-md {
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .secondary-label-md {
+      font-size: 12px; } }
+
+.hub-modal-container-md {
+  width: 95% !important;
+  margin: 10px auto; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md {
+      width: 80% !important;
+      margin: 30px auto; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md {
+      width: 60% !important;
+      max-width: 800px;
+      margin: 30px auto; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md {
+      width: 60% !important;
+      max-width: 800px;
+      margin: 30px auto; } }
+
+.hub-modal-container-md .modal-title {
+  color: #000000 !important;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  font-family: "Lato", sans-serif;
+  text-transform: none;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.3; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .modal-title {
+      font-size: 24px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .modal-title {
+      font-size: 24px; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .modal-title {
+      font-size: 24px; } }
+
+.hub-modal-container-md .modal-content {
+  border: unset;
+  border-top: 2px solid #8FBF21;
+  border-radius: unset !important;
+  box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.2);
+  padding: 25px 0;
+  padding: 0px 0 30px 0 !important; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .modal-content {
+      padding: 50px 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .modal-content {
+      padding: 70px 0; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .modal-content {
+      padding: 70px 0; } }
+
+.hub-modal-container-md .hub-modal-img-container-md {
+  height: 73px;
+  margin: 20px 0; }
+  .hub-modal-container-md .hub-modal-img-container-md .hub-modal-header-img-md {
+    max-width: 176px;
+    max-height: 73px; }
+
+.hub-modal-container-md .modal-body {
+  padding: 0 20px; }
+  .hub-modal-container-md .modal-body h5 {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 11px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    letter-spacing: 0.4px;
+    color: #979899;
+    padding-top: 0;
+    margin: 10px 0; }
+    @media all and (min-width: 768px) and (max-width: 992px) {
+      .hub-modal-container-md .modal-body h5 {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 992px) and (max-width: 1200px) {
+      .hub-modal-container-md .modal-body h5 {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 1200px) {
+      .hub-modal-container-md .modal-body h5 {
+        font-weight: 400;
+        font-size: 16px; } }
+    .hub-modal-container-md .modal-body h5 a {
+      color: #8FBF21;
+      transition: all 100ms ease-out; }
+    .hub-modal-container-md .modal-body h5 a:hover {
+      color: #4E6B0B; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .modal-body {
+      padding: 0 50px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .modal-body {
+      padding: 0 50px; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .modal-body {
+      padding: 0 50px; } }
+
+.hub-modal-container-md .btn-default {
+  background-color: #8FBF21;
+  border-radius: 30px;
+  border: none !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 13px;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer;
+  width: 100%;
+  height: 55px; }
+
+.hub-modal-container-md .hub-ok-btn-md {
+  margin-top: 20px; }
+
+.hub-modal-container-md .hub-content-italic-md {
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 11px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+  color: #979899;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 0; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .hub-content-italic-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .hub-content-italic-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .hub-content-italic-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  .hub-modal-container-md .hub-content-italic-md a {
+    color: #8FBF21;
+    transition: all 100ms ease-out; }
+  .hub-modal-container-md .hub-content-italic-md a:hover {
+    color: #4E6B0B; }
+
+.hub-modal-container-md .hub-cancel-btn-md {
+  background-color: #000000 !important;
+  border-radius: 30px;
+  border: none !important;
+  color: #FAFBFC;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 13px;
+  transition: all 500ms ease-out 50ms;
+  cursor: pointer;
+  width: 100%;
+  color: #FAFBFC !important; }
+
+.hub-modal-container-md .input-field-label-md {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000 !important;
+  font-weight: 400; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .input-field-label-md {
+      letter-spacing: 4px;
+      font-size: 12px; } }
+
+.hub-modal-container-md .form-group {
+  margin: 0 0 10px 0; }
+
+.hub-modal-container-md .input-field-md {
+  background-color: #E8EAEB;
+  border: 0;
+  height: 55px;
+  padding: 0 4px 0 8px !important;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 11px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+  color: #000000 !important;
+  font-family: "Lato", sans-serif;
+  border: none !important;
+  cursor: pointer !important; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .input-field-md {
+      font-weight: 400;
+      font-size: 16px; } }
+  .hub-modal-container-md .input-field-md a {
+    color: #8FBF21;
+    transition: all 100ms ease-out; }
+  .hub-modal-container-md .input-field-md a:hover {
+    color: #4E6B0B; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-modal-container-md .input-field-md {
+      padding: 0 0 0 10px !important; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-modal-container-md .input-field-md {
+      padding: 0 0 0 15px !important; } }
+  @media all and (min-width: 1200px) {
+    .hub-modal-container-md .input-field-md {
+      padding: 0 0 0 15px !important; } }
+  .hub-modal-container-md .input-field-md::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .hub-modal-container-md .input-field-md::-moz-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .hub-modal-container-md .input-field-md:-ms-input-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+  .hub-modal-container-md .input-field-md:-moz-placeholder {
+    font-size: 16px;
+    color: #979899;
+    font-style: italic; }
+
+.hub-modal-container-md .input-field-st {
+  transition: all 0.5s ease; }
+  .hub-modal-container-md .input-field-st:hover, .hub-modal-container-md .input-field-st:focus, .hub-modal-container-md .date-focus-st {
+    background-color: #FFFFFF !important;
+    border: 0;
+    box-shadow: inset 0px 0px 6px #8FBF21;
+    -webkit-box-shadow: inset 0px 0px 6px #8FBF21;
+    -o-box-shadow: inset 0px 0px 6px #8FBF21;
+    -ms-box-shadow: inset 0px 0px 6px #8FBF21;
+    -moz-box-shadow: inset 0px 0px 6px #8FBF21; }
+  .has-error .hub-modal-container-md .input-field-st, .has-error .hub-modal-container-md .input-field-st:hover, .has-error .hub-modal-container-md .input-field-st:focus, .has-error .hub-modal-container-md .date-focus-st {
+    box-shadow: inset 0px 0px 6px #ff6373;
+    -webkit-box-shadow: inset 0px 0px 6px #ff6373;
+    -o-box-shadow: inset 0px 0px 6px #ff6373;
+    -ms-box-shadow: inset 0px 0px 6px #ff6373;
+    -moz-box-shadow: inset 0px 0px 6px #ff6373; }
+
+.hub-modal-container-md .hub-message-md {
+  margin-bottom: 15px !important; }
+
+.hub-modal-container-md .quote-element, .hub-modal-container-md .quote-header.confirmation-choice-element-md {
+  background: #FFFFFF !important; }
+
+.hub-modal-container-md .modify-li-expanded-ly.expand-element-md {
+  display: inherit !important; }
+
+.hub-modal-container-md .modal-header {
+  background-color: unset;
+  text-align: center;
+  border-bottom: none;
+  padding: 0; }
+
+.form-group.has-error input {
+  border: 2px solid #ff6373 !important; }
+
+.modal-success-section-md {
+  background-color: #F2F4F5; }
+
+.hub-contact-btn-md {
+  background-color: #000000 !important;
+  color: #FAFBFC;
+  border: 1px solid #FAFBFC;
+  border-radius: 30px;
+  height: 35px;
+  line-height: 35px;
+  width: auto;
+  padding: 0px 30px;
+  font-size: 11px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 500ms ease-out 50ms;
+  margin: 0 auto !important;
+  position: relative;
+  display: block; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hub-contact-btn-md {
+      font-size: 12px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hub-contact-btn-md {
+      font-size: 12px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .hub-contact-btn-md {
+      font-size: 12px;
+      letter-spacing: 4px; } }
+  .hub-contact-btn-md:before {
+    margin-right: 5px; }
+  .hub-contact-btn-md:hover {
+    background-color: #FAFBFC !important;
+    color: #000000 !important; }
+
+/*This styles our elements depending on their changing state. Usually applies to things like expand/collapse, hover/blur, checked/unchecked, etc. 
+  Some agent vs. non-agent styling can go here, but that would usually go along with changes at the JS level 
+ (as class changes whenever possible, such as $('#header).removeClass('customer-header).addClass('agent-header); */
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with _st (stands for "state"), 
+ in order to easily track its associated stylesheet. eg. nav-expanded-st */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.full-overlay-ly.overlay-on-st {
+  opacity: 1;
+  z-index: 1; }
+
+.ribbon-overlay-on-st {
+  background-color: rgba(255, 255, 255, 0.9) !important; }
+
+.additional-ins-btn-st:hover {
+  color: #000000 !important;
+  border: 1px solid #8FBF21 !important; }
+
+.buy-policy-btn-md:hover, .purchase-overlay-btn-bs:hover {
+  background-color: #4E6B0B; }
+
+.input-field-st {
+  transition: all 0.5s ease; }
+  .input-field-st:hover, .input-field-st:focus, .date-focus-st {
+    background-color: #FFFFFF !important;
+    border: 0;
+    box-shadow: inset 0px 0px 6px #8FBF21;
+    -webkit-box-shadow: inset 0px 0px 6px #8FBF21;
+    -o-box-shadow: inset 0px 0px 6px #8FBF21;
+    -ms-box-shadow: inset 0px 0px 6px #8FBF21;
+    -moz-box-shadow: inset 0px 0px 6px #8FBF21; }
+  .has-error .input-field-st, .has-error .input-field-st:hover, .has-error .input-field-st:focus, .has-error .date-focus-st {
+    box-shadow: inset 0px 0px 6px #ff6373;
+    -webkit-box-shadow: inset 0px 0px 6px #ff6373;
+    -o-box-shadow: inset 0px 0px 6px #ff6373;
+    -ms-box-shadow: inset 0px 0px 6px #ff6373;
+    -moz-box-shadow: inset 0px 0px 6px #ff6373; }
+
+.has-error .date-focus-st {
+  box-shadow: inset 0px 0px 6px #ff6373;
+  -webkit-box-shadow: inset 0px 0px 6px #ff6373;
+  -o-box-shadow: inset 0px 0px 6px #ff6373;
+  -ms-box-shadow: inset 0px 0px 6px #ff6373;
+  -moz-box-shadow: inset 0px 0px 6px #ff6373; }
+
+.reset-button-st:hover {
+  background-color: #4E6B0B;
+  cursor: pointer; }
+
+.modal-on-st {
+  display: block; }
+
+.submit-button-disabled-st {
+  background-color: #979899; }
+  .submit-button-disabled-st:hover {
+    background-color: #979899 !important; }
+
+#termsCheckbox.checkbox-label-md {
+  text-decoration: none;
+  color: #6e6e6f; }
+  #termsCheckbox.checkbox-label-md:hover {
+    color: #8FBF21; }
+
+/*# sourceMappingURL=purchase.bundle.css.map*/

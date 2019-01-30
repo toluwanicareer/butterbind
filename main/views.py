@@ -82,7 +82,8 @@ class PatchQuote(View):
         data=render_to_include(response,address, quote_id)
         string=render_to_string('includes/quote_section.html', context=data)
         element_string=render_to_string('includes/group_element.html' , context=data)
-        return JsonResponse({'status':200, 'data':string, 'elements':element_string})
+        confirm_modal=render_to_string('includes/confirmation-modal.html', context={'elements':response['Elements']})
+        return JsonResponse({'status':200, 'data':string,'cmodal':confirm_modal, 'elements':element_string})
 
 
 
@@ -124,6 +125,24 @@ class getProperties(View):
         data=[address['FullAddress'] for address in data]
         return JsonResponse({'data':data})
 
+class Buy(View):
+
+    def get(self, request, *args, **kwargs):
+        quote_id=request.GET.get('quote_id')
+        url = 'https://www.swyfft.com/api/quotes/quoteid/' + quote_id
+        response = requests.get(url)
+        response = response.json()
+        errors={'reload':True}
+
+        elements=response['Elements']
+        for element in elements:
+            if not element['Value']:
+                errors['reload']=False
+        return JsonResponse(errors)
+
+    def post(self, request, *args, **kwargs):
+        return render(request, 'purchase.html')
+
 
 class About(TemplateView):
     template_name='About.html'
@@ -133,3 +152,7 @@ class Faq(TemplateView):
 
 class Contact(TemplateView):
     template_name = 'ContactUs.html'
+
+class PurchaseView(TemplateView):
+    template_name = 'purchase.html'
+

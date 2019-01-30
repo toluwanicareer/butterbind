@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+<section class="quote-header confirmation-choice-element-md">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h4 class="confirm-choice-element-title-md" data-bind="text:display()">{{element.ElementName}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h5 class="confirm-choice-element-info-md" data-bind="text:info()">{% if element.ElementName == 'NumLosses' %}The Loss History is the number of individual losses (property and liability coverage combined) experienced for this address during the preceding three years.{% endif %}</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 confirm-choice-border-bottom-bs">
+            <ul class="options-check choice-ul-md" data-bind="foreach:element.choices">
+                {% for choice in element.Choices %}
+                <li data-bind="attr:{id:element.name() + '-C_' + value()}" class="choice-li-md confirm-choice-li-md">
+                    <label data-bind="css:{'jcf-label-active':isSelected()}, click:element.setValue(value())"  class="choice element-choice-md">
+                        <strong class="quoteChoiceText quote-choice-text-bs" data-bind="text:name, css:{quoteChoiceWithImage:imageUrl}" style="{% if choice.Value == element.Value %}color:#fff; {% endif %}">{{choice.Name}}</strong>
+                        <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md {% if choice.Value == element.Value %}jcf-checked {% endif %}"
+                              data-bind="css:{'jcf-checked':isSelected(), 'jcf-unchecked':!isSelected(), quoteChoiceImage:imageUrl}, style:{'background-image':'url(' + (imageUrl() || 'Images/Transparent.gif') + ')'}">
+                            <input type="radio" data-bind="attr:{name:name, value:value}, checked: value" name="{{element.ElementName}}" value="{{choice.Value}}" style="position: absolute; opacity: 0" />
+                        </span>
+                    </label>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 confirm-choice-errors-container-bs">
+            <h5 data-bind="visible:$root.displayChoiceErrors()&&('' === element.value() || !element.isValid())" class="confirm-choice-error-instance-bs" >You have not yet made a selection. Please choose an option to continue.</h5>
+        </div>
+    </div>
+</section>
