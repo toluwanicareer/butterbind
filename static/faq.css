@@ -276,6 +276,15 @@
     .clauses-container-ly {
       padding: 0 !important; } }
 
+  
+/* address bar */
+.address-search-container-ly {
+  width: 100pw;
+  background-color: #218fbf;
+  padding: 50px 0; }
+
+
+
 /*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
 /*  
     For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes

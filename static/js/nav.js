@@ -7,17 +7,17 @@ function load_screen(){
      $('footer').css('display', 'none');
      $('.loading-container').css('display', 'block');
    $('.line-1').css('display','block');
-    setTimeout(function (){$('.line-1').css('color','#0B4E6B')}, 2500);
-    setTimeout(function(){$('.line-2').removeClass('hidden-md')}, 3000);
-    setTimeout(function(){$('.line-2').css('display', 'block')}, 3000);
-    setTimeout(function(){$('.line-2').css('color','#0B4E6B')}, 5500);
-    setTimeout(function(){$('.line-3').removeClass('hidden-md')}, 6000);
-    setTimeout(function(){$('.line-3').css('display', 'block')}, 6000);
-    setTimeout(function(){$('.line-3').css('color','#0B4E6B')}, 8500);
-    setTimeout(function(){$('.line-5').removeClass('hidden-md')}, 9000);
-    setTimeout(function(){$('.line-5').css('display','block')}, 9000);
-    setTimeout(function(){$('.line-5').css('color','#0B4E6B')}, 11500);
-    setTimeout(function(){$('#quote_page').submit()}, 11500);
+    setTimeout(function (){$('.line-1').css('color','#0B4E6B')}, 1000);
+    setTimeout(function(){$('.line-2').removeClass('hidden-md')}, 1500);
+    setTimeout(function(){$('.line-2').css('display', 'block')}, 1500);
+    setTimeout(function(){$('.line-2').css('color','#0B4E6B')}, 2500);
+    setTimeout(function(){$('.line-3').removeClass('hidden-md')}, 3000);
+    setTimeout(function(){$('.line-3').css('display', 'block')}, 3000);
+    setTimeout(function(){$('.line-3').css('color','#0B4E6B')}, 4000);
+    setTimeout(function(){$('.line-5').removeClass('hidden-md')}, 4500);
+    setTimeout(function(){$('.line-5').css('display','block')}, 4500);
+    setTimeout(function(){$('.line-5').css('color','#0B4E6B')}, 5500);
+    setTimeout(function(){$('#quote_page').submit()}, 5500);
 
 }
 $('#address_input').autocomplete({
@@ -109,3 +109,36 @@ function getPropertiesFromMd(mdata) {
 
     });
 }
+
+$(document).on('click', '.quote-element',
+        function (e) {
+            $(this).children('.element-row-md').children('.modify-info-ly').find('img').first().toggleClass('rotate-icon-st');
+            $(this).children('.element-row-md').children('.modify-li-expanded-ly').slideToggle();
+        });
+
+function reload_slider(){
+    $('.js-groups .slider-element').each(function(){
+    console.log($(this).attr('min'));
+    options={   max:parseInt($(this).attr('max')),
+
+
+   min:parseInt($(this).attr('min')),
+
+     step:parseInt($(this).attr('step')),
+
+     value:parseInt($(this).attr('value')),
+    };
+    $(this).slider(options);
+});
+
+    $('.js-groups').on('slidechange','.slider-element',function(event, ui){
+    //console.log(ui.value);
+    name=$(this).attr('element-name');
+    console.log(name);
+    $('#'+name).text('$'+ui.value);
+    get_quote(name, ui.value);
+});
+
+}
+
+reload_slider();

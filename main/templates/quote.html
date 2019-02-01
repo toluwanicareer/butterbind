@@ -218,6 +218,7 @@
         </div>
 
         <div class="row">
+
            <div class="col-xs-6 col-md-4 col-md-offset-3 button-container-left-ly">
 
                <div class="number-element-template main-replacement-cost-container-st" data-bind="validationOptions: {insertMessages: false}">
@@ -1176,14 +1177,17 @@
         'address':"{{address}}",
     'value':value}).done(function(data){
         //alert(data.data);
+
           sessionStorage.setItem('annual_price', data.json_data.annual_premium);
           sessionStorage.setItem('deductible', data.json_data.deductibles_value);
+
 
         $('#quote_replace').html(data.data)
     })
    }
 
     $('#quote_replace').on('change', '#main-replacement-cost-input', function(){
+
         value=$(this).val();
         console.log(value);
         if (value < {{min_value}}){
@@ -1197,6 +1201,7 @@
         }
         sessionStorage.setItem('home_value', value)
         get_quote('ReplacementCost', value);
+
 
 
     });
@@ -1234,6 +1239,7 @@
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
 
 
 </script>
