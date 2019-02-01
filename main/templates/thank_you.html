@@ -1,0 +1,279 @@
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by H-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="copyright" content="Copyright BetterBind LLC 2018" />
+    <meta name="description" content="Betterbind instant homeowners insurance.">
+    <meta name="keywords" content="Betterbind, insurance, homeowners insurance" />
+
+    <title>BetterBind</title>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900black" rel="stylesheet"/>
+
+<link href="/static/common.css" rel="stylesheet"/>
+
+<link href="/static/commonStyle.css" type="text/css" rel="stylesheet" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="/static/main.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.production.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.production.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.1/react-bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/MutationObserver.js/0.3.2/mutationobserver.min.js"></script>
+
+
+<script id="errorTemplate" type="text/html">
+    <label class="errorLabelOn" data-bind="validationMessage: field"></label>
+</script>
+
+    <link href="/static/quote.css?cb=28424E8F692EE3438A8E0D4E3D4F4009" type="text/css" rel="stylesheet" />
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/singleSShieldSwyfft-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/singleSShieldSwyfft-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/singleSShieldSwyfft-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/singleSShieldSwyfft-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/singleSShieldSwyfft-144x144.png" />
+
+    <link rel="icon" type="image/png" href="/static/images/favicon.png" />
+    <!--[if IE]>
+        <link rel="icon" href="/favicon.ico" type="image/ico" />
+    <![endif]-->
+
+    <script type="text/javascript">
+        $(function () {
+            $(window).on("orientationchange", function () {
+                var userAgent = navigator.userAgent.toLowerCase(); // detect the user agent
+                var iosDevices = userAgent.match(/(iphone|ipod|ipad)/) ? true : false; //check if the devices are ios devices
+                var widthOfBrowser = $(window).width();
+                var heightOfBrowser = $(window).height();
+                if (iosDevices) {
+                    var isLandscapeMode = window.orientation;
+                    if (isLandscapeMode === 90) {
+                        $('.swyfftLayout').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('height', heightOfBrowser);
+                    }
+                    else {
+                        $('#termsConditionsOverlay').css('width', widthOfBrowser);
+                        $('#termsConditionsOverlay').css('height', heightOfBrowser);
+                        $('.jspContainer').css('height', heightOfBrowser);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62029210-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62029210-6');
+</script>
+
+
+</head>
+
+<body>
+
+
+    <div id="loadingModal">
+    <div class="modal fade" role="dialog" data-bind="modal:showModal, backdrop:'static', keyboard:false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="/static/images/ajax-loader.gif"/>
+                    <span data-bind="text:message" class="loading-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="swyfftLayoutWrapper" class="swyfftLayout">
+        <header id="header-without-top-navbar">
+            <div class="container" id="headerLogo">
+                <div class="row">
+                </div>
+            </div>
+        </header>
+<!-- <<<<<<< HEAD
+        <header id="header" class="height-layout-cp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <strong class="logo swyfftLayoutLogo site-logo-layout-cp" id="swyfft-logo"><a href="/"><img src="/static/images/BetterBind_Logo_144x53.png" alt="Swyfft"></a></strong>
+                        <div class="hubLayoutLogo hub-logo-container-layout-cp" id="hubLogoContainer"><img src="/static/images/HUB-logo-sm.svg" class="hub-logo-img-bs" alt="HubLogo"></div>
+                        <nav id="quote-menubar" class="quote-menubar-ly">
+
+<div class="container">
+    <ul class="nav nav-tabs nav-tabs-layout-cp">
+
+        <li id="quoteMenuItem" class="nav-tabs-st"><a href="quote.html">Quote</a></li>
+        <li id="historyMenuItem" class="nav-tabs-st"><a href="Loginc3b6.html">History</a></li>
+        <li id="addressesMenuItem" class="nav-tabs-st"><a href="address.html">Addresses</a></li>
+    </ul>
+</div>
+
+
+                        </nav>
+                        <span id="user-details">
+                            <span class="tell text-capitalize user-details-layout-cp"> Hello,  <a href="javascript:void(0)" id="agentName"></a></span>
+
+                        </span>
+                        <nav class="navbar navbar-default hamburger-menu-layout-cp" id="hamburger-menu">
+                            <div class="navbar-header">
+                                <div>
+                                    <button type="button" id="expand-navbar" class="navbar-toggle hamburger-icon-ly collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse navbar-collapse navbar-collapse-layout-cp" id="bs-example-navbar-collapse-1">
+                                <strong class="logo"><a href="/"><img class="desktop" src="/static/images/bb-logo-svg.svg" alt="Swyfft"><img class="mobile" src="/static/images/bb-logo-svg.svg" alt="Swyfft"></a></strong>
+                                <ul class="nav navbar-nav nav-elements-layout-cp">
+                                    <li class="agent-login"><a href="Login.html">Agent Login</a></li>
+                                    <li class="agent-logout"><a href="javascript:void(0)">logout</a></li>
+                                    <li><a href="About.html">Our company</a></li>
+                                    <li><a href="ContactUs.html">Contact Us</a></li>
+                                    <li><a href="Faq.html">FAQs</a></li>
+                                    <li><a href="Press.html">In The Press</a></li>
+                                    <li><a href="Claims.html">claims</a></li>
+                                    <li class="agent-faq"><a href="Login7cd2.html">Agents</a></li>
+                                    <li class="agent-page"><a href="Login1e88.html">Admin</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+======= -->
+        {% include 'includes/full_nav.html' %}
+<!-- >>>>>>> a81f29998e270c9516dfe86b52dfdb63ef42cc8f -->
+        <section>
+
+
+
+
+<div id="wrapper">
+    <main id="main" class="main" role="main" data-bind="validationOptions:{ messageTemplate: 'errorTemplate', errorElementClass:'alert-danger'}">
+        <div data-bind="insertMessages:false">
+            <section id="premium-errors-container" class="premium-errors-container-bs premium-errors-container-ly hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <h2 class="premium-errors-header-bs">
+                    <span class="glyphicon glyphicon-exclamation-sign"></span><span>important message</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <section class="premium-errors-list-container-bs col-xs-12 col-lg-10 col-lg-12">
+                <ul class="premium-errors-line-container-ly" data-bind="foreach: premiumErrors">
+                    <li class="premium-errors-line-md">
+                        <span class="premium-errors-message-md" data-bind="text: message"></span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section id="hubButtonContainer" class="hub-contact-btn-container-ly" data-bind="visible: !isAgent() && !hubContacted()">
+       <button id="btnContactHub" class="glyphicon glyphicon-envelope btn hub-contact-btn-md hub-contact-btn-ly" data-bind="click:showHubModal, enable:userBuyEnabled, visible:!hubContacted()">Contact HUB Broker</button>
+</section>
+
+
+            <section class="quote-header" id="quotePageBody" data-bind="visible:isLoaded">
+                <input type="hidden" data-bind="value:annualPremium" id="annualPremiumInput" />
+                <input type="hidden" data-bind="value:grossAnnualPayment" id="grossAnnualPaymentInput" />
+                <input type="hidden" id="quoteId" data-bind="value:quoteId" />
+                <input type="hidden" name="addressKey" id="addressKey" data-bind="value:addressKey" />
+                <div id="quote_replace">
+<section id="square-footage-info-stick" class="quote-rd-header-bs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 quote-preview-container-ly quote-preview-container-md">
+                <img alt="swyfft logo" src="/static/images/shield-logo-45x50-white.svg" class="preview-logo-ly" />
+                <h4 class="preview-annual-premium-header-bs">Thank For Using Betterbind</h4>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</section></div>
+<div class="btn-area quote-preview-btn-container-ly quote-preview-btn-container-bs">
+    <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 summary-rc-blurb-bs" style="color:#fff">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis </div>
+        </div>
+
+        <div class="row">
+           <!--div class="col-xs-6 col-md-4 col-md-offset-3 button-container-left-ly">
+
+               <div class="number-element-template main-replacement-cost-container-st" data-bind="validationOptions: {insertMessages: false}">
+                    <input type="email" id="email-input" class="main-replacement-cost-input-bs main-replacement-cost-input-st" value="" title="" placeholder="Email" style="height:50px">
+
+                    <label class="errorLabelOn" data-bind="validationMessage: element.value, attr:{id:element.name() + 'MainError'}" id="emailMainError" style=""></label>
+                </div>
+                            </div-->
+            <div class="col-xs-6 col-md-4 button-container-right-ly col-centered"><!-- col-centered-->
+                <button id="btnBuy"  class="btn quote-buy-btn button-ly" onclick="window.location='/'">Back To Home</button>
+
+<!--                <button id="btnBuy" class="btn quote-buy-btn button-ly" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button> -->
+            </div>
+            <div class="col-xs-12">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 quote-preview-blurb-ly">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+            </section>
+        </div>
+    </main>
+</div>
+        </section>
+    </div>
+
+<script src="/static/js/main"></script>
+
+
+    <script type="text/javascript" src="/static/js/commons.js"></script>
+
+
+
+    <script type="text/javascript" src="/static/js/home.js?cb=EF45A4C2526F7D71CA75524643D62BF3"></script>
+<script type="text/javascript" src="/static/js/nav.js"></script>
+
+</body>

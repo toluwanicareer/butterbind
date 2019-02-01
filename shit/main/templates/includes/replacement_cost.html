@@ -1,0 +1,17 @@
+ <div class="number-element-template" data-bind="validationOptions: {insertMessages: false}">
+        <div class="input-info-container-md">
+            <div class="replacement-cost-input-container-md" data-bind="css:{'ny-input-field-rc-md': $quoteVm.quote().StateCode === 'NY'}">
+                <span class="large-text unit-bs">$</span>
+                <input type="number" id="replacement-cost-input" class="replacement-cost-input-bs" style="font-size:24px !important;" value="{{element.Value}}" data-bind="value:element.value, attr:{id:element.name() + 'Input'}, event:{change:element.handleValueChange}" />
+            </div>
+            <div class="details replacement-cost-details-ly">
+                <span data-bind="visible:$quoteVm.quote().StateCode === 'NY'">
+                    To calculate a fair premium, we need an accurate estimate of the insurance value on your home. The premium in this quote of <span data-bind="currency:$quoteVm.annualPremium()"></span> is based on the home value shown here of <span id="rcElementBlurbValue" data-bind="currency:$quoteVm.replacementCost()"></span>. We think that’s an appropriate value, but if you feel the value shown is inaccurate or improper, you can change that value accordingly. The policy will be issued offering Replacement Cost on Coverage A, per form HO-3 terms and conditions, including coinsurance wording. However, if you want to have a Guaranteed Replacement Cost, you can choose that option below and Swyfft will cover the full cost of replacing your home in the event of a full loss.
+                </span>
+                <span data-bind="visible:$quoteVm.quote().StateCode !== 'NY'">
+                    Swyfft will cover the full cost of replacing your home in the event of a full loss.  To calculate a fair premium, we need an accurate estimate of the value of the home.  The premium of <span data-bind="currency:$quoteVm.annualPremium()"></span> was based on a home value of <span id="rcElementBlurbValue" data-bind="currency:$quoteVm.replacementCost()"></span>, but if you believe the cost to replace your home is different, you should change the home value here accordingly.
+                </span>
+            </div>
+        </div>
+        <label class="errorLabelOn" data-bind="validationMessage: element.value, attr:{id:element.name() + 'Error'}"></label>
+    </div>

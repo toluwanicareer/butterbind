@@ -1,0 +1,161 @@
+<div id="confirmation ">
+    <div id="confirmationModal" class="modal fade confirmation-modal-md" role="dialog" data-bind="modal:showModal">
+        <div class="modal-dialog confirmation-box-md">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+                    <div class="modal-content" data-bind="visible:elements().length !== 0 && panel()!=='confirmation'">
+                        <div class="modal-header alert-info">
+                            <button type="button" class="close confirm-close-icon-bs" data-dismiss="modal" data-bind="click:function(){$parent.cancel()}">&times;</button>
+                            <div class="row">
+                                <div class="col-xs-10 col-xs-offset-1">
+                                    <h4 class="modal-title">A few final things...</h4>
+                                </div>
+                            </div>
+                            <div class="row container">
+                                <div class="col-xs-10 col-xs-offset-1">
+                                    <h5 class="confirmation-top-blurb-bs">Before you can purchase, please make sure the following is correct:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ko foreach: {data: elements, as: 'element'} -->
+
+                        <div class="modal-body js-group" data-bind="disableEdit:$parent.isBusy">
+                            <div data-bind="template: {name: 'confirmElementTemplate', data: element}">
+                                <div data-bind="attr:{id:'confirm' + name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element-md choiceElementTemplate" id="{{elment.ELementName}}Container">
+                                <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
+                                {% for element in elements %}
+                                    {% if not element.Value or  element.ElementName == 'LivingSpace' %}
+                                        {% if element.ElementType == 'r'  %}
+                                            {% include 'includes/modal-range.html' %}
+                                        {% endif %}
+                                        {% if element.ElementType == 'c' %}
+
+                                            {% include 'includes/confirmation-choice-element.html' %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                             </div>
+ </div>
+                            </div>
+
+                        </div>
+                        <!-- /ko -->
+                        <fieldset>
+
+                            <div class="row buttonHolder" style="margin-bottom: 5px">
+                                <div class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-7 confirm-ok-button-container-ly">
+                                    <input id="btnConfirm" value="CONFIRMED!" type="button" tabindex="-1" class="btn btn-default btn-living-space-md"
+                                           data-bind="click:confirmAllElements, attr:{id:'btnConfirm'}">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <script type="text/html" id="confirmElementTemplate">
+                <div data-bind="attr:{id:'confirm' + name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element-md">
+
+                    <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
+                        <div data-bind="template:'confirm-'+template()">
+
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <script type="text/html" id="confirm-rangeElementTemplate">
+                <fieldset>
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-7 confirm-range-title-container-md">
+                            <h4 class="confirm-range-element-title-md" data-bind="text:display()"></h4>
+                            <h5 class="confirm-range-element-info-md" data-bind="text:info()"></h5>
+                        </div>
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0 confirm-range-input-container-md">
+                            <div class="confirm-range-input-border-bottom-bs">
+                                <input type="number" class="custom-form-control confirm-range-input-element-md" data-bind="value:element.value, attr:{id:element.name() + 'Input-C'}" />
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+            </script>
+
+            <script type="text/html" id="confirm-choiceElementTemplate">
+
+            </script>
+
+            <script type="text/html" id="confirm-booleanElementTemplate">
+                <section class="quote-header confirmation-choice-element-md">
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <h4 class="confirm-choice-element-title-md" data-bind="text:display()"></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <h5 class="confirm-choice-element-info-md" data-bind="text:info()"></h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1 confirm-choice-border-bottom-bs">
+                            <ul class="options-check choice-ul-md">
+                                <li data-bind="attr:{id:element.name() + '-C_true'}" class="choice-li-md confirm-choice-li-md">
+                                    <label data-bind="css:{'jcf-label-active':element.value()==='true'}, click:function(){element.setValue('true')}" class="choice element-choice-md">
+                                        <strong class="quoteChoiceText quote-choice-text-bs">YES</strong>
+                                        <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md confirm-choice-element-btn-st"
+                                              data-bind="css:{'jcf-checked':element.value()==='true', 'jcf-unchecked':element.value() !== 'true'}">
+                                            <input type="radio" data-bind="attr:{name:element.name}, checked:value" value="true" style="position: absolute; opacity: 0" />
+                                        </span>
+                                    </label>
+                                </li>
+                                <li data-bind="attr:{id:element.name() + '-C_false'}" class="choice-li-md confirm-choice-li-md">
+                                    <label data-bind="css:{'jcf-label-active':element.value() !=='true'}, click:function(){element.setValue('false')}" class="choice element-choice-md">
+                                        <strong class="quoteChoiceText quote-choice-text-bs">NO</strong>
+                                        <span class="jcf-radio choice-element-btn-md modify-choice-element-btn-md confirm-choice-element-btn-st"
+                                              data-bind="css:{'jcf-checked':element.value() !== 'true', 'jcf-unchecked':element.value() === 'true'}">
+                                            <input type="radio" data-bind="attr:{name:element.name}, checked:value" value="false" style="position: absolute; opacity: 0" />
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1 confirm-choice-errors-container-bs">
+                            <h5 data-bind="visible:$root.displayChoiceErrors()&&(element.value()!==element.targetValue()), text:element.warning() || 'Please confirm the statement by selecting '+element.targetString()+' before continuing.'" class="confirm-choice-error-instance-bs">Please confirm the statement by selecting before continuing.</h5>
+                        </div>
+                    </div>
+                </section>
+            </script>
+
+
+            <!--div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+                    <div class="modal-content" data-bind="visible:panel()==='confirmation'">
+                        <div class="modal-header alert-info">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">We can work with that</h4>
+                        </div>
+                        <div class="modal-body" data-bind="disableEdit:isBusy">
+                            <div class="input-holder">
+                                <h5>This changed your premium a bit. Click OK to see your updated quote.</h5>
+                            </div>
+                            <fieldset class="container">
+                                <div class="buttonHolder" style="margin-bottom: 5px">
+                                    <input id="btnConfirmOk" value="OK" type="button" tabindex="-1" class="btn btn-default"
+                                           data-bind="click:ok">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+        </div>
+    </div>
+</div>

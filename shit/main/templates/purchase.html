@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/><!-- /Added by H-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="copyright" content="Copyright BetterBind LLC 2018"/>
+    <meta name="description" content="Betterbind instant homeowners insurance.">
+    <meta name="keywords" content="Betterbind, insurance, homeowners insurance"/>
+
+    <title>BetterBind</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900black" rel="stylesheet"/>
+
+    <link href="/static/common.css" rel="stylesheet"/>
+
+    <link href="/static/commonStyle.css" type="text/css" rel="stylesheet"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/static/main.css" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.production.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.production.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.32.1/react-bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/MutationObserver.js/0.3.2/mutationobserver.min.js"></script>
+
+
+    <script id="errorTemplate" type="text/html">
+        <label class="errorLabelOn" data-bind="validationMessage: field"></label>
+    </script>
+
+    <link href="/static/purchase.css" type="text/css" rel="stylesheet"/>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/singleSShieldSwyfft-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/singleSShieldSwyfft-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/singleSShieldSwyfft-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/static/images/singleSShieldSwyfft-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/images/singleSShieldSwyfft-144x144.png"/>
+
+    <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
+    <!--[if IE]>
+    <link rel="icon" href="/favicon.ico" type="image/ico"/>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+    </script>
+
+</head>
+
+<body>
+
+
+<div id="loadingModal">
+    <div class="modal fade" role="dialog" data-bind="modal:showModal, backdrop:'static', keyboard:false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="/static/images/ajax-loader.gif"/>
+                    <span data-bind="text:message" class="loading-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="swyfftLayoutWrapper" class="swyfftLayout">
+    <header id="header-without-top-navbar">
+        <div class="container" id="headerLogo">
+            <div class="row">
+            </div>
+        </div>
+    </header>
+    {% include 'includes/full_nav.html' %}
+    <section>
+
+
+        <main id="main" role="main">
+            <div><input type="hidden" id="quoteId" value="edfb9751-d3aa-44c8-8172-bb3dbdb2d091">
+                <div>
+                    <div class="full-overlay-ly overlay-on-st">
+                        <div class="payment-choice-container-ly container">
+                            <h2 class="overlay-header-bs">choose payment type:</h2>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+                                <input class="purchase-overlay-btn-bs" type="button" id="card-ovr" value="Credit Card">
+                                <input class="purchase-overlay-btn-bs" type="button" id="escrow-ovr" value="Escrow">
+                                <input class="purchase-overlay-btn-bs" type="button" id="echeck-ovr" value="eCheck">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headspace-ly"></div>
+                    <div class="header-row-ly ">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="header-container-ly col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-5 col-sm-6 col-xs-6">
+                                            <div class="header-logo-container-ly col-lg-1 col-md-2 col-sm-2 col-xs-2">
+                                                <img src="/images/purchase-header-logo.svg">
+                                            </div>
+                                            <div class="header-tag-bs col-lg-11 col-md-10 col-sm-10 col-xs-10">
+                                                <span>POLICY FOR</span><br>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6 col-xs-6">
+                                            <div class="row">
+                                                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                                                    <h5 class="price-instance-container-ly annual-price-md">
+                                                        <span>$4802</span>/yr</h5>
+                                                </div>
+                                                <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
+                                                    <h5 class="price-instance-container-ly monthly-price-md"><span>$408.17</span>/mo
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+                                                    <section class="annual-cost-border-md"><h4
+                                                            class="header-cost-title-bs">Annual Cost</h4><h5
+                                                            class="header-cost-price-bs">$4802</h5>
+                                                    </section>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs"><h4
+                                                        class="header-cost-title-bs">Monthly Cost</h4><h5
+                                                        class="header-cost-price-bs">$408.17</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-form-container-md">
+                        <form class="container" autocomplete="on" id="payment-form">
+                            <div class="row">
+                                <div class="parent-container-ly col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div hidden=""
+                                             class="agent-options-container-md col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <span hidden=""></span><span hidden=""></span><span hidden=""></span><a
+                                                href="#">change payment type</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><label
+                                                class="input-field-label-md">PAYMENT TYPE:</label>
+                                            <div class="container row">
+                                                <div class="form-group container">
+                                                    <div class="row">
+                                                        <div class="checkbox-container-ly col-lg-1 col-xs-1"><input
+                                                                type="checkbox" class="input-checkbox-md"
+                                                                id="pay-monthly"><label for="pay-monthly"
+                                                                                        class="checkbox-field-md input-field-st"></label>
+                                                        </div>
+                                                        <div class="col-lg-11 col-xs-11">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-sm-offset-0 col-xs-11 col-xs-offset-1">
+                                                                    <h4 id="pay-monthly"
+                                                                        class="checkbox-label-md checkbox-label-ly">
+                                                                        MONTHLY
+                                                                        - $408.17 /mo</h4></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container row">
+                                                <div class="form-group container">
+                                                    <div class="row">
+                                                        <div class="checkbox-container-ly col-lg-1 col-xs-1"><input
+                                                                type="checkbox" class="input-checkbox-md"
+                                                                id="pay-annually"><label
+                                                                for="pay-annually"
+                                                                class="checkbox-field-md input-field-st"></label></div>
+                                                        <div class="col-lg-11 col-xs-11">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-sm-offset-0 col-xs-11 col-xs-offset-1">
+                                                                    <h4 id="pay-annually"
+                                                                        class="checkbox-label-md checkbox-label-ly">
+                                                                        ANNUAL -
+                                                                        $4,802 /yr</h4></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="purchase-date-ly" id="startdate"><label
+                                                    class="input-field-label-md">Coverage Start Date:</label>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-xs-3">
+                                                        <div class="date-input-ly form-group"><label for="startdateM"
+                                                                                                     class="control-label sr-only">Coverage
+                                                            Start Date: Month </label><input placeholder="mm"
+                                                                                             type="number"
+                                                                                             id="startdateM"
+                                                                                             class="input-field-md input-field-st form-control"
+                                                                                             value=""></div>
+                                                    </div>
+                                                    <div class="col-xs-3">
+                                                        <div class="date-input-ly form-group"><label for="startdateD"
+                                                                                                     class="control-label sr-only">Coverage
+                                                            Start Date: Day</label><input placeholder="dd" type="number"
+                                                                                          id="startdateD"
+                                                                                          class="input-field-md input-field-st form-control"
+                                                                                          value=""></div>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-6">
+                                                        <div class="form-group"><label for="startdateY"
+                                                                                       class="control-label sr-only">Coverage
+                                                            Start Date: Year</label><input placeholder="yyyy"
+                                                                                           type="number"
+                                                                                           id="startdateY"
+                                                                                           class="input-field-md input-field-st form-control"
+                                                                                           value=""></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="section-header-md">primary insured</h4>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="form-group"><label for="firstName"
+                                                                           class="input-field-label-md  control-label">First
+                                                Name</label><span
+                                                    class="input-field-error-md input-field-error-hidden-md"></span>
+                                                <div class="form-control-wrapper "><input autocomplete="" type="text"
+                                                                                          id="firstName"
+                                                                                          class="input-field-md input-field-st undefined form-control"
+                                                                                          value="">
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="form-group"><label for="lastName"
+                                                                           class="input-field-label-md  control-label">Last
+                                                Name</label><span
+                                                    class="input-field-error-md input-field-error-hidden-md"></span>
+                                                <div class="form-control-wrapper "><input autocomplete="" type="text"
+                                                                                          id="lastName"
+                                                                                          class="input-field-md input-field-st undefined form-control"
+                                                                                          value="">
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group"><label for="phone"
+                                                                           class="input-field-label-md  control-label">Phone</label><span
+                                                    class="input-field-error-md input-field-error-hidden-md"></span>
+                                                <div class="form-control-wrapper "><input autocomplete="" type="tel"
+                                                                                          id="phone"
+                                                                                          class="input-field-md input-field-st undefined form-control"
+                                                                                          value="">
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group"><label for="email"
+                                                                           class="input-field-label-md  control-label">Email</label><span
+                                                    class="input-field-error-md input-field-error-hidden-md"></span>
+                                                <div class="form-control-wrapper "><input autocomplete="" type="email"
+                                                                                          id="email"
+                                                                                          class="input-field-md input-field-st undefined form-control"
+                                                                                          value="">
+                                                    <div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hidden"><h4 class="section-header-md">mailing address</h4>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="mailing-address1"
+                                                                               class="input-field-label-md  control-label">Mailing
+                                                    Address</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              placeholder="street address"
+                                                                                              type="text"
+                                                                                              id="mailing-address1"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="200 Oxford Dr">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="mailing-address2"
+                                                                               class="input-field-label-md  control-label"></label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              placeholder="apt or unit #"
+                                                                                              type="text"
+                                                                                              id="mailing-address2"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="form-group"><label for="mailing-city"
+                                                                               class="input-field-label-md  control-label">City</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="mailing-city"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="Cotuit">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                                                <div class="form-group"><label for="mailing-state"
+                                                                               class="input-field-label-md  control-label">State</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="mailing-state"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="MA">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-9">
+                                                <div class="form-group"><label for="mailing-zip"
+                                                                               class="input-field-label-md  control-label">Zip</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="mailing-zip"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="02635">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-insured-row-ly row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="row">
+                                                <div class="col-lg-4 col-lg-offset-8 col-md-4 col-md-offset-8 col-sm-12 col-xs-12">
+                                                    <input type="button" id="btnAdditionalInsured"
+                                                           class="additional-ins-btn-md additional-ins-btn-st"
+                                                           value="+ ADDITIONAL INSURED"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span hidden=""></span>
+                                    <div class="row">
+                                        <div class="col-xs-6"><span hidden=""></span></div>
+                                        <div class="col-xs-6"><span hidden=""></span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12"><span hidden=""></span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9"><span hidden=""
+                                                                                               id="cardx"></span>
+                                        </div>
+                                        <div class="col-lg-2 col-lg-offset-2 col-md-2 col-md-offset-2 col-sm-3 col-xs-3">
+                                            <span hidden=""></span></div>
+                                    </div>
+                                    <div class=""><h4 class="section-header-md">billing address</h4>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="billing-address1"
+                                                                               class="input-field-label-md  control-label">Billing
+                                                    Address</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              placeholder="street address"
+                                                                                              type="text"
+                                                                                              id="billing-address1"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="200 Oxford Dr">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="billing-address2"
+                                                                               class="input-field-label-md  control-label"></label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              placeholder="apt or unit #"
+                                                                                              type="text"
+                                                                                              id="billing-address2"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="form-group"><label for="billing-city"
+                                                                               class="input-field-label-md  control-label">City</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="billing-city"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="Cotuit">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                                                <div class="form-group"><label for="billing-state"
+                                                                               class="input-field-label-md  control-label">State</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="billing-state"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="MA">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-9">
+                                                <div class="form-group"><label for="billing-zip"
+                                                                               class="input-field-label-md  control-label">Zip</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete=""
+                                                                                              type="text"
+                                                                                              id="billing-zip"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="02635">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span hidden=""></span>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-12">
+                                                <div class="bank-name-bs">
+                                                    {% include 'includes/bank_name.html' %}
+                                                    <span hidden=""></span></div>
+                                            </div>
+                                            <div class="col-md-6 col-xs-12"><span hidden=""></span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-xs-12"><span hidden=""></span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12"><span hidden=""></span></div>
+                                            <div class="col-xs-12"><span hidden=""></span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12"><span hidden=""></span>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><span hidden=""></span>
+                                            </div>
+                                            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-9"><span hidden=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-xs-12">
+                                            <div class="form-group container">
+                                                <div class="row">
+                                                    <div class="checkbox-container-ly col-lg-1 col-xs-1"><input
+                                                            type="checkbox" class="input-checkbox-md"
+                                                            id="newpurchase"><label for="newpurchase"
+                                                                                    class="checkbox-field-md input-field-st"></label>
+                                                    </div>
+                                                    <div class="col-lg-11 col-xs-11">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-sm-offset-0 col-xs-11 col-xs-offset-1">
+                                                                <h4 id="newpurchase"
+                                                                    class="checkbox-label-md checkbox-label-ly">THIS IS
+                                                                    A
+                                                                    NEW PURCHASE</h4></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span hidden=""></span>
+                                    <div class="row">
+                                        <div class="col-xs-12"><span hidden=""></span></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 col-xs-12"><span hidden=""></span></div>
+                                        <div class="col-md-7 col-xs-12"><span hidden=""></span></div>
+                                    </div>
+                                    <div hidden="" class="container row">
+                                        <div>ACCOUNT TYPE</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="echeck-checklabel-container-ly col-xs-6"><span hidden=""></span>
+                                        </div>
+                                        <div class="echeck-checklabel-container-ly col-xs-6"><span hidden=""></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 col-xs-6"><h4 class="section-header-md">mortgage
+                                            information</h4></div>
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-xs-12"><p class="post-purchase-section-p-md">If you have a
+                                                mortgage, it is very important that your lender/mortgagee be listed on
+                                                your
+                                                insurance policy. Please provide that information below.</p></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-md-6 col-xs-12">
+                                                <div class="bank-name-bs">
+                                                    {% include 'includes/bank_name.html' %}
+                                                    <div class="form-group"><label for="bank-name-mortgage"
+                                                                                   class="input-field-label-md  control-label">BANK
+                                                        NAME</label><span
+                                                            class="input-field-error-md input-field-error-hidden-md"></span>
+                                                        <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                                  type="text"
+                                                                                                  id="bank-name-mortgage"
+                                                                                                  class="input-field-md input-field-st undefined form-control"
+                                                                                                  value="">
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xs-12">
+                                                <div class="form-group"><label for="loan-number-mortgage"
+                                                                               class="input-field-label-md  control-label">LOAN
+                                                    NUMBER</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              type="text"
+                                                                                              id="loan-number-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-xs-12"><span hidden=""></span></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="bank-street1-mortgage"
+                                                                               class="input-field-label-md  control-label">BANK
+                                                    ADDRESS</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              placeholder="street address"
+                                                                                              type="text"
+                                                                                              id="bank-street1-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <div class="form-group"><label for="bank-street2-mortgage"
+                                                                               class="input-field-label-md  control-label"></label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              placeholder="suite or unit #"
+                                                                                              type="text"
+                                                                                              id="bank-street2-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                                                <div class="form-group"><label for="bank-city-mortgage"
+                                                                               class="input-field-label-md  control-label">CITY</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              type="text"
+                                                                                              id="bank-city-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                                                <div class="form-group"><label for="bank-state-code-mortgage"
+                                                                               class="input-field-label-md  control-label">STATE</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              type="text"
+                                                                                              id="bank-state-code-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-5 col-sm-12 col-xs-9">
+                                                <div class="form-group"><label for="bank-zip-mortgage"
+                                                                               class="input-field-label-md  control-label">ZIP</label><span
+                                                        class="input-field-error-md input-field-error-hidden-md"></span>
+                                                    <div class="form-control-wrapper "><input autocomplete="on"
+                                                                                              type="text"
+                                                                                              id="bank-zip-mortgage"
+                                                                                              class="input-field-md input-field-st undefined form-control"
+                                                                                              value="">
+                                                        <div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="section-header-md">Terms &amp; Conditions</h4>
+                                    <div class="row">
+                                        <div class="col-md-10 col-xs-12">
+                                            <div class="form-group container">
+                                                <div class="row">
+                                                    <div class="checkbox-container-ly col-lg-1 col-xs-1"><input
+                                                            type="checkbox" class="input-checkbox-md"
+                                                            id="termsCheckbox"><label for="termsCheckbox"
+                                                                                      class="checkbox-field-md input-field-st"></label>
+                                                    </div>
+                                                    <div class="col-lg-11 col-xs-11">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-sm-offset-0 col-xs-11 col-xs-offset-1">
+                                                                <a href="/privacy" target="_blank"><h4
+                                                                        id="termsCheckbox"
+                                                                        class="checkbox-label-md">
+                                                                    I ACCEPT THE TERMS &amp; CONDITIONS</h4></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-lg-offset-9 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                                            <input class="buy-policy-btn-md" type="submit" id="buy-btn"
+                                                   value="Buy Policy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="full-overlay-ly overlay-off-st">
+                    <div class="modal modal-off-st"><input type="button" class="modal-close-button-ly">
+                        <h2 class="overlay-header-bs">POLICY PURCHASED!</h2>
+                        <div class="ribbon-container-ly"><img src="/images/ribbon.svg"></div>
+                        <p class="ribbon-blurb-ly">Your policy is being sent to your email <span
+                                id="ribbon-email"></span>.</p>
+                        <p class="ribbon-blurb-ly">Full coverage starts on <span id="ribbon-start"></span> at 12:01am
+                        </p></div>
+                </div>
+            </div>
+
+
+        </main>
+
+
+    </section>
+    <script type="text/javascript" src="/static/js/purchase.js"></script>
+    {% include 'includes/footer.html' %}

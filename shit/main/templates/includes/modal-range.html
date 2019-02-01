@@ -1,0 +1,16 @@
+ <fieldset>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-7 confirm-range-title-container-md">
+            <h4 class="confirm-range-element-title-md" data-bind="text:display()">{{element.ElementDisplay}}</h4>
+            <h5 class="confirm-range-element-info-md" data-bind="text:info()"></h5>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0 confirm-range-input-container-md">
+            <div class="confirm-range-input-border-bottom-bs">
+                <input type="number" class="custom-form-control modal-range confirm-range-input-element-md" name="{{element.ElementName}}" id="{{element.ElementName}}Input-C"  value="{{element.Value}}" data-bind="value:element.value, attr:{id:element.name() + 'Input-C'}" />
+            </div>
+
+        </div>
+
+    </div>
+
+</fieldset>

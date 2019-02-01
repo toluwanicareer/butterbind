@@ -1,0 +1,15 @@
+<div class="container load-container" style="height: 100vh; width:100%; background-color: #8FBF21; padding-top: 140px; display:none">
+		<div class="col-md-10 col-md-push-2">
+
+
+	        <p class="line-md line-1 loaded-md" style="">locating your home</p>
+	        <p class="line-md line-2 loaded-md" style="">analyzing your home</p>
+	        <p class="line-md line-3 loaded-md" style="">assessing its value</p>
+	        <p class="line-md line-5 loaded-md">optimizing coverage</p>
+       	</div>
+		<form id="quote_page" method="post">
+			<input name="quote_id" id="quote_id" type="hidden"/>
+			<input name="addresskey"  id="addresskey" type="hidden"/>
+			<input name="addressname" id="addressname" type="hidden">
+		</form>
+	</div>

@@ -28,4 +28,6 @@ urlpatterns = [
     path('about', views.About.as_view()),
     path('faq', views.Faq.as_view()),
     path('contact', views.Contact.as_view()),
+    path('send_mail', views.SendMail.as_view()),
+    path('thank_you', views.ThankYou.as_view())
 ]

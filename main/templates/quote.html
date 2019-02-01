@@ -212,18 +212,30 @@
                 <div id="quote_replace">{% include 'includes/quote_section.html' %}</div>
 <div class="btn-area quote-preview-btn-container-ly quote-preview-btn-container-bs">
     <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 step-header-bs"><span class="step-header-span-bs">step 3:</span>Buy Policy </div>
+            <div class="col-xs-12 col-md-6 col-md-offset-3 summary-rc-blurb-bs">please enter your email</div>
+        </div>
+
         <div class="row">
-   <!--         <div class="col-xs-6 col-md-3 col-md-offset-3 button-container-left-ly">
-                <button id="btnModifyQuote" class="btn btn-quote quote-modify-btn button-ly" data-bind="click:showModifyElements, enable:adminCustomizeEnabled">customize</button>
-            </div> -->
-            <div class="col-xs-6 col-md-3 button-container-right-ly col-centered">
-                <button id="btnBuy" class="btn quote-buy-btn button-ly" onclick="window.open('https://www.jypinsuranceagency.com/betterbind-payment','_blank')" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button>
+
+           <div class="col-xs-6 col-md-4 col-md-offset-3 button-container-left-ly">
+
+               <div class="number-element-template main-replacement-cost-container-st" data-bind="validationOptions: {insertMessages: false}">
+                    <input type="email" id="email-input" class="main-replacement-cost-input-bs main-replacement-cost-input-st" value="" title="" placeholder="Email" style="height:50px">
+
+                    <label class="errorLabelOn" data-bind="validationMessage: element.value, attr:{id:element.name() + 'MainError'}" id="emailMainError" style=""></label>
+                </div>
+                            </div>
+            <div class="col-xs-6 col-md-2 button-container-right-ly "><!-- col-centered-->
+                <button id="btnBuy"  class="btn quote-buy-btn button-ly" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button>
 
 <!--                <button id="btnBuy" class="btn quote-buy-btn button-ly" data-bind="click:buy, enable:!disabled() && userBuyEnabled()">buy policy</button> -->
             </div>
             <div class="col-xs-12">
             </div>
         </div>
+
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 quote-preview-blurb-ly">
 
@@ -1168,13 +1180,19 @@
         'address':"{{address}}",
     'value':value}).done(function(data){
         //alert(data.data);
+
+          sessionStorage.setItem('annual_price', data.json_data.annual_premium);
+          sessionStorage.setItem('deductible', data.json_data.deductibles_value);
+
+
         $('#quote_replace').html(data.data)
     })
    }
 
     $('#quote_replace').on('change', '#main-replacement-cost-input', function(){
-        value=$(this).val()
-        console.log(value)
+
+        value=$(this).val();
+        console.log(value);
         if (value < {{min_value}}){
             console.log(1)
             $('#ReplacementCostMainError').html('<span>Please enter a value that is greater than {{min_value}}</span>')
@@ -1184,8 +1202,47 @@
              $('#ReplacementCostMainError').text('Please enter a value that is less than {{max_value}}')
             return false
         }
+        sessionStorage.setItem('home_value', value)
         get_quote('ReplacementCost', value);
 
 
-    })
+
+    });
+   sessionStorage.setItem('address', '{{address}}');
+   sessionStorage.setItem('deductible', '{{deductibles_value}}');
+   sessionStorage.setItem('home_value', '{{replacement_price}}');
+   sessionStorage.setItem('annual_price', '{{annual_premium}}')
+
+    $('#btnBuy').click(function(e){
+    email=$('#email-input').val();
+        console.log(email)
+        if (email != ''){
+        if (validateEmail(email)){
+            $.get('/send_mail', {'address':sessionStorage.getItem('address'),
+            'deductible':sessionStorage.getItem('deductible'),
+                'home_value':sessionStorage.getItem('home_value'),
+                'annual_price':sessionStorage.getItem('annual_price'),
+                'email':email,
+            })
+                .done(function(data){
+                    window.location='/thank_you'
+                })
+        }
+        else{
+            $('#emailMainError').text('Please enter a valid email')
+        }
+        }
+        else{
+            $('#emailMainError').text('Please enter an email to buy policy')
+        }
+
+});
+
+   function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+
 </script>

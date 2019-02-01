@@ -1,0 +1,51 @@
+
+<div id="demo">
+
+    <div id="sliderSection" class="quote-element-container-bs">
+
+        <!--ko let: { $quoteVm: $data }-->
+        <div data-bind="template:{name:'elementGroupTemplate', foreach:sortedElementGroups}">
+           <!--  include 'includes/group_element.html'  -->
+           <div class="container" data-bind="visible:elements().length > 0">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 modify-table-ly">
+                        <h2 data-bind="text:name" class="modify-title-bs"></h2>
+                        <ul class="quote-detail" data-bind="template:{name:'elementTemplate', foreach:elements, as:'element'}">
+                            {% for element in elements %}
+                                {% include 'includes/element.html' %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/ko-->
+    </div>
+    <section-- class="premium-fees-container-ly premium-fees-container-bs container" data-bind="visible: annualQuoteFees().length">
+<div class="container premium-fees-wrapper-ly">
+<div class="row premium-fee-margin-ly">
+<!--div class="col-sm-12">
+<h5 class="premium-fees-header-md premium-fees-header-ly">* additional state fees disclosure</h5>
+</div-->
+</div>
+<div class="row premium-fee-margin-ly">
+<div class="col-sm-12">
+<!--p class="premium-fees-blurb-md premium-fees-blurb-ly">
+The premium price quoted above includes all required additional fees subject to your state's regulations including the <span class="premium-fees-blurb-items-md" data-bind="foreach: annualQuoteFees"><span class="premium-fees-blurb-items-instance-md" data-bind="text:displayName()"></span></span>
+</p-->
+</div>
+</div>
+<!--section class="premium-fees-breakdown-container-md premium-fees-breakdown-container-ly premium-fee-margin-ly">
+<!--div class="row">
+<div class="col-sm-12">
+<h5 class="premium-fees-breakdown-header-md">Total Annual Fees: <span id="annualFeesTotal_Value" class="fees-green-span-md" data-bind="text: formatCurrencyUS(annualFeesTotal()) "></span></h5>
+</div>
+</div-->
+<!--div class="premium-fees-line-container-ly" data-bind="foreach: annualQuoteFees">
+<div class="row premium-fee-instance-ly">
+<div class="col-sm-12"><span id="quoteFeeName" data-bind="text: displayName()"></span><span class="fees-green-span-md fees-instance-symbol-ly">$</span><span id="quoteFee_Value" class="fees-green-span-md" data-bind="text: value()"></span></div>
+</div>
+</div>
+</section-->
+</div>

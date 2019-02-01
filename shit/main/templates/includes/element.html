@@ -1,0 +1,52 @@
+<li data-bind="attr:{id:name() + 'Container'}, css:template, visible: childElementDisplay()" class="quote-element">
+    <div class="row element-row-md" data-bind="attr:{id:name() + 'Block'}">
+
+        <div class="modify-info-ly">
+            <div class="element-header-container-ly"><span class="modify-li-header-bs" data-bind="text:display">{{element.ElementDisplay}}</span><!--span class="premium-error-icon-md glyphicon glyphicon-exclamation-sign" data-bind="visible:showPremiumErrorIcon()"></span><!--span class="quote-warning-icon-md" data-bind="visible:showQuoteWarningIcon()"><img class="element-warning-logo-ly" src="/static/images/warning_element.svg" alt="warning logo" /></span--></div>
+            <span class="modify-li-price" data-bind="formatElementValue: parsedValue(), attr:{id:name() + '_Value'}">{% if not element.Value %}Nothing Selected {% else %}{% if not element.ElementType == 'b' %}{% if element.ElementType in stuffs  %}{% endif %}     {{element.Value}} {% else %} {% if element.Value == 'true' %} Yes {% else %} No {% endif %}{% endif  %}{% endif %}</span>
+            <button id="expand-element-btn" class="btn-info modify-li-edit-icon" data-target="#{{element.ElementName}}Info" data-bind="attr:{'data-target': info() ? '#' + name() + 'Info' : '', id: name() + 'ExpandBtn'}, css:{'default-cursor':!info()}, visible:!isAgent">
+                <img src="/static/images/dropdown-icon-2.svg" class="dropdown-icon-bs">
+
+
+            </button>
+            <button id="expand-info-agent-btn" class="btn-info modify-li-edit-icon" data-bind="attr:{id: name() + 'ExpandInfoAgentBtn'}, css:{'default-cursor':!info()}, visible:isAgent, click:toggleAgentInfo">
+                <img src="/static/images/dropdown-icon-2.svg" class="dropdown-icon-bs" data-bind="css:{'rotate-icon-st':!showInfoAgents()}">
+            </button>
+        </div>
+
+
+
+        <div i class="info-area expand-element modify-li-expanded-ly" id="{{element.ElementName}}Info" data-bind="attr:{id:name() + 'Info'}">
+            <div class="modify-li-expanded-content-ly modify-li-expanded-content-md">
+                <div data-bind="template:template">
+                    {% if element.ElementName == 'ReplacementCost' %}
+                        {% include 'includes/replacement_cost.html' %}
+                    {% endif %}
+                    {% if element.ElementType == 'p' or element.ElementType == 'r' %}
+                        {% include 'includes/range_element.html' %}
+                    {% endif %}
+                    {% if element.ElementType == 'c' %}
+                        {% include 'includes/box-content.html' %}
+                    {% endif %}
+                    {% if element.ElementType == 'b' %}
+                        {% include 'includes/boolean-element.html' %}
+                    {% endif %}
+                </div>
+                <div class="info-area" data-bind="visible: isAgent && showInfoAgents()">
+                    <div class="info-area">
+                        <div class="info-block-md">
+                            <p data-bind="html:info(), attr:{id:element.name() + 'InfoAgent'}"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="info-area" data-bind="visible:!isAgent">
+                    <div class="info-block info-block-md">
+                        <p data-bind="html:info, attr:{id:element.name() + 'Info'}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

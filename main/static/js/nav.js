@@ -110,35 +110,3 @@ function getPropertiesFromMd(mdata) {
     });
 }
 
-$(document).on('click', '.quote-element',
-        function (e) {
-            $(this).children('.element-row-md').children('.modify-info-ly').find('img').first().toggleClass('rotate-icon-st');
-            $(this).children('.element-row-md').children('.modify-li-expanded-ly').slideToggle();
-        });
-
-function reload_slider(){
-    $('.js-groups .slider-element').each(function(){
-    console.log($(this).attr('min'));
-    options={   max:parseInt($(this).attr('max')),
-
-
-   min:parseInt($(this).attr('min')),
-
-     step:parseInt($(this).attr('step')),
-
-     value:parseInt($(this).attr('value')),
-    };
-    $(this).slider(options);
-});
-
-    $('.js-groups').on('slidechange','.slider-element',function(event, ui){
-    //console.log(ui.value);
-    name=$(this).attr('element-name');
-    console.log(name);
-    $('#'+name).text('$'+ui.value);
-    get_quote(name, ui.value);
-});
-
-}
-
-reload_slider();

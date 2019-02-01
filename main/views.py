@@ -8,6 +8,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 import requests
 from django.views import View
+from django.core.mail import send_mail
 # Create your views here.
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -82,7 +83,7 @@ class PatchQuote(View):
         data=render_to_include(response,address, quote_id)
         string=render_to_string('includes/quote_section.html', context=data)
         element_string=render_to_string('includes/group_element.html' , context=data)
-        return JsonResponse({'status':200, 'data':string, 'elements':element_string})
+        return JsonResponse({'status':200, 'data':string, 'elements':element_string, 'json_data':data})
 
 
 
@@ -133,3 +134,26 @@ class Faq(TemplateView):
 
 class Contact(TemplateView):
     template_name = 'ContactUs.html'
+
+class SendMail(View):
+
+    def get(self, request, *args, **kwargs):
+        if request.is_ajax :
+            address=request.GET.get('address')
+            annual_premium=request.GET.get('annual_price')
+            deductible=request.GET.get('deductible')
+            home_value=request.GET.get('home_value')
+            email=request.GET.get('email')
+            message=render_to_string('includes/mail_template.html',context={'address':address, 'annual_premium':annual_premium,
+                                                                         'deductible':deductible, 'home_value':home_value,'email':email
+                                                                            } )
+
+            status=send_mail('New quote from betterbind.com', message, 'website@betterbind.com', ['hello@betterbind.com'], fail_silently=False)
+            return JsonResponse({'status':200})
+
+
+
+
+
+class ThankYou(TemplateView):
+    template_name = 'thank_you.html'

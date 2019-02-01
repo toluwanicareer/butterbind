@@ -1,0 +1,378 @@
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+/*Base styles go here, such as global font family, font size, margins, padding, etc. 
+ some css normalization can go here also, but we already have a normalize sheet higher in the chain*/
+.hero-container-bs {
+  background-color: #000000 !important;
+  width: 100%;
+  height: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 900; }
+
+.hero-text-bs {
+  color: #FFFFFF !important;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-family: "Lato", sans-serif !important;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-rendering: optimizeLegibility;
+  margin: 50px auto 80px auto; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hero-text-bs {
+      margin: 70px auto 110px auto; } }
+  @media all and (min-width: 1200px) {
+    .hero-text-bs {
+      margin: 70px auto 110px auto; } }
+
+.hero-text-callout-bs {
+  color: #8FBF21; }
+
+.clause-bs {
+  padding: 30px 15px;
+  border-bottom: 1px solid #E8EAEB; }
+  .clause-bs h2 {
+    color: #000000 !important;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase; }
+    @media all and (min-width: 768px) and (max-width: 992px) {
+      .clause-bs h2 {
+        font-size: 24px;
+        letter-spacing: 4px; } }
+    @media all and (min-width: 992px) and (max-width: 1200px) {
+      .clause-bs h2 {
+        font-size: 24px;
+        letter-spacing: 4px; } }
+    @media all and (min-width: 1200px) {
+      .clause-bs h2 {
+        font-size: 24px;
+        letter-spacing: 4px; } }
+  .clause-bs p {
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 11px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    letter-spacing: 0.4px;
+    color: #979899; }
+    @media all and (min-width: 768px) and (max-width: 992px) {
+      .clause-bs p {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 992px) and (max-width: 1200px) {
+      .clause-bs p {
+        font-weight: 400;
+        font-size: 16px; } }
+    @media all and (min-width: 1200px) {
+      .clause-bs p {
+        font-weight: 400;
+        font-size: 16px; } }
+    .clause-bs p a {
+      color: #8FBF21;
+      transition: all 100ms ease-out; }
+    .clause-bs p a:hover {
+      color: #4E6B0B; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .clause-bs {
+      padding: 56px 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .clause-bs {
+      padding: 56px 0; } }
+  @media all and (min-width: 1200px) {
+    .clause-bs {
+      padding: 56px 0; } }
+
+.about-list-bs {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px 0 0 0;
+  letter-spacing: 0.4px;
+  color: #979899; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .about-list-bs {
+      font-size: 16px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .about-list-bs {
+      font-size: 16px; } }
+  @media all and (min-width: 1200px) {
+    .about-list-bs {
+      font-size: 16px; } }
+  .about-list-bs li:before {
+    content: "\2022";
+    color: #8FBF21;
+    display: inline-block;
+    width: 40px;
+    margin-left: -45px; }
+  .about-list-bs li {
+    margin-top: 20px;
+    padding-left: 45px; }
+
+.bold-header-bs {
+  font-weight: bold;
+  color: #000000 !important; }
+
+.search-input-header-bs {
+  color: #FAFBFC;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .search-input-header-bs {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .search-input-header-bs {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .search-input-header-bs {
+      font-size: 24px;
+      letter-spacing: 4px; } }
+
+.address-input-bs {
+  font-family: "Lato", sans-serif;
+  font-weight: 300 !important;
+  letter-spacing: 0.4px;
+  background-color: #FAFBFC;
+  color: #000000 !important;
+  border-radius: 55px;
+  font-size: 14px !important;
+  font-style: italic;
+  height: 56px;
+  width: 100%;
+  padding-left: 20px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .address-input-bs {
+      font-size: 16px !important; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .address-input-bs {
+      font-size: 16px !important; } }
+  @media all and (min-width: 1200px) {
+    .address-input-bs {
+      font-size: 16px !important; } }
+
+.visual-sec input[type="text"] {
+  font-weight: 900; }
+
+.visual-sec input[type="button"] {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+input.ui-autocomplete-input:focus {
+  box-shadow: 0 0 4px 2px #979899; }
+
+input#btnSubmit {
+  background-color: #000000 !important;
+  color: #FAFBFC;
+  border: none;
+  border-radius: 30px;
+  height: 56px;
+  width: auto;
+  padding: 11px 30px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 500ms ease-out 50ms; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    input#btnSubmit {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    input#btnSubmit {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    input#btnSubmit {
+      font-size: 16px;
+      letter-spacing: 4px; } }
+
+input#btnSubmit:hover {
+  cursor: pointer;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  font-weight: 500; }
+
+input#btnSubmit[disabled], input#btnSubmit[disabled]:hover {
+  cursor: not-allowed;
+  background-color: #749D17 !important;
+  color: #8FBF21 !important;
+  opacity: 1; }
+
+/*This sheet is for layout-specific styling (ie. the way our elements stack and how that changes depending on screen resolution/width). 
+This means that many of our layout-changing media queries will go here. 
+This should ideally apply only at the container level, but can also touch specific modules if relevant*/
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with -ly (stands for "layout"), 
+ in order to easily track its associated stylesheet. eg. header-container-ly, header-ly */
+.about-top-container-ly {
+  margin-top: 58px; }
+
+.clauses-container-ly {
+  padding: 15px 15px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .clauses-container-ly {
+      padding: 30px 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .clauses-container-ly {
+      padding: 30px 0; } }
+  @media all and (min-width: 1200px) {
+    .clauses-container-ly {
+      padding: 30px 0; } }
+
+.clauses-container-ly .container div:nth-of-type(4) .clause-bs {
+  border-bottom: none; }
+
+.address-search-container-ly {
+  width: 100vw;
+  background-color: #8FBF21;
+  padding: 50px 0; }
+
+.search-input-header-ly {
+  padding: 0 0 10px 0;
+  text-align: center; }
+
+#about .form-quote {
+  width: auto;
+  padding: 0; }
+
+.form-quote .address-search-input-ly {
+  width: auto;
+  -webkit-flex-grow: 2;
+  -moz-flex-grow: 2;
+  -ms-flex-grow: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  margin-bottom: 10px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .form-quote .address-search-input-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto;
+      margin: 0 20px 0 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .form-quote .address-search-input-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto;
+      margin: 0 20px 0 0; } }
+  @media all and (min-width: 1200px) {
+    .form-quote .address-search-input-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto;
+      margin: 0 20px 0 0; } }
+
+.get-quote-btn-ly {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .get-quote-btn-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .get-quote-btn-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto; } }
+  @media all and (min-width: 1200px) {
+    .get-quote-btn-ly {
+      -webkit-flex-basis: auto;
+      -moz-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto; } }
+
+.form-container-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6*/
+  display: -moz-box;
+  /* OLD - FF 19 */
+  display: -ms-flexbox;
+  /* IE 10 */
+  display: -webkit-flex;
+  /*NEW - Chrome prefix*/
+  display: flex;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+/*# sourceMappingURL=aboutPrivacy.bundle.css.map*/
