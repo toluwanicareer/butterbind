@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+/*Base styles go here, such as global font family, font size, margins, padding, etc. 
+ some css normalization can go here also, but we already have a normalize sheet higher in the chain*/
+/*Mobile: 320-767px
+Tablet & older desktops: 767-1279px
+Standard desktop: 1280px – 1599px
+Large Desktop: >1600px*/
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.hero-container-bs {
+  background-color: #000000 !important;
+  width: 100%;
+  height: auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin-top: 58px; }
+
+.hero-text-bs {
+  color: #FFFFFF !important;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3;
+  font-family: "Lato", sans-serif !important;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-rendering: optimizeLegibility;
+  margin: 50px auto 80px auto; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 1200px) {
+    .hero-text-bs {
+      font-size: 42px;
+      letter-spacing: 4px; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .hero-text-bs {
+      margin: 70px auto 110px auto; } }
+  @media all and (min-width: 1200px) {
+    .hero-text-bs {
+      margin: 70px auto 110px auto; } }
+
+.hero-text-callout-bs {
+  color: #8FBF21; }
+
+/*This sheet is for layout-specific styling (ie. the way our elements stack and how that changes depending on screen resolution/width). 
+ This means that many of our layout-changing media queries will go here. 
+ This should ideally apply only at the container level, but can also touch specific modules if relevant*/
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with _ly (stands for "layout"), 
+ in order to easily track its associated stylesheet. eg. header-container-ly, header-ly */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.parent-container-ly {
+  margin-top: 30px; }
+
+.border-container-ly {
+  border-bottom: 1px solid #E8EAEB;
+  margin-top: 15px; }
+
+.article-row-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  flex-direction: column; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .article-row-ly {
+      flex-direction: row; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .article-row-ly {
+      flex-direction: row; } }
+  @media all and (min-width: 1200px) {
+    .article-row-ly {
+      flex-direction: row; } }
+
+.article-img-container-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  flex-direction: row; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .article-img-container-ly {
+      flex-direction: column;
+      padding: 0; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .article-img-container-ly {
+      flex-direction: column;
+      padding: 0; } }
+  @media all and (min-width: 1200px) {
+    .article-img-container-ly {
+      flex-direction: column;
+      padding: 0; } }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .snippet-container-ly {
+    align-self: flex-end; } }
+
+.article-preview-container-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; }
+
+.article-tags-container-ly {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .article-tags-container-ly {
+      margin-top: unset; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .article-tags-container-ly {
+      margin-top: unset; } }
+  @media all and (min-width: 1200px) {
+    .article-tags-container-ly {
+      margin-top: unset; } }
+
+.article-source-img-ly {
+  max-width: 144px;
+  max-height: 144px;
+  margin-bottom: 10px;
+  border: 1px solid #E8EAEB; }
+  @media all and (min-width: 768px) and (max-width: 992px) {
+    .article-source-img-ly {
+      max-width: unset;
+      max-height: 188px;
+      min-width: 100%; } }
+  @media all and (min-width: 992px) and (max-width: 1200px) {
+    .article-source-img-ly {
+      max-width: unset;
+      max-height: 188px;
+      min-width: 100%; } }
+  @media all and (min-width: 1200px) {
+    .article-source-img-ly {
+      max-width: unset;
+      max-height: 188px;
+      min-width: 100%; } }
+
+/*This styles specific modules within the layout components of our pages. 
+ This should contain most of our styling, excluding state-specific styles*/
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with _md (stands for "module"), 
+ in order to easily track its associated stylesheet. eg. nav-li1-md */
+/*Mobile: 320-767px
+Tablet & older desktops: 767-1279px
+Standard desktop: 1280px – 1599px
+Large Desktop: >1600px*/
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+.article-url-md {
+  color: #8FBF21;
+  text-decoration: underline;
+  font-size: 16px; }
+
+.article-title-md {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #000000 !important; }
+
+.article-text-md {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #979899;
+  margin-bottom: 10px; }
+
+.published-snippet-md {
+  color: #979899;
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  letter-spacing: 0.3px;
+  line-height: 15px; }
+  .published-snippet-md span {
+    color: #000000 !important; }
+  @media only screen and (min-width: 320px) and (max-width: 768px) {
+    .published-snippet-md {
+      align-self: flex-end;
+      margin: 0 0 10px 10px;
+      line-height: 10px; } }
+
+.article-ribbon-md li {
+  font-size: 12px;
+  border: 1px solid #E8EAEB;
+  border-radius: 15px;
+  color: #979899;
+  padding: 2px 8px;
+  margin-right: 5px;
+  display: inline-block; }
+
+.ribbon-icon-md {
+  color: #E8EAEB;
+  margin-right: 10px;
+  margin-top: 10px; }
+
+/*This styles our elements depending on their changing state. Usually applies to things like expand/collapse, hover/blur, checked/unchecked, etc. 
+ Some agent vs. non-agent styling can go here, but that would usually go along with changes at the JS level 
+ (as class changes whenever possible, such as $('#header).removeClass('customer-header).addClass('agent-header); */
+/*Whenever possible, classes targetted by styles in this sheet should be suffixed with _st (stands for "state"), 
+ in order to easily track its associated stylesheet. eg. nav-expanded-st */
+/*This sheet imports all other common modules and serves as a base reference, so that all modules can be brought into any stylesheet with a single import statement.*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*container for modals to be used with React-Bootstrap modals*/
+/*  
+    For use in sketch, download "sketch-palettes" plugin: https://github.com/andrewfiorillo/sketch-palettes
+    Load this palette: https://www.dropbox.com/s/8ipa5kei755nq3k/swyfft-document-colors.sketchpalette?dl=0
+    Visual style guide: https://www.dropbox.com/s/oeize3nk1ruvaup/01-base-palette.png?dl=0
+*/
+/* Greens */
+/* Neutrals */
+/* ui element colors */
+/* 
+    note: 
+    - numbers go from brightest (1) to darkest (3) 
+    - grays all have same hue + saturation but lightness varies on HSL scale 
+*/
+/*
+    11/9/16: old variables added back so code doesn't break on current site.  CB to find all, replace with new variables names and delete from this file.
+*/
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+/* display text - bubble preview font size */
+/* large headers, page level */
+/* mid headers, page level */
+/* small-mid headers, page level */
+/* small headers, section level */
+/* body copy */
+/* subtext, footnotes */
+/* common transitions slowest (1) to fastest (3) */
+/* cubic bezier functions for rc-tooltip animation timing */
+
+/*# sourceMappingURL=press.bundle.css.map*/
