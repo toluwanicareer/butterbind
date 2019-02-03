@@ -148,7 +148,7 @@ class SendMail(View):
                                                                          'deductible':deductible, 'home_value':home_value,'email':email
                                                                             } )
 
-            status=send_mail('New quote from betterbind.com', message, 'website@betterbind.com', ['betterbind@gmail.com'], fail_silently=False)
+            status=send_mail('New quote from betterbind.com', message, 'website@betterbind.com', ['abiodun.toluwanii@gmail.com'], fail_silently=False)
             return JsonResponse({'status':200})
 
 
