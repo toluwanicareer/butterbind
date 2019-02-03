@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import requests
 from django.views import View
 from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -148,7 +149,7 @@ class SendMail(View):
                                                                          'deductible':deductible, 'home_value':home_value,'email':email
                                                                             } )
 
-            status=send_mail('New quote from betterbind.com', message, 'website@betterbind.com', ['abiodun.toluwanii@gmail.com'], fail_silently=False)
+            status=send_mail('New quote from betterbind.com', message, settings.EMAIL_HOST_USER, ['abiodun.toluwanii@gmail.com'], fail_silently=False)
             return JsonResponse({'status':200})
 
 
