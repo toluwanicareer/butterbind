@@ -92,19 +92,27 @@ function getPropertiesFromMd(mdata) {
         //console.log(data)
         if (data.ErrorString=='') {
             //console.log(data.Results[0].Address.AddressKey);
-            newdata = {'addresskey': data.Results[0].Address.AddressKey, 'address': mdata.addressname}
-            $.post('/', newdata).done(function (data) {
-                if (data.status) {
-                    start_load_screen(data)
 
-                    //alert('Data premium Price is: ' +data.annual_premium)
-                }
-                else{
-                        //getPropertiesFromMd(data)
-                        show_error_modal();
-					}
+           try {
+               newdata = {'addresskey': data.Results[0].Address.AddressKey, 'address': mdata.addressname}
 
-            })
+               $.post('/', newdata).done(function (data) {
+                   if (data.status) {
+                       start_load_screen(data)
+
+                       //alert('Data premium Price is: ' +data.annual_premium)
+                   }
+
+                   else {
+                       //getPropertiesFromMd(data)
+                       show_error_modal();
+                   }
+
+               })
+           }
+            catch(err){
+               show_error_modal();
+            }
         }
 
     });
