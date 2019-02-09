@@ -58,6 +58,8 @@ $('#quotebutton').click(function (e) {
                         getPropertiesFromMd(data)
                         //show_error_modal();
 					}
+                }).fail(function(err){
+                    show_error_network_modal();
                 })
             });
 
@@ -73,6 +75,14 @@ function show_error_modal(){
     //console.log('im here ok');
     $('#errorModalTitle').text('SORRY');
     $('#errorModalBody').text('BetterBind cannot provide instant quote for this property yet. Please contact betterbind@gmail.com for a quote.');
+
+    $('#errorModal').modal('show');
+}
+
+function show_error_network_modal(){
+    //console.log('im here ok');
+    $('#errorModalTitle').text('SORRY');
+    $('#errorModalBody').text('Network Error , please check your network connection');
 
     $('#errorModal').modal('show');
 }
@@ -115,6 +125,8 @@ function getPropertiesFromMd(mdata) {
             }
         }
 
+    }).fail(function(err){
+        show_error_network_modal()
     });
 }
 
