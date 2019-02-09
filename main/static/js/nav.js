@@ -118,9 +118,12 @@ function getPropertiesFromMd(mdata) {
                        show_error_modal();
                    }
 
-               })
+               }).fail(function(err){
+        show_error_network_modal()
+    });
            }
             catch(err){
+               console.log('error new');
                show_error_modal();
             }
         }
