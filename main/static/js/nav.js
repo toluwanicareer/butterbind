@@ -20,6 +20,7 @@ function load_screen(){
     setTimeout(function(){$('#quote_page').submit()}, 7500);
 
 }
+//
 $('#address_input').autocomplete({
     minLength:3,
     source: function(request, response){
